@@ -1,0 +1,37 @@
+cmake_minimum_required(VERSION 3.10)
+project(zmq_c_api_tests CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# --- Gerekli Kütüphaneleri Bulma ---
+# Sistemde manuel olarak kurduğumuz libzmq'yu bulmasını istiyoruz
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(ZMQ REQUIRED libzmq)
+
+# --- Derleyici Ayarları ---
+# Tüm hedefler için DRAFT API'leri (ZMQ_RADIO, zmq_join vb. için) aktive ediyoruz
+add_compile_definitions(ZMQ_BUILD_DRAFT_API)
+
+# --- Hedefleri Tanımlama ---
+# Şu ana kadar yazdığımız üç uygulamayı da derliyoruz.
+add_executable(pub_epgm pub_epgm.cpp)
+add_executable(pub_udp pub_udp.cpp)
+add_executable(radio_udp radio_udp.cpp)
+add_executable(subscriber_radio_udp subscriber_radio_udp.cpp)
+
+# --- Kütüphaneleri ve Yolları Tüm Hedeflere Bağlama ---
+# foreach döngüsü ile aynı ayarları üç hedef için de tek seferde yapıyoruz
+foreach(TARGET pub_epgm pub_udp radio_udp)
+    # Gerekli başlık dosyalarının (header) yollarını belirtiyoruz.
+    target_include_directories(${TARGET} PRIVATE
+        # cppzmq kullanan pub_epgm ve pub_udp için bu yol gerekli.
+        "${CMAKE_SOURCE_DIR}/../third_party/cppzmq"
+        # C API'sini (zmq.h) kullanan radio_udp için bu yol gerekli.
+        ${ZMQ_INCLUDE_DIRS}
+    )
+    # Gerekli kütüphaneleri bağlıyoruz (linkliyoruz).
+    target_link_libraries(${TARGET} PRIVATE
+        ${ZMQ_LIBRARIES}
+    )
+endforeach()

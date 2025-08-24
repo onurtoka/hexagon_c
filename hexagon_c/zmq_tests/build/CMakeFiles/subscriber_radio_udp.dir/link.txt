@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/subscriber_radio_udp.dir/subscriber_radio_udp.cpp.o -o subscriber_radio_udp  -lzmq 

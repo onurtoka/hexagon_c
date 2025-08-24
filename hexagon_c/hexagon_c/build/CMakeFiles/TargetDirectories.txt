@@ -1,0 +1,3 @@
+/workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles/hexagon_c_app.dir
+/workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles/edit_cache.dir
+/workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles/rebuild_cache.dir

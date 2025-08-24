@@ -1,0 +1,48 @@
+=== MANUAL ZeroMQ SENDER STARTED ===
+Connected to tcp://localhost:7777
+Starting to send messages...
+[1] Sent: TestMessage{id:1,time:1754607714285}
+[2] Sent: TestMessage{id:2,time:1754607714786}
+[3] Sent: TestMessage{id:3,time:1754607715302}
+[4] Sent: TestMessage{id:4,time:1754607715804}
+[5] Sent: TestMessage{id:5,time:1754607716320}
+[6] Sent: TestMessage{id:6,time:1754607716821}
+[7] Sent: TestMessage{id:7,time:1754607717338}
+[8] Sent: TestMessage{id:8,time:1754607717855}
+[9] Sent: TestMessage{id:9,time:1754607718373}
+[10] Sent: TestMessage{id:10,time:1754607718890}
+[11] Sent: TestMessage{id:11,time:1754607719406}
+[12] Sent: TestMessage{id:12,time:1754607719923}
+[13] Sent: TestMessage{id:13,time:1754607720440}
+[14] Sent: TestMessage{id:14,time:1754607720956}
+[15] Sent: TestMessage{id:15,time:1754607721459}
+[16] Sent: TestMessage{id:16,time:1754607721976}
+[17] Sent: TestMessage{id:17,time:1754607722492}
+[18] Sent: TestMessage{id:18,time:1754607722993}
+[19] Sent: TestMessage{id:19,time:1754607723509}
+[20] Sent: TestMessage{id:20,time:1754607724027}
+Finished sending 20 messages
+=== MANUAL ZeroMQ SENDER STARTED ===
+Connected to tcp://localhost:7777
+Starting to send messages...
+[1] Sent: TestMessage{id:1,time:1754608190017}
+[2] Sent: TestMessage{id:2,time:1754608190518}
+[3] Sent: TestMessage{id:3,time:1754608191033}
+[4] Sent: TestMessage{id:4,time:1754608191536}
+[5] Sent: TestMessage{id:5,time:1754608192052}
+[6] Sent: TestMessage{id:6,time:1754608192570}
+[7] Sent: TestMessage{id:7,time:1754608193087}
+[8] Sent: TestMessage{id:8,time:1754608193602}
+[9] Sent: TestMessage{id:9,time:1754608194105}
+[10] Sent: TestMessage{id:10,time:1754608194621}
+[11] Sent: TestMessage{id:11,time:1754608195139}
+[12] Sent: TestMessage{id:12,time:1754608195656}
+[13] Sent: TestMessage{id:13,time:1754608196173}
+[14] Sent: TestMessage{id:14,time:1754608196690}
+[15] Sent: TestMessage{id:15,time:1754608197206}
+[16] Sent: TestMessage{id:16,time:1754608197708}
+[17] Sent: TestMessage{id:17,time:1754608198224}
+[18] Sent: TestMessage{id:18,time:1754608198741}
+[19] Sent: TestMessage{id:19,time:1754608199257}
+[20] Sent: TestMessage{id:20,time:1754608199759}
+Finished sending 20 messages

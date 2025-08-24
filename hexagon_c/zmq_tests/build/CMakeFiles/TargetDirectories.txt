@@ -1,0 +1,6 @@
+/workspaces/zmq_monitor_v2/zmq_tests/build/CMakeFiles/pub_epgm.dir
+/workspaces/zmq_monitor_v2/zmq_tests/build/CMakeFiles/pub_udp.dir
+/workspaces/zmq_monitor_v2/zmq_tests/build/CMakeFiles/radio_udp.dir
+/workspaces/zmq_monitor_v2/zmq_tests/build/CMakeFiles/subscriber_radio_udp.dir
+/workspaces/zmq_monitor_v2/zmq_tests/build/CMakeFiles/edit_cache.dir
+/workspaces/zmq_monitor_v2/zmq_tests/build/CMakeFiles/rebuild_cache.dir

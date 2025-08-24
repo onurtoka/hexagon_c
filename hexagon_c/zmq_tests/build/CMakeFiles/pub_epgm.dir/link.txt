@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/pub_epgm.dir/pub_epgm.cpp.o -o pub_epgm  -lzmq 

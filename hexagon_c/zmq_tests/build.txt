@@ -1,0 +1,1 @@
+g++ app3_listener.cpp -o app3 -std=c++17 -I/usr/local/include -I../third_party/cppzmq -L/usr/local/lib -lzmq

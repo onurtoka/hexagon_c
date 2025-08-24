@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/radio_udp.dir/radio_udp.cpp.o -o radio_udp  -lzmq 

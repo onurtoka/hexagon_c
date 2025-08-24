@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/hat_b_app.dir/src/application/main.cpp.o -o hat_b_app  -lzmq 
