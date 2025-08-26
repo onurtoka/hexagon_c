@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/workspaces/hexagon_c/hexagon_c/hexagon_bx/src -I/workspaces/hexagon_c/hexagon_c/hexagon_bx/include -I/usr/include/pgm-5.3 -I/usr/include/libxml2 -I/usr/include/mit-krb5
+CXX_INCLUDES = -I/workspaces/hexagon_c/hexagon_c/hexagon_bx/src -I/workspaces/hexagon_c/hexagon_c/hexagon_bx/include -I/usr/include/pgm-5.3 -I/usr/include/libxml2
 
 CXX_FLAGS = -O3 -DNDEBUG -std=c++17
 

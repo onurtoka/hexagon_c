@@ -13,7 +13,9 @@ bool TrackDataProcessor::submitDelayCalcTrackData(const model::DelayCalcTrackDat
             return false;
         }
 
+        // FinalCalcDelayData oluştur ve performance metrics hesapla
         model::FinalCalcDelayData final_data = createFinalCalcDelayData(data);
+        auto metrics = final_data.calculatePerformanceMetrics();
 
         auto now = std::chrono::duration_cast<std::chrono::milliseconds>(
             std::chrono::system_clock::now().time_since_epoch()
@@ -22,7 +24,8 @@ bool TrackDataProcessor::submitDelayCalcTrackData(const model::DelayCalcTrackDat
         long long b_to_c_delay = now - data.getSecondHopSentTime();
         
         std::cout << "Track[" << data.getTrackId() << "] FirstSent:" << data.getFirstHopSentTime()
-                  << " TotalDelay:" << total_delay << "ms B->C:" << b_to_c_delay << "ms" << std::endl;
+                  << " TotalDelay:" << total_delay << "ms B->C:" << b_to_c_delay << "ms"
+                  << " LatencyScore:" << metrics.latency_score << std::endl;
 
         return true;
 

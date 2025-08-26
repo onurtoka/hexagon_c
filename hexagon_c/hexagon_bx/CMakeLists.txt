@@ -86,7 +86,7 @@ set(DOMAIN_LOGIC_SOURCES
 # Source files - Adapters
 set(ADAPTER_SOURCES
     src/adapters/incoming/zeromq/ZeroMQDataSubscriber.hpp
-    src/adapters/outgoing/zeromq/ZeroMQDataPublisher.hpp
+    src/adapters/outgoing/zeromq/ZeroMQRadioPublisher.hpp
 )
 
 # Ana library - Domain + Adapters

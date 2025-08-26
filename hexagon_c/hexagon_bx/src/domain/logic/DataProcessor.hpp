@@ -84,7 +84,8 @@ public:
      * Sistem hazır durumu kontrolü
      */
     bool isReadyToProcess() const override {
-        return publisher_ && publisher_->isPublisherActive() && repository_;
+        // RADIO Publisher ve repository kontrolü
+        return publisher_ != nullptr && publisher_->isPublisherActive() && repository_ != nullptr;
     }
 
     /**
@@ -151,7 +152,7 @@ private:
             return false;
         }
 
-        // 2. cpp_hat'e gönder
+        // 2. hexagon_c'ye RADIO ile gönder
         if (!publisher_->publishDelayCalcTrackData(data)) {
             return false;
         }
@@ -179,7 +180,7 @@ private:
             }
         }
 
-        // Batch publishing
+        // Batch publishing - RADIO ile gönder
         publisher_->publishBatchData(valid_data);
 
         return processed;

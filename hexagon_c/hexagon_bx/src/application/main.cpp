@@ -15,7 +15,7 @@
 #include "../domain/logic/DataProcessor.hpp"
 
 // Adapter katmanı
-#include "../adapters/outgoing/zeromq/ZeroMQDataPublisher.hpp"
+#include "../adapters/outgoing/zeromq/ZeroMQRadioPublisher.hpp"
 
 using namespace hat;
 
@@ -201,9 +201,10 @@ int main(int argc, char* argv[]) {
         // 1. Repository (Secondary Port)
         auto repository = std::make_shared<InMemoryDataRepository>();
 
-        // 2. Publisher (Secondary Port) - cpp_hat'e gönderir
-        auto publisher = std::make_shared<hat_b::adapters::outgoing::zeromq::ZeroMQDataPublisher>(
-            output_endpoint);
+        // 2. RADIO Publisher (Secondary Port) - hexagon_c'ye UDP multicast ile gönderir
+        auto publisher = std::make_shared<hat_b::adapters::outgoing::zeromq::ZeroMQRadioPublisher>(
+            "udp://239.1.1.1:9001",  // hexagon_c ile aynı endpoint
+            "SOURCE_DATA");          // hexagon_c ile aynı grup
 
         // 3. Domain Logic (Hexagon'un kalbi)
         auto data_processor = std::make_shared<hat_b::domain::logic::DataProcessor>(
@@ -216,14 +217,15 @@ int main(int argc, char* argv[]) {
 
         // Publisher'ı başlat
         if (!publisher->start()) {
-            std::cerr << "Failed to start publisher!" << std::endl;
+            std::cerr << "Failed to start RADIO publisher!" << std::endl;
             return 1;
         }
-        std::cout << "✓ Publisher started" << std::endl;
+        std::cout << "✓ RADIO Publisher started (UDP multicast)" << std::endl;
 
         std::cout << "\n=== Data Generation Started ===\n" << std::endl;
         std::cout << "Generating DelayCalcTrackData every " << generation_interval_ms << "ms" << std::endl;
-        std::cout << "Sending to cpp_hat on " << output_endpoint << std::endl;
+        std::cout << "UDP Multicast gönderimi: " << "udp://239.1.1.1:9001" << " (grup: SOURCE_DATA)" << std::endl;
+        std::cout << "Target: hexagon_c DISH receiver" << std::endl;
         std::cout << "Press Ctrl+C to stop gracefully." << std::endl;
 
         // Ana döngü - veri üretimi ve gönderimi
@@ -257,12 +259,12 @@ int main(int argc, char* argv[]) {
                 
                 std::cout << "\n--- Statistics ---" << std::endl;
                 
-                // Publisher stats
+                // RADIO Publisher stats
                 auto pub_stats = publisher->getPublisherStats();
-                std::cout << "Publisher: Published=" << pub_stats.total_published
+                std::cout << "RADIO Publisher: Published=" << pub_stats.total_published
                          << ", Failed=" << pub_stats.failed_publications
                          << ", Avg Latency=" << pub_stats.average_latency_ms << "ms" << std::endl;
-
+                
                 // Repository stats
                 auto repo_stats = repository->getRepositoryStats();
                 std::cout << "Repository: Records=" << repo_stats.total_records
@@ -282,7 +284,7 @@ int main(int argc, char* argv[]) {
 
         // Graceful shutdown
         publisher->stop();
-        std::cout << "✓ Publisher stopped" << std::endl;
+        std::cout << "✓ RADIO Publisher stopped" << std::endl;
 
         // Son istatistikleri göster
         std::cout << "\n=== Final Statistics ===" << std::endl;

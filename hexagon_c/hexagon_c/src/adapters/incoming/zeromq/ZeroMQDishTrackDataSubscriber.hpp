@@ -1,8 +1,12 @@
 #pragma once
 
+// DRAFT API'leri etkinleştirmek için (ZMQ_DISH için gerekli)
+#define ZMQ_BUILD_DRAFT_API
+
 #include "../../../domain/ports/incoming/TrackDataSubmission.hpp"
 #include "../../../domain/model/DelayCalcTrackData.hpp"
-#include <zmq.h>
+#include <zmq.hpp>
+#include <zmq_addon.hpp>
 #include <thread>
 #include <atomic>
 #include <memory>
@@ -11,9 +15,6 @@
 #include <optional>
 #include <cstring>
 #include <chrono>
-
-// DRAFT API'leri etkinleştirmek için (ZMQ_DISH için gerekli)
-#define ZMQ_BUILD_DRAFT_API
 
 namespace hat::adapters::incoming::zeromq {
 
@@ -26,9 +27,9 @@ class ZeroMQDishTrackDataSubscriber {
 private:
     std::shared_ptr<domain::ports::incoming::TrackDataSubmission> track_data_submission_;
     
-    // ZeroMQ context ve dish socket
-    void* zmq_context_;
-    void* dish_socket_;
+    // ZeroMQ C++ context ve socket
+    zmq::context_t zmq_context_;
+    std::unique_ptr<zmq::socket_t> dish_socket_;
     
     // Thread yönetimi
     std::thread subscriber_thread_;
@@ -40,14 +41,14 @@ private:
     
     // Gecikme hesaplama için
     struct LatencyMeasurement {
-        std::chrono::high_resolution_clock::time_point receive_time;
+        std::chrono::steady_clock::time_point receive_time;
         long long send_timestamp_ns;
         long long latency_ns;
         std::string original_data;
     };
     
-    // Hata kontrolü için yardımcı fonksiyon
-    void check_rc(int rc, const std::string& context_msg);
+    // Hata kontrolü için yardımcı fonksiyon (C++ wrapper ile artık gereksiz)
+    // void check_rc(int rc, const std::string& context_msg);
 
 public:
     /**

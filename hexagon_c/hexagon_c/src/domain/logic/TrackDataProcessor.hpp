@@ -36,7 +36,7 @@ public:
 private:
     /**
      * DelayCalcTrackData'dan FinalCalcDelayData üretir
-     * Basit gecikme hesaplaması - gereksiz karmaşıklık kaldırıldı
+     * Gelişmiş gecikme hesaplaması ve performance metrics
      */
     model::FinalCalcDelayData createFinalCalcDelayData(const model::DelayCalcTrackData& input_data);
 };

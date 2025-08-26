@@ -6,7 +6,7 @@
 #include <thread>
 
 #include "../domain/logic/TrackDataProcessor.hpp"
-#include "../adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.hpp"
+#include "../adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.hpp"
 
 using namespace hat;
 
@@ -27,8 +27,10 @@ int main(int argc, char* argv[]) {
 
         auto data_processor = std::make_shared<domain::logic::TrackDataProcessor>();
 
-        auto subscriber = std::make_shared<adapters::incoming::zeromq::ZeroMQTrackDataSubscriber>(
-            data_processor
+        auto subscriber = std::make_shared<adapters::incoming::zeromq::ZeroMQDishTrackDataSubscriber>(
+            data_processor,
+            "udp://239.1.1.1:9001",  // UDP multicast endpoint - DISH bind için
+            "SOURCE_DATA"            // Group name
         );
 
         if (data_processor && subscriber && data_processor->isReadyToReceive()) {

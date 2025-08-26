@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/workspaces/hexagon_c/hexagon_c/hexagon_c/src -I/workspaces/hexagon_c/hexagon_c/hexagon_c/include -I/workspaces/hexagon_c/hexagon_c/hexagon_c/../include -I/usr/include/pgm-5.3 -I/usr/include/libxml2 -I/usr/include/mit-krb5
+CXX_INCLUDES = -I/workspaces/hexagon_c/hexagon_c/hexagon_c/../libzmq/include -I/workspaces/hexagon_c/hexagon_c/hexagon_c/../include
 
-CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17
+CXX_FLAGS = -O3 -march=native -mtune=native -flto -ffast-math -DNDEBUG -std=gnu++17 -DZMQ_BUILD_DRAFT_API=1 -pthread -O3 -march=native -mtune=native -flto -ffast-math -DNDEBUG
 

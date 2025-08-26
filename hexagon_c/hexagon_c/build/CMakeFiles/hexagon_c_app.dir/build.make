@@ -69,66 +69,10 @@ include CMakeFiles/hexagon_c_app.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/hexagon_c_app.dir/flags.make
 
-CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.o: CMakeFiles/hexagon_c_app.dir/flags.make
-CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.o: /workspaces/hexagon_c/hexagon_c/hexagon_c/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp
-CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.o: CMakeFiles/hexagon_c_app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.o -MF CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.o.d -o CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.o -c /workspaces/hexagon_c/hexagon_c/hexagon_c/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp
-
-CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/hexagon_c/hexagon_c/hexagon_c/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp > CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.i
-
-CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/hexagon_c/hexagon_c/hexagon_c/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp -o CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.s
-
-CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp.o: CMakeFiles/hexagon_c_app.dir/flags.make
-CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp.o: /workspaces/hexagon_c/hexagon_c/hexagon_c/src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp
-CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp.o: CMakeFiles/hexagon_c_app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp.o -MF CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp.o.d -o CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp.o -c /workspaces/hexagon_c/hexagon_c/hexagon_c/src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp
-
-CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/hexagon_c/hexagon_c/hexagon_c/src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp > CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp.i
-
-CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/hexagon_c/hexagon_c/hexagon_c/src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp -o CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp.s
-
-CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp.o: CMakeFiles/hexagon_c_app.dir/flags.make
-CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp.o: /workspaces/hexagon_c/hexagon_c/hexagon_c/src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp
-CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp.o: CMakeFiles/hexagon_c_app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp.o -MF CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp.o.d -o CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp.o -c /workspaces/hexagon_c/hexagon_c/hexagon_c/src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp
-
-CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/hexagon_c/hexagon_c/hexagon_c/src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp > CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp.i
-
-CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/hexagon_c/hexagon_c/hexagon_c/src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp -o CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp.s
-
-CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp.o: CMakeFiles/hexagon_c_app.dir/flags.make
-CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp.o: /workspaces/hexagon_c/hexagon_c/hexagon_c/src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp
-CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp.o: CMakeFiles/hexagon_c_app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp.o -MF CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp.o.d -o CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp.o -c /workspaces/hexagon_c/hexagon_c/hexagon_c/src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp
-
-CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/hexagon_c/hexagon_c/hexagon_c/src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp > CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp.i
-
-CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/hexagon_c/hexagon_c/hexagon_c/src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp -o CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp.s
-
 CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.o: CMakeFiles/hexagon_c_app.dir/flags.make
 CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.o: /workspaces/hexagon_c/hexagon_c/hexagon_c/src/application/main.cpp
 CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.o: CMakeFiles/hexagon_c_app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.o -MF CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.o.d -o CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.o -c /workspaces/hexagon_c/hexagon_c/hexagon_c/src/application/main.cpp
 
 CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.i: cmake_force
@@ -139,10 +83,24 @@ CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/hexagon_c/hexagon_c/hexagon_c/src/application/main.cpp -o CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.s
 
+CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.o: CMakeFiles/hexagon_c_app.dir/flags.make
+CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.o: /workspaces/hexagon_c/hexagon_c/hexagon_c/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp
+CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.o: CMakeFiles/hexagon_c_app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.o -MF CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.o.d -o CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.o -c /workspaces/hexagon_c/hexagon_c/hexagon_c/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp
+
+CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/hexagon_c/hexagon_c/hexagon_c/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp > CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.i
+
+CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/hexagon_c/hexagon_c/hexagon_c/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp -o CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.s
+
 CMakeFiles/hexagon_c_app.dir/src/domain/logic/TrackDataProcessor.cpp.o: CMakeFiles/hexagon_c_app.dir/flags.make
 CMakeFiles/hexagon_c_app.dir/src/domain/logic/TrackDataProcessor.cpp.o: /workspaces/hexagon_c/hexagon_c/hexagon_c/src/domain/logic/TrackDataProcessor.cpp
 CMakeFiles/hexagon_c_app.dir/src/domain/logic/TrackDataProcessor.cpp.o: CMakeFiles/hexagon_c_app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/hexagon_c_app.dir/src/domain/logic/TrackDataProcessor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/hexagon_c_app.dir/src/domain/logic/TrackDataProcessor.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hexagon_c_app.dir/src/domain/logic/TrackDataProcessor.cpp.o -MF CMakeFiles/hexagon_c_app.dir/src/domain/logic/TrackDataProcessor.cpp.o.d -o CMakeFiles/hexagon_c_app.dir/src/domain/logic/TrackDataProcessor.cpp.o -c /workspaces/hexagon_c/hexagon_c/hexagon_c/src/domain/logic/TrackDataProcessor.cpp
 
 CMakeFiles/hexagon_c_app.dir/src/domain/logic/TrackDataProcessor.cpp.i: cmake_force
@@ -156,7 +114,7 @@ CMakeFiles/hexagon_c_app.dir/src/domain/logic/TrackDataProcessor.cpp.s: cmake_fo
 CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.o: CMakeFiles/hexagon_c_app.dir/flags.make
 CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.o: /workspaces/hexagon_c/hexagon_c/hexagon_c/src/domain/model/DelayCalcTrackData.cpp
 CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.o: CMakeFiles/hexagon_c_app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.o -MF CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.o.d -o CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.o -c /workspaces/hexagon_c/hexagon_c/hexagon_c/src/domain/model/DelayCalcTrackData.cpp
 
 CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.i: cmake_force
@@ -170,7 +128,7 @@ CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.s: cmake_fo
 CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcDelayData.cpp.o: CMakeFiles/hexagon_c_app.dir/flags.make
 CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcDelayData.cpp.o: /workspaces/hexagon_c/hexagon_c/hexagon_c/src/domain/model/FinalCalcDelayData.cpp
 CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcDelayData.cpp.o: CMakeFiles/hexagon_c_app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcDelayData.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcDelayData.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcDelayData.cpp.o -MF CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcDelayData.cpp.o.d -o CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcDelayData.cpp.o -c /workspaces/hexagon_c/hexagon_c/hexagon_c/src/domain/model/FinalCalcDelayData.cpp
 
 CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcDelayData.cpp.i: cmake_force
@@ -183,11 +141,8 @@ CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcDelayData.cpp.s: cmake_fo
 
 # Object files for target hexagon_c_app
 hexagon_c_app_OBJECTS = \
-"CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.o" \
-"CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp.o" \
-"CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp.o" \
-"CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp.o" \
 "CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.o" \
+"CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.o" \
 "CMakeFiles/hexagon_c_app.dir/src/domain/logic/TrackDataProcessor.cpp.o" \
 "CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.o" \
 "CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcDelayData.cpp.o"
@@ -195,21 +150,19 @@ hexagon_c_app_OBJECTS = \
 # External object files for target hexagon_c_app
 hexagon_c_app_EXTERNAL_OBJECTS =
 
-hexagon_c_app: CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.o
-hexagon_c_app: CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp.o
-hexagon_c_app: CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp.o
-hexagon_c_app: CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp.o
-hexagon_c_app: CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.o
-hexagon_c_app: CMakeFiles/hexagon_c_app.dir/src/domain/logic/TrackDataProcessor.cpp.o
-hexagon_c_app: CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.o
-hexagon_c_app: CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcDelayData.cpp.o
-hexagon_c_app: CMakeFiles/hexagon_c_app.dir/build.make
-hexagon_c_app: CMakeFiles/hexagon_c_app.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable hexagon_c_app"
+/workspaces/hexagon_c/hexagon_c/hexagon_c/hexagon_c_app: CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.o
+/workspaces/hexagon_c/hexagon_c/hexagon_c/hexagon_c_app: CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.o
+/workspaces/hexagon_c/hexagon_c/hexagon_c/hexagon_c_app: CMakeFiles/hexagon_c_app.dir/src/domain/logic/TrackDataProcessor.cpp.o
+/workspaces/hexagon_c/hexagon_c/hexagon_c/hexagon_c_app: CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.o
+/workspaces/hexagon_c/hexagon_c/hexagon_c/hexagon_c_app: CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcDelayData.cpp.o
+/workspaces/hexagon_c/hexagon_c/hexagon_c/hexagon_c_app: CMakeFiles/hexagon_c_app.dir/build.make
+/workspaces/hexagon_c/hexagon_c/hexagon_c/hexagon_c_app: /workspaces/hexagon_c/hexagon_c/libzmq/build/lib/libzmq.a
+/workspaces/hexagon_c/hexagon_c/hexagon_c/hexagon_c_app: CMakeFiles/hexagon_c_app.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable /workspaces/hexagon_c/hexagon_c/hexagon_c/hexagon_c_app"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hexagon_c_app.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/hexagon_c_app.dir/build: hexagon_c_app
+CMakeFiles/hexagon_c_app.dir/build: /workspaces/hexagon_c/hexagon_c/hexagon_c/hexagon_c_app
 .PHONY : CMakeFiles/hexagon_c_app.dir/build
 
 CMakeFiles/hexagon_c_app.dir/clean:

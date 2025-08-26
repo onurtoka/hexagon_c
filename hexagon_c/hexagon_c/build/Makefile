@@ -113,7 +113,6 @@ preinstall/fast:
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -P /workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
@@ -153,78 +152,6 @@ src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.s: src/adapters/incom
 src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.s
 .PHONY : src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.s
-
-src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.o: src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp.o
-.PHONY : src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.o
-
-# target to build an object file
-src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp.o
-.PHONY : src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp.o
-
-src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.i: src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp.i
-.PHONY : src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.i
-
-# target to preprocess a source file
-src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp.i
-.PHONY : src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp.i
-
-src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.s: src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp.s
-.PHONY : src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.s
-
-# target to generate assembly for a file
-src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp.s
-.PHONY : src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp.s
-
-src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.o: src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp.o
-.PHONY : src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.o
-
-# target to build an object file
-src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp.o
-.PHONY : src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp.o
-
-src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.i: src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp.i
-.PHONY : src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.i
-
-# target to preprocess a source file
-src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp.i
-.PHONY : src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp.i
-
-src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.s: src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp.s
-.PHONY : src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.s
-
-# target to generate assembly for a file
-src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp.s
-.PHONY : src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp.s
-
-src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.o: src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp.o
-.PHONY : src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.o
-
-# target to build an object file
-src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp.o
-.PHONY : src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp.o
-
-src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.i: src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp.i
-.PHONY : src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.i
-
-# target to preprocess a source file
-src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp.i
-.PHONY : src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp.i
-
-src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.s: src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp.s
-.PHONY : src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.s
-
-# target to generate assembly for a file
-src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp.s
-.PHONY : src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp.s
 
 src/application/main.o: src/application/main.cpp.o
 .PHONY : src/application/main.o
@@ -334,15 +261,6 @@ help:
 	@echo "... src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.o"
 	@echo "... src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.i"
 	@echo "... src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.s"
-	@echo "... src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.o"
-	@echo "... src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.i"
-	@echo "... src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.s"
-	@echo "... src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.o"
-	@echo "... src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.i"
-	@echo "... src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.s"
-	@echo "... src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.o"
-	@echo "... src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.i"
-	@echo "... src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.s"
 	@echo "... src/application/main.o"
 	@echo "... src/application/main.i"
 	@echo "... src/application/main.s"
@@ -366,7 +284,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -P /workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

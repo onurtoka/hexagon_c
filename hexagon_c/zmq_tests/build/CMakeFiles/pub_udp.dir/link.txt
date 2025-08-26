@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/pub_udp.dir/pub_udp.cpp.o -o pub_udp  -lzmq 

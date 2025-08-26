@@ -3,17 +3,9 @@
 
 #include "ZeroMQDishTrackDataSubscriber.hpp"
 #include <iostream>
-#include <cassert>
+#include <zmq.hpp> // C++ wrapper için
 
 namespace hat::adapters::incoming::zeromq {
-
-// Hata kontrolü yardımcı fonksiyonu (app2_processor.cpp'den uyarlandı)
-void ZeroMQDishTrackDataSubscriber::check_rc(int rc, const std::string& context_msg) {
-    if (rc != 0) {
-        std::cerr << context_msg << " - ZMQ Error #" << zmq_errno() << ": " << zmq_strerror(zmq_errno()) << std::endl;
-        throw std::runtime_error("ZMQ Error: " + context_msg);
-    }
-}
 
 ZeroMQDishTrackDataSubscriber::ZeroMQDishTrackDataSubscriber(
     std::shared_ptr<domain::ports::incoming::TrackDataSubmission> track_data_submission,
@@ -23,7 +15,7 @@ ZeroMQDishTrackDataSubscriber::ZeroMQDishTrackDataSubscriber(
     , running_(false)
     , multicast_endpoint_(multicast_endpoint)
     , group_name_(group_name)
-    , zmq_context_(nullptr)
+    , zmq_context_(1)  // 1 I/O thread
     , dish_socket_(nullptr) {
     
     initializeDishSocket();
@@ -31,37 +23,29 @@ ZeroMQDishTrackDataSubscriber::ZeroMQDishTrackDataSubscriber(
 
 ZeroMQDishTrackDataSubscriber::~ZeroMQDishTrackDataSubscriber() {
     stop();
-    
-    // Socket'leri temizle
-    if (dish_socket_) {
-        zmq_close(dish_socket_);
-    }
-    if (zmq_context_) {
-        zmq_ctx_term(zmq_context_);
-    }
+    // C++ wrapper RAII ile otomatik cleanup yapar
 }
 
 void ZeroMQDishTrackDataSubscriber::initializeDishSocket() {
     try {
-        // ZeroMQ context oluştur
-        zmq_context_ = zmq_ctx_new();
-        assert(zmq_context_);
+        // DISH socket oluştur (C++ wrapper ile) - Draft API gerekli
+        dish_socket_ = std::make_unique<zmq::socket_t>(zmq_context_, zmq::socket_type::dish);
 
-        // DISH socket oluştur (app2_processor.cpp pattern'i)
-    dish_socket_ = zmq_socket(zmq_context_, ZMQ_SUB);
-        assert(dish_socket_);
-
-        std::cout << "[DishSubscriber] Dish socket oluşturuldu." << std::endl;
-        std::cout << "[DishSubscriber] Multicast endpoint: " << multicast_endpoint_ << std::endl;
-        std::cout << "[DishSubscriber] Grup adı: " << group_name_ << std::endl;
-
-    // Endpoint'e connect (SUB için)
-    check_rc(zmq_connect(dish_socket_, multicast_endpoint_.c_str()), "SUB zmq_connect");
-    // Topic filtre olarak grup adını subscribe et
-    check_rc(zmq_setsockopt(dish_socket_, ZMQ_SUBSCRIBE, group_name_.c_str(), group_name_.size()), "SUB zmq_setsockopt subscribe");
+        // Performance optimizations
+        dish_socket_->set(zmq::sockopt::rcvhwm, 0);       // Unlimited receive buffer
+        dish_socket_->set(zmq::sockopt::rcvtimeo, 100);   // 100ms timeout for graceful shutdown
+        dish_socket_->set(zmq::sockopt::linger, 0);       // No linger on close
+        dish_socket_->set(zmq::sockopt::immediate, 1);    // Process messages immediately
         
-    std::cout << "[DishSubscriber] SUB socket başarıyla bağlandı ve abone olundu." << std::endl;
+        // UDP multicast için DISH socket bind yapar
+        dish_socket_->bind(multicast_endpoint_);
+        
+        // Gruba join ol (DISH için)
+        dish_socket_->join(group_name_.c_str());
 
+    } catch (const zmq::error_t& e) {
+        std::cerr << "[DishSubscriber] ZMQ Initialize hatası: " << e.what() << std::endl;
+        throw;
     } catch (const std::exception& e) {
         std::cerr << "[DishSubscriber] Initialize hatası: " << e.what() << std::endl;
         throw;
@@ -77,10 +61,22 @@ bool ZeroMQDishTrackDataSubscriber::start() {
 
     // Subscriber worker thread'ini başlat
     subscriber_thread_ = std::thread([this]() {
+        // Real-time thread priority ayarla
+        #ifdef __linux__
+        struct sched_param param;
+        param.sched_priority = 95; // Max priority
+        pthread_setschedparam(pthread_self(), SCHED_FIFO, &param);
+        
+        // CPU affinity - dedicated core
+        cpu_set_t cpuset;
+        CPU_ZERO(&cpuset);
+        CPU_SET(1, &cpuset); // Core 1'e bind et
+        pthread_setaffinity_np(pthread_self(), sizeof(cpu_set_t), &cpuset);
+        #endif
+        
         subscriberWorker();
     });
 
-    std::cout << "[DishSubscriber] Subscriber başlatıldı." << std::endl;
     return true;
 }
 
@@ -90,8 +86,6 @@ void ZeroMQDishTrackDataSubscriber::stop() {
     if (subscriber_thread_.joinable()) {
         subscriber_thread_.join();
     }
-
-    std::cout << "[DishSubscriber] Subscriber durduruldu." << std::endl;
 }
 
 bool ZeroMQDishTrackDataSubscriber::isRunning() const {
@@ -99,38 +93,20 @@ bool ZeroMQDishTrackDataSubscriber::isRunning() const {
 }
 
 void ZeroMQDishTrackDataSubscriber::subscriberWorker() {
-    std::cout << "[DishSubscriber] Worker thread başlatıldı." << std::endl;
-    std::cout << "[DishSubscriber] Mesajlar bekleniyor..." << std::endl;
-
     while (running_.load()) {
         try {
-            // app2_processor.cpp pattern'ini takip et - mesaj alma
-            zmq_msg_t received_msg;
-            zmq_msg_init(&received_msg);
+            // C++ wrapper ile mesaj alma
+            zmq::message_t received_msg;
             
-            // Non-blocking receive (timeout ile)
-            int bytes = zmq_msg_recv(&received_msg, dish_socket_, ZMQ_DONTWAIT);
+            // Blocking receive with timeout (daha verimli)
+            auto result = dish_socket_->recv(received_msg, zmq::recv_flags::none);
             
-            if (bytes == -1) {
-                int error = zmq_errno();
-                if (error == EAGAIN) {
-                    // Mesaj yok, kısa bekle
-                    std::this_thread::sleep_for(std::chrono::milliseconds(10));
-                    zmq_msg_close(&received_msg);
-                    continue;
-                } else {
-                    std::cerr << "[DishSubscriber] Receive hatası: " << zmq_strerror(error) << std::endl;
-                    zmq_msg_close(&received_msg);
-                    continue;
-                }
+            if (!result) {
+                continue;
             }
 
-            // Mesajı string'e çevir
-            std::string received_payload(
-                static_cast<char*>(zmq_msg_data(&received_msg)), 
-                zmq_msg_size(&received_msg)
-            );
-            zmq_msg_close(&received_msg);
+            // Mesajı string'e çevir (C++ wrapper)
+            std::string received_payload = received_msg.to_string();
 
             // app2_processor.cpp pattern'i - gecikme hesaplama
             auto latency_info = processReceivedMessage(received_payload);
@@ -142,18 +118,21 @@ void ZeroMQDishTrackDataSubscriber::subscriberWorker() {
                 // Domain katmanına gönder
                 track_data_submission_->submitDelayCalcTrackData(track_data.value());
                 
-                std::cout << "[DishSubscriber] Veri domain katmanına gönderildi - Track ID: " 
-                          << track_data->getTrackId() << ", Gecikme: " 
-                          << latency_info.latency_ns / 1000.0 << " mikrosaniye" << std::endl;
+                std::cout << "📡 Track " << track_data->getTrackId() 
+                          << " alındı - Gecikme: " << latency_info.latency_ns / 1000.0 << " μs" << std::endl;
             }
 
+        } catch (const zmq::error_t& e) {
+            if (e.num() != EAGAIN) {  // EAGAIN = mesaj yok, normal durum
+                std::cerr << "[DishSubscriber] ZMQ Worker thread hatası: " << e.what() << std::endl;
+            }
+            // Hata durumunda çok kısa bekle
+            std::this_thread::sleep_for(std::chrono::microseconds(100));
         } catch (const std::exception& e) {
             std::cerr << "[DishSubscriber] Worker thread hatası: " << e.what() << std::endl;
-            std::this_thread::sleep_for(std::chrono::milliseconds(100));
+            std::this_thread::sleep_for(std::chrono::microseconds(100));
         }
     }
-
-    std::cout << "[DishSubscriber] Worker thread sonlandırıldı." << std::endl;
 }
 
 ZeroMQDishTrackDataSubscriber::LatencyMeasurement 
@@ -162,8 +141,8 @@ ZeroMQDishTrackDataSubscriber::processReceivedMessage(const std::string& receive
     LatencyMeasurement result;
     
     // app2_processor.cpp pattern'ini takip et
-    // 1. Mesajı alır almaz mevcut zamanı kaydet
-    result.receive_time = std::chrono::high_resolution_clock::now();
+    // 1. Mesajı alır almaz mevcut zamanı kaydet (steady_clock daha kararlı)
+    result.receive_time = std::chrono::steady_clock::now();
 
     // 2. Mesajı '|' karakterinden ayırarak orijinal metni ve gönderim zamanını bul
     size_t separator_pos = received_payload.find_last_of('|');
@@ -189,9 +168,6 @@ ZeroMQDishTrackDataSubscriber::processReceivedMessage(const std::string& receive
     auto receive_time_ns = std::chrono::duration_cast<std::chrono::nanoseconds>(
         result.receive_time.time_since_epoch()).count();
     result.latency_ns = receive_time_ns - result.send_timestamp_ns;
-
-    std::cout << "[DishSubscriber] -> Mesaj alındı: \"" << result.original_data << "\"" << std::endl;
-    std::cout << "[DishSubscriber]    Gecikme: " << result.latency_ns / 1000.0 << " mikrosaniye" << std::endl;
 
     return result;
 }
