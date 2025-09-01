@@ -17,14 +17,14 @@ bool TrackDataProcessor::submitDelayCalcTrackData(const model::DelayCalcTrackDat
         model::FinalCalcDelayData final_data = createFinalCalcDelayData(data);
         auto metrics = final_data.calculatePerformanceMetrics();
 
-        auto now = std::chrono::duration_cast<std::chrono::milliseconds>(
+        auto now = std::chrono::duration_cast<std::chrono::microseconds>(
             std::chrono::system_clock::now().time_since_epoch()
         ).count();
         long long total_delay = now - data.getFirstHopSentTime();
         long long b_to_c_delay = now - data.getSecondHopSentTime();
         
         std::cout << "Track[" << data.getTrackId() << "] FirstSent:" << data.getFirstHopSentTime()
-                  << " TotalDelay:" << total_delay << "ms B->C:" << b_to_c_delay << "ms"
+                  << " TotalDelay:" << total_delay << "μs B->C:" << b_to_c_delay << "μs"
                   << " LatencyScore:" << metrics.latency_score << std::endl;
 
         return true;
@@ -47,13 +47,13 @@ model::FinalCalcDelayData TrackDataProcessor::createFinalCalcDelayData(
 
     auto current_time = std::chrono::system_clock::now();
     auto epoch_time = current_time.time_since_epoch();
-    int64_t current_time_ns = std::chrono::duration_cast<std::chrono::nanoseconds>(epoch_time).count();
+    int64_t current_time_us = std::chrono::duration_cast<std::chrono::microseconds>(epoch_time).count();
 
-    int64_t processing_delay = current_time_ns - input_data.getOriginalUpdateTime();
+    int64_t processing_delay = current_time_us - input_data.getOriginalUpdateTime();
     
     final_data.setTotalDelayTime(processing_delay);
     final_data.setFirstHopSentTime(input_data.getOriginalUpdateTime());
-    final_data.setThirdHopSentTime(current_time_ns);
+    final_data.setThirdHopSentTime(current_time_us);
 
     return final_data;
 }

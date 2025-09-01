@@ -24,7 +24,7 @@ private:
     double y_position_ecef_;          // YPositionECEF
     double z_position_ecef_;          // ZPositionECEF
     
-    // Zaman alanları (long - milliseconds since epoch)
+    // Zaman alanları (int64_t - microseconds since epoch)
     int64_t update_time_;             // Update Time
     int64_t original_update_time_;    // OriginalUpdate Time
     int64_t first_hop_sent_time_;     // FirstHopSent Time

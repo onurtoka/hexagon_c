@@ -1,0 +1,117 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TrackStatics",
+  "description": "Bir izin çok adımlı (multi-hop) gecikme verilerinin istatistiksel analizini (ortalama, standart sapma, min/max) içerir.",
+  "type": "object",
+
+  "x-service-metadata": {
+    "description": "UDP RADIO/DISH yayınının bağlantı bilgileri.",
+    "protocol": "udp",
+    "multicast_address": "239.1.1.5",
+    "port": 9599
+  },
+
+  "properties": {
+    "trackId": {
+      "description": "İz için benzersiz tam sayı kimliği",
+      "type": "integer",
+      "minimum": -9223372036854775808,
+      "maximum": 9223372036854775807
+    },
+    "firstHopDelayDataMean": {
+      "description": "İlk atlama gecikme verisinin ortalaması.",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1.0e+6
+    },
+    "firstHopDelayDataStd": {
+      "description": "İlk atlama gecikme verisinin standart sapması.",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1.0e+6
+    },
+    "firstHopDelayDataMin": {
+      "description": "İlk atlama gecikme verisinin minimum değeri.",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1.0e+6
+    },
+    "firstHopDelayDataMax": {
+      "description": "İlk atlama gecikme verisinin maksimum değeri.",
+      "type": "number",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1.0e+6
+    },
+    "secondHopDelayDataMean": {
+      "description": "İkinci atlama gecikme verisinin ortalaması.",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1.0e+6
+    },
+    "secondHopDelayDataStd": {
+      "description": "İkinci atlama gecikme verisinin standart sapması.",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1.0e+6
+    },
+    "secondHopDelayDataMin": {
+      "description": "İkinci atlama gecikme verisinin minimum değeri.",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1.0e+6
+    },
+    "secondHopDelayDataMax": {
+      "description": "İkinci atlama gecikme verisinin maksimum değeri.",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1.0e+6
+    },
+    "totalHopDelayDataMean": {
+      "description": "Toplam gecikme verisinin ortalaması.",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1.0e+6
+    },
+    "totalHopDelayDataStd": {
+      "description": "Toplam gecikme verisinin standart sapması.",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1.0e+6
+    },
+    "totalHopDelayDataMin": {
+      "description": "Toplam gecikme verisinin minimum değeri.",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1.0e+6
+    },
+    "totalHopDelayDataMax": {
+      "description": "Toplam gecikme verisinin maksimum değeri.",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1.0e+6
+    },
+    "updateTime": {
+      "description": "Son güncelleme zamanı (nanosaniye)",
+      "type": "integer",
+      "minimum": -9223372036854775808,
+      "maximum": 9223372036854775807
+    }
+  },
+  "required": [
+    "trackId",
+    "firstHopDelayDataMean",
+    "firstHopDelayDataStd",
+    "firstHopDelayDataMin",
+    "firstHopDelayDataMax",
+    "secondHopDelayDataMean",
+    "secondHopDelayDataStd",
+    "secondHopDelayDataMin",
+    "secondHopDelayDataMax",
+    "totalHopDelayDataMean",
+    "totalHopDelayDataStd",
+    "totalHopDelayDataMin",
+    "totalHopDelayDataMax",
+    "updateTime"
+  ]
+}

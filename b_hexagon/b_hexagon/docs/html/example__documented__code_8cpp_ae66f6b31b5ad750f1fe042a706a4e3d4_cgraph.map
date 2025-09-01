@@ -1,0 +1,21 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title="Main function demonstrating the shape system." alt="" coords="5,196,60,221"/>
+<area shape="rect" id="Node000002" href="$class_shape_container.html#a524e0dc705ff087752389c724e1ba61f" title="Add a shape to the container." alt="" coords="115,5,312,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="34,195,41,165,55,126,76,84,106,48,128,34,131,38,110,52,80,87,60,128,46,167,39,196"/>
+<area shape="rect" id="Node000003" href="$class_shape_factory.html#a3bea74bc905be9e8be1ca0836bb4baf3" title="Create a circle with specified radius." alt="" coords="381,87,575,112"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="35,195,59,142,79,114,107,92,146,75,188,64,231,59,275,58,356,66,423,80,422,86,355,71,274,63,232,64,189,69,148,80,109,96,83,117,63,145,40,197"/>
+<area shape="rect" id="Node000004" href="$class_shape_factory.html#a301f0b3cede6fcc3573d82ccba3364ac" title="Create a random shape for testing purposes." alt="" coords="108,106,319,146"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="52,193,107,162,139,148,141,153,109,167,55,198"/>
+<area shape="rect" id="Node000005" href="$class_shape_factory.html#a1e70ea3e43d77528aba913db69cf2350" title="Create a rectangle with specified dimensions." alt="" coords="367,140,589,165"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="60,203,362,164,363,170,61,208"/>
+<area shape="rect" id="Node000006" href="$namespace_geometry_utils.html#a68963f87e1022edf69843d2ddcadb77c" title="Calculate the distance between two points." alt="" coords="123,221,303,247"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="61,210,110,217,109,222,60,215"/>
+<area shape="rect" id="Node000007" href="$class_shape_container.html#a1e7faf9caad930f2f143bde446cd7d9d" title="Draw all shapes in the container." alt="" coords="122,271,305,296"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="50,219,77,239,109,257,128,264,126,269,107,262,74,243,47,223"/>
+<area shape="rect" id="Node000008" href="$class_shape_container.html#a1c08cc33c007bf342ea3fbf61b62132c" title="Get the number of shapes in the container." alt="" coords="116,321,311,361"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="42,220,68,263,87,286,110,307,118,312,115,317,106,311,83,290,63,266,38,223"/>
+<area shape="rect" id="Node000009" href="$class_shape_container.html#a49820093c4efa84f1e18048104d9e0da" title="Calculate total area of all shapes." alt="" coords="117,385,310,411"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="39,221,45,252,58,293,79,335,93,354,110,371,118,377,115,381,106,375,89,358,75,338,53,295,40,253,33,222"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="319,113,366,108,367,113,319,118"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="319,134,353,137,353,143,319,139"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="IDataSender::send" name="IDataSender::send">
+<area shape="rect" id="Node000001" title="Send one enriched DelayCalculatedTrackData instance to the external world." alt="" coords="300,13,441,38"/>
+<area shape="rect" id="Node000002" href="$class_calculator_service.html#a769ea16b132231936fb0241586dd29e7" title="Begin the processing loop (blocking call)." alt="" coords="108,5,252,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="286,28,252,28,252,23,286,23"/>
+<area shape="rect" id="Node000003" href="$application_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,60,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="94,28,60,28,60,23,94,23"/>
+</map>

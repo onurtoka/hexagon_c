@@ -27,10 +27,9 @@ int main(int argc, char* argv[]) {
 
         auto data_processor = std::make_shared<domain::logic::TrackDataProcessor>();
 
+        // Default UDP multicast configuration (udp://239.1.1.1:9001, SOURCE_DATA)
         auto subscriber = std::make_shared<adapters::incoming::zeromq::ZeroMQDishTrackDataSubscriber>(
-            data_processor,
-            "udp://239.1.1.1:9001",  // UDP multicast endpoint - DISH bind için
-            "SOURCE_DATA"            // Group name
+            data_processor
         );
 
         if (data_processor && subscriber && data_processor->isReadyToReceive()) {

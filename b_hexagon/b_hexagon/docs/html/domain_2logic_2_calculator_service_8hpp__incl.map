@@ -1,0 +1,11 @@
+<map id="src/domain/logic/CalculatorService.hpp" name="src/domain/logic/CalculatorService.hpp">
+<area shape="rect" id="Node000001" title="Declares the application service coordinating domain calculations and I/O." alt="" coords="134,5,333,45"/>
+<area shape="rect" id="Node000002" href="$_i_data_receiver_8hpp.html" title="Declares the incoming port abstraction for acquiring raw domain input (TrackData)." alt="" coords="38,93,210,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,48,161,87,157,83,207,44"/>
+<area shape="rect" id="Node000004" href="$_i_data_sender_8hpp.html" title="Declares the outgoing port abstraction for emitting processed DelayCalculatedTrackData." alt="" coords="258,93,427,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="259,44,309,83,306,87,256,48"/>
+<area shape="rect" id="Node000003" href="$_track_data_8hpp.html" title=" " alt="" coords="5,189,219,214"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="124,134,118,175,113,174,119,133"/>
+<area shape="rect" id="Node000005" href="$_delay_calculated_track_data_8hpp.html" title=" " alt="" coords="243,181,469,221"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="348,133,354,167,348,168,343,134"/>
+</map>

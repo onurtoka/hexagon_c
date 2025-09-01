@@ -1,0 +1,39 @@
+cmake_minimum_required(VERSION 3.16)
+project(zeromq_messaging_system CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Sistemdeki ZeroMQ kütüphanesini bul
+find_package(ZeroMQ REQUIRED)
+
+# Submodule olarak eklediğimiz kütüphaneleri CMake'e tanıtıyoruz
+add_subdirectory(third_party/cppzmq)
+add_subdirectory(third_party/msgpack-c)
+add_subdirectory(third_party/json)
+add_subdirectory(third_party/json-schema-validator)
+
+
+# Mesajlaşma kütüphanemizi oluşturuyoruz
+add_library(messaging STATIC
+    messaging/src/messaging.cpp
+)
+target_include_directories(messaging PUBLIC
+    messaging/include
+    # cppzmq header'larını dahil et
+    ${CMAKE_CURRENT_SOURCE_DIR}/third_party/cppzmq/include
+)
+target_link_libraries(messaging PRIVATE 
+    ZMQ::libzmq 
+    msgpackc-c-static # msgpack-c'den gelen target
+    nlohmann_json::nlohmann_json # nlohmann/json'dan gelen target
+    nlohmann_json_schema_validator::nlohmann_json_schema_validator # validatorden gelen target
+)
+
+# Örnek Publisher uygulamasını oluşturuyoruz
+add_executable(publisher_app applications/publisher_app.cpp)
+target_link_libraries(publisher_app PRIVATE messaging)
+
+# Örnek Subscriber uygulamasını oluşturuyoruz
+add_executable(subscriber_app applications/subscriber_app.cpp)
+target_link_libraries(subscriber_app PRIVATE messaging)

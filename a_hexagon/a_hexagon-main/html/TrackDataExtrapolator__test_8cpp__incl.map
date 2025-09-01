@@ -1,0 +1,27 @@
+<map id="test/domain/logic/TrackDataExtrapolator_test.cpp" name="test/domain/logic/TrackDataExtrapolator_test.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="273,5,477,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,101,85,126"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="287,48,195,70,98,96,89,99,87,94,97,91,194,64,285,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="110,101,173,126"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="319,48,186,96,181,98,179,93,184,91,318,43"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="197,101,275,126"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="346,48,268,96,265,91,343,43"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="299,101,363,126"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="367,47,345,89,341,87,363,44"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="387,101,453,126"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="387,44,410,87,405,89,382,47"/>
+<area shape="rect" id="Node000007" href="$TrackData_8h.html" title="Header file for TrackData model class." alt="" coords="529,181,677,221"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="425,43,468,64,511,91,551,129,583,168,579,171,548,133,508,95,466,69,423,48"/>
+<area shape="rect" id="Node000008" href="$ExtrapTrackData_8h.html" title=" " alt="" coords="619,269,810,309"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="411,43,440,64,467,92,479,110,485,127,491,159,497,189,505,204,518,219,560,248,607,267,605,272,557,253,514,223,500,207,492,191,485,160,480,129,474,112,463,95,437,68,407,48"/>
+<area shape="rect" id="Node000009" href="$TrackDataExtrapolator_8h.html" title="Header file for TrackDataExtrapolator class." alt="" coords="606,93,823,133"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="450,43,628,87,627,93,449,48"/>
+<area shape="poly" id="edge10_Node000009_Node000007" title=" " alt="" coords="691,136,640,175,637,171,688,131"/>
+<area shape="poly" id="edge11_Node000009_Node000008" title=" " alt="" coords="717,134,717,256,712,256,712,134"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="894,277,957,302"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="824,128,908,149,942,163,963,180,972,202,969,225,959,248,946,267,942,264,954,245,964,224,967,202,959,183,939,168,907,154,823,133"/>
+<area shape="rect" id="Node000011" href="$TrackDataOutgoingPort_8h.html" title=" " alt="" coords="752,181,949,221"/>
+<area shape="poly" id="edge12_Node000009_Node000011" title=" " alt="" coords="746,131,811,172,808,176,743,136"/>
+<area shape="poly" id="edge13_Node000011_Node000008" title=" " alt="" coords="822,224,758,264,755,260,819,219"/>
+<area shape="poly" id="edge14_Node000011_Node000010" title=" " alt="" coords="869,220,908,264,904,268,865,223"/>
+</map>

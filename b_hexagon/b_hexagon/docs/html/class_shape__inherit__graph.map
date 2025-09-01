@@ -1,0 +1,7 @@
+<map id="Shape" name="Shape">
+<area shape="rect" id="Node000001" title="Abstract base class representing a drawable shape." alt="" coords="70,5,173,151"/>
+<area shape="rect" id="Node000002" href="$class_circle.html" title="Concrete implementation of a circle shape." alt="" coords="5,199,109,344"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,165,84,199,79,197,90,163"/>
+<area shape="rect" id="Node000003" href="$class_rectangle.html" title="Concrete implementation of a rectangle shape." alt="" coords="133,209,237,334"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="152,163,167,207,162,209,147,165"/>
+</map>

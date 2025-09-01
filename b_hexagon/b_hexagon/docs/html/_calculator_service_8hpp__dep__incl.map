@@ -1,0 +1,11 @@
+<map id="src/domain/logic/CalculatorService.hpp" name="src/domain/logic/CalculatorService.hpp">
+<area shape="rect" id="Node000001" title="Declares the application service coordinating domain calculations and I/O." alt="" coords="211,5,410,45"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html" title="Application entry point demonstrating Hexagonal Architecture assembly." alt="" coords="5,101,187,126"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="252,53,126,103,124,98,250,48"/>
+<area shape="rect" id="Node000003" href="$_calculator_service_8cpp.html" title=" " alt="" coords="211,93,410,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="313,59,313,93,308,93,308,59"/>
+<area shape="rect" id="Node000004" href="$_process_track_use_case_8hpp.html" title="Process Track Use Case &#45; Core business workflow orchestration." alt="" coords="435,93,629,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="373,48,485,91,483,96,371,53"/>
+<area shape="rect" id="Node000005" href="$_process_track_use_case_8cpp.html" title="Implementation of ProcessTrackUseCase &#45; Core business workflow orchestration." alt="" coords="435,181,629,221"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="535,147,535,181,529,181,529,147"/>
+</map>

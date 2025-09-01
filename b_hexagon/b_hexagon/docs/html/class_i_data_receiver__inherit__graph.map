@@ -1,0 +1,5 @@
+<map id="IDataReceiver" name="IDataReceiver">
+<area shape="rect" id="Node000001" title="Abstraction for receiving a single TrackData instance from an external source." alt="" coords="29,5,171,151"/>
+<area shape="rect" id="Node000002" href="$class_zero_m_q_data_receiver.html" title="ZeroMQ SUB adapter for receiving TrackData published by a PUB socket (JSON format)." alt="" coords="5,199,195,304"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,164,103,199,97,199,97,164"/>
+</map>

@@ -1,0 +1,49 @@
+\doxysection{Extrap\+Track\+Data.\+h}
+\hypertarget{ExtrapTrackData_8h_source}{}\label{ExtrapTrackData_8h_source}\index{src/domain/model/ExtrapTrackData.h@{src/domain/model/ExtrapTrackData.h}}
+\mbox{\hyperlink{ExtrapTrackData_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ EXTRAP\_TRACK\_DATA\_H\ }}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ EXTRAP\_TRACK\_DATA\_H\ }}
+\DoxyCodeLine{00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacedomain}{domain}}\ \{}
+\DoxyCodeLine{00004\ \textcolor{keyword}{namespace\ }model\ \{}
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdomain_1_1model_1_1ExtrapTrackData}{ExtrapTrackData}}\ \{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{public}:\ }
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{classdomain_1_1model_1_1ExtrapTrackData_abc9769f89553b11867736489d82df487}{ExtrapTrackData}}();}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classdomain_1_1model_1_1ExtrapTrackData_a35d375fba1187b263192a1ba32b196df}{\string~ExtrapTrackData}}();}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classdomain_1_1model_1_1ExtrapTrackData_a24282fc68a6c1987931e6f3b23ca6d03}{getTrackId}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ TrackId;\ \}}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdomain_1_1model_1_1ExtrapTrackData_a271fc67a01c7e03e60b61a7f7d7f1102}{setTrackId}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id})\ \{\ TrackId\ =\ id;\ \}}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classdomain_1_1model_1_1ExtrapTrackData_af04eaf74e09761db38eb31b97698b186}{getXVelocityECEF}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ XVelocityECEF;\ \}}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdomain_1_1model_1_1ExtrapTrackData_a7bdec985615af3f69877e382b2b747f4}{setXVelocityECEF}}(\textcolor{keywordtype}{double}\ v)\ \{\ XVelocityECEF\ =\ v;\ \}}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classdomain_1_1model_1_1ExtrapTrackData_a52c51443bc923f62cc2e89ee3eef12e9}{getYVelocityECEF}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ YVelocityECEF;\ \}}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdomain_1_1model_1_1ExtrapTrackData_a3c76733c87e357fa1e45cc6e622fae74}{setYVelocityECEF}}(\textcolor{keywordtype}{double}\ v)\ \{\ YVelocityECEF\ =\ v;\ \}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classdomain_1_1model_1_1ExtrapTrackData_ae5b66a4e3d3707aa6435c0a1d6870b06}{getZVelocityECEF}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ ZVelocityECEF;\ \}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdomain_1_1model_1_1ExtrapTrackData_a6824a00b9c60c6f1b80181cf053d4b32}{setZVelocityECEF}}(\textcolor{keywordtype}{double}\ v)\ \{\ ZVelocityECEF\ =\ v;\ \}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classdomain_1_1model_1_1ExtrapTrackData_a5e1e2788a6961357bab038eb8dc68f4f}{getXPositionECEF}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ XPositionECEF;\ \}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdomain_1_1model_1_1ExtrapTrackData_a0159489725b8002868b6ea22337cea7f}{setXPositionECEF}}(\textcolor{keywordtype}{double}\ p)\ \{\ XPositionECEF\ =\ p;\ \}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classdomain_1_1model_1_1ExtrapTrackData_aa3e30e09892ffc3ccc7fa85d8e1ddcf6}{getYPositionECEF}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ YPositionECEF;\ \}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdomain_1_1model_1_1ExtrapTrackData_a58b890f8c45ab3d6b39659745879d515}{setYPositionECEF}}(\textcolor{keywordtype}{double}\ p)\ \{\ YPositionECEF\ =\ p;\ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classdomain_1_1model_1_1ExtrapTrackData_a580ddf41a9af0ee84c2b694ae97fe747}{getZPositionECEF}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ ZPositionECEF;\ \}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdomain_1_1model_1_1ExtrapTrackData_a328a3b0dd028de53e9bffcf173ffdde1}{setZPositionECEF}}(\textcolor{keywordtype}{double}\ p)\ \{\ ZPositionECEF\ =\ p;\ \}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classdomain_1_1model_1_1ExtrapTrackData_aec0f3d99be5bbfc20a77fd408488dabe}{getUpdateTime}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ updateTime;\ \}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdomain_1_1model_1_1ExtrapTrackData_ab0622de214a4c01197bc3960c9d273b4}{setUpdateTime}}(\textcolor{keywordtype}{long}\ t)\ \{\ updateTime\ =\ t;\ \}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classdomain_1_1model_1_1ExtrapTrackData_ad60cc925196086383d9e8986c0f4bb4a}{getOriginalUpdateTime}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ originalUpdateTime;\ \}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdomain_1_1model_1_1ExtrapTrackData_abbb5aaa7bf73d910b0d80e771e0eb555}{setOriginalUpdateTime}}(\textcolor{keywordtype}{long}\ t)\ \{\ originalUpdateTime\ =\ t;\ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classdomain_1_1model_1_1ExtrapTrackData_a3f7ffcfe609b037a592eda9918e97d6c}{getFirstHopSentTime}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ firstHopSentTime;\ \}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdomain_1_1model_1_1ExtrapTrackData_a18da1f547d3d94ead84b570442067b0a}{setFirstHopSentTime}}(\textcolor{keywordtype}{long}\ t)\ \{\ firstHopSentTime\ =\ t;\ \}}
+\DoxyCodeLine{00029\ \textcolor{keyword}{private}:\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ TrackId;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{double}\ XVelocityECEF;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{double}\ YVelocityECEF;}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{double}\ ZVelocityECEF;}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{double}\ XPositionECEF;}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{double}\ YPositionECEF;}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{double}\ ZPositionECEF;}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{long}\ originalUpdateTime;}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{long}\ updateTime;}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{long}\ firstHopSentTime;}
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ \}}
+\DoxyCodeLine{00042\ \}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ProcessedTrackData",
+  "description": "İşlenmiş bir izin ECEF koordinat sistemindeki kinematik durumunu ve güncelleme zamanını içerir.",
+  "type": "object",
+
+  "x-service-metadata": {
+    "description": "UDP RADIO/DISH yayınının bağlantı bilgileri.",
+    "protocol": "udp",
+    "multicast_address": "239.1.1.5",
+    "port": 9598
+  },
+
+  "properties": {
+    "trackId": {
+      "description": "İz için benzersiz tam sayı kimliği",
+      "type": "integer",
+      "minimum": -9223372036854775808,
+      "maximum": 9223372036854775807
+    },
+    "xVelocityECEF": {
+      "description": "ECEF koordinatlarındaki X ekseni hızı (m/s)",
+      "type": "number",
+      "minimum": -1.0e+6,
+      "maximum": 1.0e+6
+    },
+    "yVelocityECEF": {
+      "description": "ECEF koordinatlarındaki Y ekseni hızı (m/s)",
+      "type": "number",
+      "minimum": -1.0e+6,
+      "maximum": 1.0e+6
+    },
+    "zVelocityECEF": {
+      "description": "ECEF koordinatlarındaki Z ekseni hızı (m/s)",
+      "type": "number",
+      "minimum": -1.0e+6,
+      "maximum": 1.0e+6
+    },
+    "xPositionECEF": {
+      "description": "ECEF koordinatlarındaki X ekseni konumu (metre)",
+      "type": "number",
+      "minimum": -9.9e+10,
+      "maximum": 9.9e+10
+    },
+    "yPositionECEF": {
+      "description": "ECEF koordinatlarındaki Y ekseni konumu (metre)",
+      "type": "number",
+      "minimum": -9.9e+10,
+      "maximum": 9.9e+10
+    },
+    "zPositionECEF": {
+      "description": "ECEF koordinatlarındaki Z ekseni konumu (metre)",
+      "type": "number",
+      "minimum": -9.9e+10,
+      "maximum": 9.9e+10
+    },
+    "updateTime": {
+      "description": "Son güncelleme zamanı (nanosaniye)",
+      "type": "integer",
+      "minimum": -9223372036854775808,
+      "maximum": 9223372036854775807
+    }
+  },
+  "required": [
+    "trackId",
+    "xVelocityECEF",
+    "yVelocityECEF",
+    "zVelocityECEF",
+    "xPositionECEF",
+    "yPositionECEF",
+    "zPositionECEF",
+    "updateTime"
+  ]
+}

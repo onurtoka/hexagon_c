@@ -18,7 +18,7 @@ public:
         double latency_score;          // Gecikme skoru (0-100)
         double throughput_rating;      // Verim oranı
         double efficiency_index;       // Verimlilik indeksi
-        int64_t processing_overhead;   // İşleme ek yükü (nanoseconds)
+        int64_t processing_overhead;   // İşleme ek yükü (microseconds)
     };
 
     // Constructors

@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['generate_20documentation_0',['generate documentation',['../md_docs_2_p_r_o_j_e_c_t___c_o_m_p_l_e_t_e.html#autotoc_md190',1,'1. Generate Documentation'],['../index.html#autotoc_md260',1,'Step 2: Generate Documentation']]],
+  ['generated_20diagrams_1',['generated diagrams',['../index.html#autotoc_md269',1,'Auto-Generated Diagrams'],['../md_docs_2_d_o_x_y_g_e_n___s_e_t_u_p.html#autotoc_md65',1,'Generated Diagrams']]],
+  ['generated_20diagrams_20doxygen_20graphviz_2',['Auto-Generated Diagrams (Doxygen + Graphviz)',['../index.html#autotoc_md255',1,'']]],
+  ['generated_20documentation_20stats_3',['📊 Generated Documentation Stats',['../md_docs_2_p_r_o_j_e_c_t___c_o_m_p_l_e_t_e.html#autotoc_md187',1,'']]],
+  ['generated_20output_4',['Generated Output',['../md_docs_2_d_o_x_y_g_e_n___s_e_t_u_p.html#autotoc_md63',1,'']]],
+  ['generation_5',['Basic Documentation Generation',['../md_docs_2_d_o_x_y_g_e_n___s_e_t_u_p.html#autotoc_md61',1,'']]],
+  ['geometryutils_6',['GeometryUtils',['../namespace_geometry_utils.html',1,'']]],
+  ['getlastmetrics_7',['getLastMetrics',['../classhexagon_1_1domain_1_1usecases_1_1_process_track_use_case.html#afebd56e9bdd475ab30abce787609426e',1,'hexagon::domain::usecases::ProcessTrackUseCase']]],
+  ['getradius_8',['getRadius',['../class_circle.html#a58eb59828b4459ca38932b87c65f03a9',1,'Circle']]],
+  ['getshapecount_9',['getShapeCount',['../class_shape_container.html#a1c08cc33c007bf342ea3fbf61b62132c',1,'ShapeContainer']]],
+  ['git_20status_10',['Git Status',['../md_docs_2_p_r_o_j_e_c_t___s_t_a_t_u_s___u_p_d_a_t_e.html#autotoc_md241',1,'']]],
+  ['github_11',['github',['../md_docs_2_p_r_o_j_e_c_t___s_t_a_t_u_s___u_p_d_a_t_e.html#autotoc_md234',1,'Changes Integrated from GitHub'],['../md_docs_2_p_r_o_j_e_c_t___s_t_a_t_u_s___u_p_d_a_t_e.html',1,'Project Status Report - Updated from GitHub']]],
+  ['github_20actions_20example_12',['GitHub Actions Example',['../index.html#autotoc_md279',1,'']]],
+  ['global_20namespace_20usage_13',['Rule 7-3-1: Global Namespace Usage',['../md_docs_2_m_i_s_r_a___z_e_r_o_m_q___s_e_n_d_e_r___a_n_a_l_y_s_i_s.html#autotoc_md166',1,'']]],
+  ['graphs_20and_20dependencies_14',['2. Call Graphs and Dependencies',['../md_docs_2_d_o_x_y_g_e_n___s_e_t_u_p.html#autotoc_md50',1,'']]],
+  ['graphviz_15',['Auto-Generated Diagrams (Doxygen + Graphviz)',['../index.html#autotoc_md255',1,'']]],
+  ['gray_16',['Infrastructure (Gray)',['../md_docs_2architecture.html#autotoc_md43',1,'']]],
+  ['green_17',['Domain Core (Green)',['../md_docs_2architecture.html#autotoc_md40',1,'']]],
+  ['guards_18',['Rule 16-2-3: Header Guards',['../md_docs_2_m_i_s_r_a___c_o_m_p_l_i_a_n_c_e___i_m_p_l_e_m_e_n_t_a_t_i_o_n.html#autotoc_md83',1,'']]],
+  ['guards_20implementation_20rule_2016_202_203_19',['1. Header Guards Implementation (Rule 16-2-3)',['../md_docs_2_m_i_s_r_a___r_e_f_a_c_t_o_r_i_n_g___c_o_m_p_l_e_t_e.html#autotoc_md123',1,'']]],
+  ['guards_20rule_2016_202_203_20',['1. Header Guards (Rule 16-2-3)',['../md_docs_2_m_i_s_r_a___c_p_p__2023___c_o_m_p_l_i_a_n_c_e.html#autotoc_md103',1,'']]],
+  ['guide_21',['guide',['../index.html',1,'Hexagonal C++ Documentation Build Guide'],['../md_docs_2_m_i_s_r_a___c_p_p__2023___c_o_m_p_l_i_a_n_c_e.html',1,'MISRA C++ 2023 Compliance Guide']]]
+];

@@ -1,0 +1,11 @@
+# External libzmq build artifacts
+build/
+install/
+setup_env.sh
+
+# Test artifacts
+test/
+
+# Temporary files
+*.tmp
+*.log

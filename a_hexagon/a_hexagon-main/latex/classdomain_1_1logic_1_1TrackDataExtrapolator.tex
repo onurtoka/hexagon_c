@@ -1,0 +1,92 @@
+\doxysection{domain\+::logic\+::Track\+Data\+Extrapolator Class Reference}
+\hypertarget{classdomain_1_1logic_1_1TrackDataExtrapolator}{}\label{classdomain_1_1logic_1_1TrackDataExtrapolator}\index{domain::logic::TrackDataExtrapolator@{domain::logic::TrackDataExtrapolator}}
+
+
+Main business logic class for track data extrapolation.  
+
+
+
+
+{\ttfamily \#include $<$Track\+Data\+Extrapolator.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdomain_1_1logic_1_1TrackDataExtrapolator_a2df7b7e90d7c91456c6ae5e4c47d3dd6}{Track\+Data\+Extrapolator}} (\mbox{\hyperlink{classdomain_1_1ports_1_1outgoing_1_1ExtrapTrackDataOutgoingPort}{domain\+::ports\+::outgoing\+::\+Extrap\+Track\+Data\+Outgoing\+Port}} \texorpdfstring{$\ast$}{*}outgoing\+Port)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classdomain_1_1logic_1_1TrackDataExtrapolator}{Track\+Data\+Extrapolator}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdomain_1_1logic_1_1TrackDataExtrapolator_a4af9555dd108a446e4b16d416fcc7360}{process\+And\+Forward\+Track\+Data}} (const \mbox{\hyperlink{classdomain_1_1model_1_1TrackData}{domain\+::model\+::\+Track\+Data}} \&track\+Data)
+\begin{DoxyCompactList}\small\item\em Processes incoming track data and forwards extrapolated results. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ \mbox{\hyperlink{classdomain_1_1model_1_1ExtrapTrackData}{Extrap\+Track\+Data}} $>$ \mbox{\hyperlink{classdomain_1_1logic_1_1TrackDataExtrapolator_abf43f33bfcacf059df5003d6dd99edb2}{extrapolate\+To200\+Hz}} (const \mbox{\hyperlink{classdomain_1_1model_1_1TrackData}{Track\+Data}} \&track\+Data)
+\begin{DoxyCompactList}\small\item\em Static method to extrapolate track data to 200Hz frequency. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main business logic class for track data extrapolation. 
+
+This class implements the core extrapolation algorithm that converts incoming track data from 5Hz frequency to 200Hz frequency using constant velocity model. It follows the Hexagonal Architecture pattern by implementing the Track\+Data\+Incoming\+Port interface. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classdomain_1_1logic_1_1TrackDataExtrapolator_a2df7b7e90d7c91456c6ae5e4c47d3dd6}\label{classdomain_1_1logic_1_1TrackDataExtrapolator_a2df7b7e90d7c91456c6ae5e4c47d3dd6} 
+\index{domain::logic::TrackDataExtrapolator@{domain::logic::TrackDataExtrapolator}!TrackDataExtrapolator@{TrackDataExtrapolator}}
+\index{TrackDataExtrapolator@{TrackDataExtrapolator}!domain::logic::TrackDataExtrapolator@{domain::logic::TrackDataExtrapolator}}
+\doxysubsubsection{\texorpdfstring{TrackDataExtrapolator()}{TrackDataExtrapolator()}}
+{\footnotesize\ttfamily domain\+::logic\+::\+Track\+Data\+Extrapolator\+::\+Track\+Data\+Extrapolator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdomain_1_1ports_1_1outgoing_1_1ExtrapTrackDataOutgoingPort}{domain\+::ports\+::outgoing\+::\+Extrap\+Track\+Data\+Outgoing\+Port}} \texorpdfstring{$\ast$}{*}}]{outgoing\+Port }\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{classdomain_1_1logic_1_1TrackDataExtrapolator}{Track\+Data\+Extrapolator}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em outgoing\+Port} & Pointer to the outgoing port implementation \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classdomain_1_1logic_1_1TrackDataExtrapolator_abf43f33bfcacf059df5003d6dd99edb2}\label{classdomain_1_1logic_1_1TrackDataExtrapolator_abf43f33bfcacf059df5003d6dd99edb2} 
+\index{domain::logic::TrackDataExtrapolator@{domain::logic::TrackDataExtrapolator}!extrapolateTo200Hz@{extrapolateTo200Hz}}
+\index{extrapolateTo200Hz@{extrapolateTo200Hz}!domain::logic::TrackDataExtrapolator@{domain::logic::TrackDataExtrapolator}}
+\doxysubsubsection{\texorpdfstring{extrapolateTo200Hz()}{extrapolateTo200Hz()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classdomain_1_1model_1_1ExtrapTrackData}{Extrap\+Track\+Data}} $>$ domain\+::logic\+::\+Track\+Data\+Extrapolator\+::extrapolate\+To200\+Hz (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classdomain_1_1model_1_1TrackData}{Track\+Data}} \&}]{track\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Static method to extrapolate track data to 200Hz frequency. 
+
+Generates 25 extrapolated data points covering 125ms window using constant velocity model. Each point is spaced 5ms apart.
+
+
+\begin{DoxyParams}{Parameters}
+{\em track\+Data} & Input track data to extrapolate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$\+Extrap\+Track\+Data$>$ Vector of 25 extrapolated data points 
+\end{DoxyReturn}
+\Hypertarget{classdomain_1_1logic_1_1TrackDataExtrapolator_a4af9555dd108a446e4b16d416fcc7360}\label{classdomain_1_1logic_1_1TrackDataExtrapolator_a4af9555dd108a446e4b16d416fcc7360} 
+\index{domain::logic::TrackDataExtrapolator@{domain::logic::TrackDataExtrapolator}!processAndForwardTrackData@{processAndForwardTrackData}}
+\index{processAndForwardTrackData@{processAndForwardTrackData}!domain::logic::TrackDataExtrapolator@{domain::logic::TrackDataExtrapolator}}
+\doxysubsubsection{\texorpdfstring{processAndForwardTrackData()}{processAndForwardTrackData()}}
+{\footnotesize\ttfamily void domain\+::logic\+::\+Track\+Data\+Extrapolator\+::process\+And\+Forward\+Track\+Data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classdomain_1_1model_1_1TrackData}{domain\+::model\+::\+Track\+Data}} \&}]{track\+Data }\end{DoxyParamCaption})}
+
+
+
+Processes incoming track data and forwards extrapolated results. 
+
+This method receives track data at 5Hz, extrapolates it to 200Hz for a 125ms window (25 data points), and forwards the results through the configured outgoing port.
+
+
+\begin{DoxyParams}{Parameters}
+{\em track\+Data} & Input track data containing position, velocity, and timing \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/domain/logic/\mbox{\hyperlink{TrackDataExtrapolator_8h}{Track\+Data\+Extrapolator.\+h}}\item 
+src/domain/logic/\mbox{\hyperlink{TrackDataExtrapolator_8cpp}{Track\+Data\+Extrapolator.\+cpp}}\end{DoxyCompactItemize}

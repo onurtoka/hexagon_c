@@ -1,0 +1,146 @@
+\doxysection{test/domain/logic/\+Track\+Data\+Extrapolator\+\_\+test.cpp File Reference}
+\hypertarget{TrackDataExtrapolator__test_8cpp}{}\label{TrackDataExtrapolator__test_8cpp}\index{test/domain/logic/TrackDataExtrapolator\_test.cpp@{test/domain/logic/TrackDataExtrapolator\_test.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include "{}../../../src/domain/model/\+Track\+Data.\+h"{}}\newline
+{\ttfamily \#include "{}../../../src/domain/model/\+Extrap\+Track\+Data.\+h"{}}\newline
+{\ttfamily \#include "{}../../../src/domain/logic/\+Track\+Data\+Extrapolator.\+h"{}}\newline
+Include dependency graph for Track\+Data\+Extrapolator\+\_\+test.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{TrackDataExtrapolator__test_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classMockOutgoingAdapter}{Mock\+Outgoing\+Adapter}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{TrackDataExtrapolator__test_8cpp_a9cc34fd87cb865c77439a5d39b3b111b}{ASSERT\+\_\+\+EQ}}(a,  b)~if ((a) != (b)) \{ std\+::cerr $<$$<$ "{}ASSERT\+\_\+\+EQ failed\+: "{} $<$$<$ \#a $<$$<$ "{} != "{} $<$$<$ \#b $<$$<$ "{} ("{} $<$$<$ (a) $<$$<$ "{} != "{} $<$$<$ (b) $<$$<$ "{})\textbackslash{}n"{}; return false; \}
+\item 
+\#define \mbox{\hyperlink{TrackDataExtrapolator__test_8cpp_a4d8ad4b55e293db89434b5c9c3520adf}{EXPECT\+\_\+\+DOUBLE\+\_\+\+EQ}}(a,  b)~if (std\+::fabs((a) -\/ (b)) $>$ 1e-\/9) \{ std\+::cerr $<$$<$ "{}EXPECT\+\_\+\+DOUBLE\+\_\+\+EQ failed\+: "{} $<$$<$ \#a $<$$<$ "{} != "{} $<$$<$ \#b $<$$<$ "{} ("{} $<$$<$ (a) $<$$<$ "{} != "{} $<$$<$ (b) $<$$<$ "{})\textbackslash{}n"{}; return false; \}
+\item 
+\#define \mbox{\hyperlink{TrackDataExtrapolator__test_8cpp_aea83abf82acc09b60175e0f45f239b54}{EXPECT\+\_\+\+NEAR}}(a,  b,  tol)~if (std\+::fabs((a) -\/ (b)) $>$ (tol)) \{ std\+::cerr $<$$<$ "{}EXPECT\+\_\+\+NEAR failed\+: "{} $<$$<$ \#a $<$$<$ "{} != "{} $<$$<$ \#b $<$$<$ "{} ("{} $<$$<$ (a) $<$$<$ "{} != "{} $<$$<$ (b) $<$$<$ "{})\textbackslash{}n"{}; return false; \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{TrackDataExtrapolator__test_8cpp_a9f8be0e0fc082cc6138a75e7dc27ba01}{Test\+\_\+process\+And\+Forward\+Track\+Data\+\_\+\+Constant\+Velocity}} ()
+\item 
+bool \mbox{\hyperlink{TrackDataExtrapolator__test_8cpp_aa903ea5040cd39b6a45c3503bfba855a}{Test\+\_\+process\+And\+Forward\+Track\+Data\+\_\+\+Zero\+Velocity}} ()
+\item 
+bool \mbox{\hyperlink{TrackDataExtrapolator__test_8cpp_ad6efda01d838efff6329f7e8c930006c}{Test\+\_\+process\+And\+Forward\+Track\+Data\+\_\+\+Negative\+Velocity}} ()
+\item 
+bool \mbox{\hyperlink{TrackDataExtrapolator__test_8cpp_a5acbf8173c757d855d9b37d86079e5a4}{Test\+\_\+process\+And\+Forward\+Track\+Data\+\_\+\+Large\+Values}} ()
+\item 
+bool \mbox{\hyperlink{TrackDataExtrapolator__test_8cpp_a6f0da1213b117e748cc1d4701f77fc34}{Test\+\_\+process\+And\+Forward\+Track\+Data\+\_\+\+Time\+Progression}} ()
+\item 
+bool \mbox{\hyperlink{TrackDataExtrapolator__test_8cpp_aff54987c87498ddbcd50ce5d663df1af}{Test\+\_\+extrapolate\+\_\+\+Basic\+Functionality}} ()
+\item 
+bool \mbox{\hyperlink{TrackDataExtrapolator__test_8cpp_ac20757adec7e68c4c0e6eeb4e2036a64}{Test\+\_\+extrapolate\+\_\+\+Position\+Calculation}} ()
+\item 
+bool \mbox{\hyperlink{TrackDataExtrapolator__test_8cpp_a1da33bbaf0e953a18cd1c38c28c4368b}{Test\+\_\+extrapolate\+\_\+\+First\+Hop\+Sent\+Time}} ()
+\item 
+bool \mbox{\hyperlink{TrackDataExtrapolator__test_8cpp_add10a2952d808b53b2d712c316c04d2f}{Test\+\_\+extrapolate\+\_\+\+Velocity\+Preservation}} ()
+\item 
+bool \mbox{\hyperlink{TrackDataExtrapolator__test_8cpp_a51cb055beafd2e3122632d497c574a68}{Test\+\_\+extrapolate\+\_\+\+Track\+Id\+Preservation}} ()
+\item 
+int \mbox{\hyperlink{TrackDataExtrapolator__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{TrackDataExtrapolator__test_8cpp_a9cc34fd87cb865c77439a5d39b3b111b}\label{TrackDataExtrapolator__test_8cpp_a9cc34fd87cb865c77439a5d39b3b111b} 
+\index{TrackDataExtrapolator\_test.cpp@{TrackDataExtrapolator\_test.cpp}!ASSERT\_EQ@{ASSERT\_EQ}}
+\index{ASSERT\_EQ@{ASSERT\_EQ}!TrackDataExtrapolator\_test.cpp@{TrackDataExtrapolator\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{ASSERT\_EQ}{ASSERT\_EQ}}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+EQ(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})~if ((a) != (b)) \{ std\+::cerr $<$$<$ "{}ASSERT\+\_\+\+EQ failed\+: "{} $<$$<$ \#a $<$$<$ "{} != "{} $<$$<$ \#b $<$$<$ "{} ("{} $<$$<$ (a) $<$$<$ "{} != "{} $<$$<$ (b) $<$$<$ "{})\textbackslash{}n"{}; return false; \}}
+
+\Hypertarget{TrackDataExtrapolator__test_8cpp_a4d8ad4b55e293db89434b5c9c3520adf}\label{TrackDataExtrapolator__test_8cpp_a4d8ad4b55e293db89434b5c9c3520adf} 
+\index{TrackDataExtrapolator\_test.cpp@{TrackDataExtrapolator\_test.cpp}!EXPECT\_DOUBLE\_EQ@{EXPECT\_DOUBLE\_EQ}}
+\index{EXPECT\_DOUBLE\_EQ@{EXPECT\_DOUBLE\_EQ}!TrackDataExtrapolator\_test.cpp@{TrackDataExtrapolator\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_DOUBLE\_EQ}{EXPECT\_DOUBLE\_EQ}}
+{\footnotesize\ttfamily \#define EXPECT\+\_\+\+DOUBLE\+\_\+\+EQ(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})~if (std\+::fabs((a) -\/ (b)) $>$ 1e-\/9) \{ std\+::cerr $<$$<$ "{}EXPECT\+\_\+\+DOUBLE\+\_\+\+EQ failed\+: "{} $<$$<$ \#a $<$$<$ "{} != "{} $<$$<$ \#b $<$$<$ "{} ("{} $<$$<$ (a) $<$$<$ "{} != "{} $<$$<$ (b) $<$$<$ "{})\textbackslash{}n"{}; return false; \}}
+
+\Hypertarget{TrackDataExtrapolator__test_8cpp_aea83abf82acc09b60175e0f45f239b54}\label{TrackDataExtrapolator__test_8cpp_aea83abf82acc09b60175e0f45f239b54} 
+\index{TrackDataExtrapolator\_test.cpp@{TrackDataExtrapolator\_test.cpp}!EXPECT\_NEAR@{EXPECT\_NEAR}}
+\index{EXPECT\_NEAR@{EXPECT\_NEAR}!TrackDataExtrapolator\_test.cpp@{TrackDataExtrapolator\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_NEAR}{EXPECT\_NEAR}}
+{\footnotesize\ttfamily \#define EXPECT\+\_\+\+NEAR(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b,  }\item[{}]{tol }\end{DoxyParamCaption})~if (std\+::fabs((a) -\/ (b)) $>$ (tol)) \{ std\+::cerr $<$$<$ "{}EXPECT\+\_\+\+NEAR failed\+: "{} $<$$<$ \#a $<$$<$ "{} != "{} $<$$<$ \#b $<$$<$ "{} ("{} $<$$<$ (a) $<$$<$ "{} != "{} $<$$<$ (b) $<$$<$ "{})\textbackslash{}n"{}; return false; \}}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{TrackDataExtrapolator__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{TrackDataExtrapolator__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{TrackDataExtrapolator\_test.cpp@{TrackDataExtrapolator\_test.cpp}!main@{main}}
+\index{main@{main}!TrackDataExtrapolator\_test.cpp@{TrackDataExtrapolator\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{TrackDataExtrapolator__test_8cpp_aff54987c87498ddbcd50ce5d663df1af}\label{TrackDataExtrapolator__test_8cpp_aff54987c87498ddbcd50ce5d663df1af} 
+\index{TrackDataExtrapolator\_test.cpp@{TrackDataExtrapolator\_test.cpp}!Test\_extrapolate\_BasicFunctionality@{Test\_extrapolate\_BasicFunctionality}}
+\index{Test\_extrapolate\_BasicFunctionality@{Test\_extrapolate\_BasicFunctionality}!TrackDataExtrapolator\_test.cpp@{TrackDataExtrapolator\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{Test\_extrapolate\_BasicFunctionality()}{Test\_extrapolate\_BasicFunctionality()}}
+{\footnotesize\ttfamily bool Test\+\_\+extrapolate\+\_\+\+Basic\+Functionality (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{TrackDataExtrapolator__test_8cpp_a1da33bbaf0e953a18cd1c38c28c4368b}\label{TrackDataExtrapolator__test_8cpp_a1da33bbaf0e953a18cd1c38c28c4368b} 
+\index{TrackDataExtrapolator\_test.cpp@{TrackDataExtrapolator\_test.cpp}!Test\_extrapolate\_FirstHopSentTime@{Test\_extrapolate\_FirstHopSentTime}}
+\index{Test\_extrapolate\_FirstHopSentTime@{Test\_extrapolate\_FirstHopSentTime}!TrackDataExtrapolator\_test.cpp@{TrackDataExtrapolator\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{Test\_extrapolate\_FirstHopSentTime()}{Test\_extrapolate\_FirstHopSentTime()}}
+{\footnotesize\ttfamily bool Test\+\_\+extrapolate\+\_\+\+First\+Hop\+Sent\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{TrackDataExtrapolator__test_8cpp_ac20757adec7e68c4c0e6eeb4e2036a64}\label{TrackDataExtrapolator__test_8cpp_ac20757adec7e68c4c0e6eeb4e2036a64} 
+\index{TrackDataExtrapolator\_test.cpp@{TrackDataExtrapolator\_test.cpp}!Test\_extrapolate\_PositionCalculation@{Test\_extrapolate\_PositionCalculation}}
+\index{Test\_extrapolate\_PositionCalculation@{Test\_extrapolate\_PositionCalculation}!TrackDataExtrapolator\_test.cpp@{TrackDataExtrapolator\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{Test\_extrapolate\_PositionCalculation()}{Test\_extrapolate\_PositionCalculation()}}
+{\footnotesize\ttfamily bool Test\+\_\+extrapolate\+\_\+\+Position\+Calculation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{TrackDataExtrapolator__test_8cpp_a51cb055beafd2e3122632d497c574a68}\label{TrackDataExtrapolator__test_8cpp_a51cb055beafd2e3122632d497c574a68} 
+\index{TrackDataExtrapolator\_test.cpp@{TrackDataExtrapolator\_test.cpp}!Test\_extrapolate\_TrackIdPreservation@{Test\_extrapolate\_TrackIdPreservation}}
+\index{Test\_extrapolate\_TrackIdPreservation@{Test\_extrapolate\_TrackIdPreservation}!TrackDataExtrapolator\_test.cpp@{TrackDataExtrapolator\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{Test\_extrapolate\_TrackIdPreservation()}{Test\_extrapolate\_TrackIdPreservation()}}
+{\footnotesize\ttfamily bool Test\+\_\+extrapolate\+\_\+\+Track\+Id\+Preservation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{TrackDataExtrapolator__test_8cpp_add10a2952d808b53b2d712c316c04d2f}\label{TrackDataExtrapolator__test_8cpp_add10a2952d808b53b2d712c316c04d2f} 
+\index{TrackDataExtrapolator\_test.cpp@{TrackDataExtrapolator\_test.cpp}!Test\_extrapolate\_VelocityPreservation@{Test\_extrapolate\_VelocityPreservation}}
+\index{Test\_extrapolate\_VelocityPreservation@{Test\_extrapolate\_VelocityPreservation}!TrackDataExtrapolator\_test.cpp@{TrackDataExtrapolator\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{Test\_extrapolate\_VelocityPreservation()}{Test\_extrapolate\_VelocityPreservation()}}
+{\footnotesize\ttfamily bool Test\+\_\+extrapolate\+\_\+\+Velocity\+Preservation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{TrackDataExtrapolator__test_8cpp_a9f8be0e0fc082cc6138a75e7dc27ba01}\label{TrackDataExtrapolator__test_8cpp_a9f8be0e0fc082cc6138a75e7dc27ba01} 
+\index{TrackDataExtrapolator\_test.cpp@{TrackDataExtrapolator\_test.cpp}!Test\_processAndForwardTrackData\_ConstantVelocity@{Test\_processAndForwardTrackData\_ConstantVelocity}}
+\index{Test\_processAndForwardTrackData\_ConstantVelocity@{Test\_processAndForwardTrackData\_ConstantVelocity}!TrackDataExtrapolator\_test.cpp@{TrackDataExtrapolator\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{Test\_processAndForwardTrackData\_ConstantVelocity()}{Test\_processAndForwardTrackData\_ConstantVelocity()}}
+{\footnotesize\ttfamily bool Test\+\_\+process\+And\+Forward\+Track\+Data\+\_\+\+Constant\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{TrackDataExtrapolator__test_8cpp_a5acbf8173c757d855d9b37d86079e5a4}\label{TrackDataExtrapolator__test_8cpp_a5acbf8173c757d855d9b37d86079e5a4} 
+\index{TrackDataExtrapolator\_test.cpp@{TrackDataExtrapolator\_test.cpp}!Test\_processAndForwardTrackData\_LargeValues@{Test\_processAndForwardTrackData\_LargeValues}}
+\index{Test\_processAndForwardTrackData\_LargeValues@{Test\_processAndForwardTrackData\_LargeValues}!TrackDataExtrapolator\_test.cpp@{TrackDataExtrapolator\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{Test\_processAndForwardTrackData\_LargeValues()}{Test\_processAndForwardTrackData\_LargeValues()}}
+{\footnotesize\ttfamily bool Test\+\_\+process\+And\+Forward\+Track\+Data\+\_\+\+Large\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{TrackDataExtrapolator__test_8cpp_ad6efda01d838efff6329f7e8c930006c}\label{TrackDataExtrapolator__test_8cpp_ad6efda01d838efff6329f7e8c930006c} 
+\index{TrackDataExtrapolator\_test.cpp@{TrackDataExtrapolator\_test.cpp}!Test\_processAndForwardTrackData\_NegativeVelocity@{Test\_processAndForwardTrackData\_NegativeVelocity}}
+\index{Test\_processAndForwardTrackData\_NegativeVelocity@{Test\_processAndForwardTrackData\_NegativeVelocity}!TrackDataExtrapolator\_test.cpp@{TrackDataExtrapolator\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{Test\_processAndForwardTrackData\_NegativeVelocity()}{Test\_processAndForwardTrackData\_NegativeVelocity()}}
+{\footnotesize\ttfamily bool Test\+\_\+process\+And\+Forward\+Track\+Data\+\_\+\+Negative\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{TrackDataExtrapolator__test_8cpp_a6f0da1213b117e748cc1d4701f77fc34}\label{TrackDataExtrapolator__test_8cpp_a6f0da1213b117e748cc1d4701f77fc34} 
+\index{TrackDataExtrapolator\_test.cpp@{TrackDataExtrapolator\_test.cpp}!Test\_processAndForwardTrackData\_TimeProgression@{Test\_processAndForwardTrackData\_TimeProgression}}
+\index{Test\_processAndForwardTrackData\_TimeProgression@{Test\_processAndForwardTrackData\_TimeProgression}!TrackDataExtrapolator\_test.cpp@{TrackDataExtrapolator\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{Test\_processAndForwardTrackData\_TimeProgression()}{Test\_processAndForwardTrackData\_TimeProgression()}}
+{\footnotesize\ttfamily bool Test\+\_\+process\+And\+Forward\+Track\+Data\+\_\+\+Time\+Progression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{TrackDataExtrapolator__test_8cpp_aa903ea5040cd39b6a45c3503bfba855a}\label{TrackDataExtrapolator__test_8cpp_aa903ea5040cd39b6a45c3503bfba855a} 
+\index{TrackDataExtrapolator\_test.cpp@{TrackDataExtrapolator\_test.cpp}!Test\_processAndForwardTrackData\_ZeroVelocity@{Test\_processAndForwardTrackData\_ZeroVelocity}}
+\index{Test\_processAndForwardTrackData\_ZeroVelocity@{Test\_processAndForwardTrackData\_ZeroVelocity}!TrackDataExtrapolator\_test.cpp@{TrackDataExtrapolator\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{Test\_processAndForwardTrackData\_ZeroVelocity()}{Test\_processAndForwardTrackData\_ZeroVelocity()}}
+{\footnotesize\ttfamily bool Test\+\_\+process\+And\+Forward\+Track\+Data\+\_\+\+Zero\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+

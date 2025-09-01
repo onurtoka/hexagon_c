@@ -1,0 +1,29 @@
+\doxysection{Zero\+MQExtrap\+Track\+Data\+Adapter.\+h}
+\hypertarget{ZeroMQExtrapTrackDataAdapter_8h_source}{}\label{ZeroMQExtrapTrackDataAdapter_8h_source}\index{src/adapters/outgoing/ZeroMQExtrapTrackDataAdapter.h@{src/adapters/outgoing/ZeroMQExtrapTrackDataAdapter.h}}
+\mbox{\hyperlink{ZeroMQExtrapTrackDataAdapter_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ZEROMQ\_EXTRAP\_TRACK\_DATA\_ADAPTER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ZEROMQ\_EXTRAP\_TRACK\_DATA\_ADAPTER\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <zmq.hpp>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}../../domain/model/ExtrapTrackData.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}../../domain/ports/outgoing/TrackDataOutgoingPort.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacedomain}{domain}}\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }adapters\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }outgoing\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdomain_1_1adapters_1_1outgoing_1_1ZeroMQExtrapTrackDataAdapter}{ZeroMQExtrapTrackDataAdapter}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classdomain_1_1ports_1_1outgoing_1_1ExtrapTrackDataOutgoingPort}{domain::ports::outgoing::ExtrapTrackDataOutgoingPort}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:\ }
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{classdomain_1_1adapters_1_1outgoing_1_1ZeroMQExtrapTrackDataAdapter_a76a3ff20f271b96ba13453076f2c3ce7}{ZeroMQExtrapTrackDataAdapter}}();\ \textcolor{comment}{//\ Parametresiz\ constructor}}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdomain_1_1adapters_1_1outgoing_1_1ZeroMQExtrapTrackDataAdapter_ad244eb9f1a952b927686df7e5d27e456}{sendExtrapTrackData}}(\textcolor{keyword}{const}\ std::vector<domain::model::ExtrapTrackData>\&\ data)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00015\ \textcolor{keyword}{private}:\ }
+\DoxyCodeLine{00016\ \ \ \ \ zmq::context\_t\ context;}
+\DoxyCodeLine{00017\ \ \ \ \ zmq::socket\_t\ socket;\ \ }
+\DoxyCodeLine{00018\ \ \ \ \ std::string\ serialize(\textcolor{keyword}{const}\ \mbox{\hyperlink{classdomain_1_1model_1_1ExtrapTrackData}{domain::model::ExtrapTrackData}}\&\ data);}
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ \}}
+\DoxyCodeLine{00021\ \}}
+\DoxyCodeLine{00022\ \}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

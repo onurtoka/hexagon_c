@@ -1,0 +1,292 @@
+<svg width="1400" height="1000" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions for gradients and patterns -->
+  <defs>
+    <linearGradient id="hexGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e3f2fd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#bbdefb;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="incomingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f5e8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c8e6c9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="outgoingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff3e0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffe0b2;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="3" dy="3" stdDeviation="2" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrowhead" markerWidth="12" markerHeight="8" refX="11" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#333" />
+    </marker>
+    <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
+      <rect width="8" height="8" fill="#6b6b6b"/>
+      <path d="M 0 0 L 0 8" stroke="#000000" stroke-width="2"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="1000" fill="#f5f5f5"/>
+  
+  <rect x="50" y="50" rx="8" width="1300" stroke="#333" stroke-width="4" height="550" fill="#ebebeb"/>
+
+  <!-- Title -->
+  <text x="700" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#333">
+    B_Hexagon Architecture - Track Data Delay Calculation System
+  </text>
+
+  <!-- Large Hexagon (Domain Core) -->
+  <polygon points="702,56 967,192 967,458 702,594 434,458 434,192"
+         fill="url(#hexGradient)"
+         stroke="#1976d2"
+         stroke-width="4"
+         filter="url(#shadow)"/>
+
+  <!-- Domain Core Label -->
+  <text x="700" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1976d2">
+    DOMAIN CORE
+  </text>
+
+  <!-- Left Port (Incoming) - Inside Hexagon -->
+  <rect x="500" y="300" width="180" height="55" rx="8" 
+        fill="#4caf50" stroke="#388e3c" stroke-width="2" filter="url(#shadow)"/>
+  <text x="590" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">
+    IDataReceiver
+  </text>
+  <text x="590" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">
+    (Inbound Port)
+  </text>
+  <text x="505" y="348" text-anchor="left" font-family="Arial, sans-serif" font-size="9" fill="white">
+    + onDataReceived(TrackData): void
+  </text>
+
+  <!-- Right Port (Outgoing) - Inside Hexagon -->
+  <rect x="720" y="300" width="180" height="55" rx="8" 
+        fill="#ff9800" stroke="#f57c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="810" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">
+    IDataSender
+  </text>
+  <text x="810" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">
+    (Outbound Port)
+  </text>
+  <text x="725" y="348" text-anchor="left" font-family="Arial, sans-serif" font-size="9" fill="white">
+    + send(DelayCalculatedTrackData): void
+  </text>
+
+  <!-- Application Service Section in Hexagon -->
+  <rect x="480" y="170" width="440" height="90" rx="12" 
+        fill="#ffffff" stroke="#1976d2" stroke-width="2" filter="url(#shadow)"/>
+  <text x="700" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">
+    Application Service Layer
+  </text>
+  
+  <rect x="488" y="200" width="425" height="50" rx="5" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  <text x="700" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">
+    CalculatorService &lt;&lt;implements IDataReceiver&gt;&gt;
+  </text>
+  <text x="495" y="230" font-family="Arial, sans-serif" font-size="11" fill="#888">
+    + onDataReceived(TrackData): void - Calculates delays and forwards results
+  </text>
+  <text x="495" y="245" font-family="Arial, sans-serif" font-size="11" fill="#888">
+    + start(): void - Initializes service, Uses TrackCalculations domain logic
+  </text>
+
+  <!-- Model Section in Hexagon -->
+  <rect x="520" y="380" width="360" height="140" rx="12" 
+        fill="#ffffff" stroke="#1976d2" stroke-width="2" filter="url(#shadow)"/>
+  <text x="700" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">
+    Domain Model Layer
+  </text>
+  
+  <rect x="540" y="415" width="140" height="95" rx="5" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  <text x="610" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">
+    TrackData
+  </text>
+  <text x="550" y="445" font-family="Arial, sans-serif" font-size="9" fill="#666">
+    + trackId: int
+  </text>
+  <text x="550" y="458" font-family="Arial, sans-serif" font-size="9" fill="#666">
+    + *VelocityECEF: double
+  </text>
+  <text x="550" y="471" font-family="Arial, sans-serif" font-size="9" fill="#666">
+    + *PositionECEF: double
+  </text>
+  <text x="550" y="484" font-family="Arial, sans-serif" font-size="9" fill="#666">
+    + updateTime: long (ns)
+  </text>
+  <text x="550" y="497" font-family="Arial, sans-serif" font-size="9" fill="#666">
+    + originalUpdateTime: long (ns)
+  </text>
+
+  <rect x="720" y="415" width="140" height="95" rx="5" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  <text x="790" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">
+    DelayCalculatedTrackData
+  </text>
+  <text x="730" y="445" font-family="Arial, sans-serif" font-size="9" fill="#666">
+    + trackId: int
+  </text>
+  <text x="730" y="458" font-family="Arial, sans-serif" font-size="9" fill="#666">
+    + *VelocityECEF: double
+  </text>
+  <text x="730" y="471" font-family="Arial, sans-serif" font-size="9" fill="#666">
+    + *PositionECEF: double
+  </text>
+  <text x="730" y="484" font-family="Arial, sans-serif" font-size="9" fill="#666">
+    + firstHopDelayTime: long (ns)
+  </text>
+  <text x="730" y="497" font-family="Arial, sans-serif" font-size="9" fill="#666">
+    + secondHopSentTime: long (ns)
+  </text>
+
+  <!-- Left Side - Incoming Adapters -->
+  <rect x="80" y="200" width="300" height="140" rx="20" 
+        fill="url(#incomingGradient)" stroke="#4caf50" stroke-width="4" filter="url(#shadow)"/>
+  
+  <text x="230" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2e7d32">
+    INCOMING ADAPTERS
+  </text>
+
+  <!-- ZeroMQ DISH Incoming Adapter -->
+  <rect x="110" y="230" width="240" height="100" rx="10"
+        fill="#ffffff" stroke="#4caf50" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">
+    ZeroMQDataReceiver
+  </text>
+  <text x="230" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333">
+    &lt;&lt;DISH Socket - RADIO-DISH Pattern&gt;&gt;
+  </text>
+  <text x="120" y="280" font-family="Arial, sans-serif" font-size="11" fill="#666">
+    + startReceiving(): void
+  </text>
+  <text x="120" y="295" font-family="Arial, sans-serif" font-size="11" fill="#666">
+    + parseJson(string): TrackData
+  </text>
+  <text x="120" y="310" font-family="Arial, sans-serif" font-size="11" fill="#666">
+    + Uses application-level group filtering
+  </text>
+
+  <!-- Right Side - Outgoing Adapters -->
+  <rect x="1020" y="200" width="300" height="140" rx="20" 
+        fill="url(#outgoingGradient)" stroke="#ff9800" stroke-width="4" filter="url(#shadow)"/>
+  
+  <text x="1170" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#e65100">
+    OUTGOING ADAPTERS
+  </text>
+
+  <!-- ZeroMQ RADIO Outgoing Adapter -->
+  <rect x="1050" y="230" width="240" height="100" rx="10" 
+        fill="#ffffff" stroke="#ff9800" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1170" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">
+    ZeroMQDataSender
+  </text>
+  <text x="1170" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333">
+    &lt;&lt;implements IDataSender - RADIO Socket&gt;&gt;
+  </text>
+  <text x="1060" y="280" font-family="Arial, sans-serif" font-size="11" fill="#666">
+    + send(DelayCalculatedTrackData): void
+  </text>
+  <text x="1060" y="295" font-family="Arial, sans-serif" font-size="11" fill="#666">
+    + JSON serialization with group prefix
+  </text>
+  <text x="1060" y="310" font-family="Arial, sans-serif" font-size="11" fill="#666">
+    + RADIO-DISH broadcast pattern
+  </text>
+
+  <!-- External Systems (Standalone) -->
+  <!-- External System (Left) - a_hexagon -->
+  <rect x="110" y="480" width="240" height="60" rx="10" 
+        fill="#c8e6c9" stroke="#4caf50" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">
+    External System
+  </text>
+  <text x="230" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666">
+    Publishes ExtrapTrackData (JSON)
+  </text>
+
+  <!-- External System (Right) - c_hexagon -->
+  <rect x="1050" y="480" width="240" height="60" rx="10" 
+        fill="#ffe0b2" stroke="#ff9800" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1170" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">
+     External System
+  </text>
+  <text x="1170" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666">
+    Receives DelayCalcTrackData (JSON)
+  </text>
+
+  <!-- Application Layer -->
+  <rect x="560" y="650" width="280" height="100" rx="15" 
+        fill="#f3e5f5" stroke="#9c27b0" stroke-width="4" filter="url(#shadow)"/>
+  <text x="700" y="675" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#7b1fa2">
+    APPLICATION LAYER
+  </text>
+  <text x="700" y="700" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#333">
+    main.cpp (Composition Root)
+  </text>
+
+  <text x="700" y="730" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666">
+    + Orchestrates adapters and domain logic
+  </text>
+
+  <!-- Arrows showing data flow -->
+  
+  <!-- External System to Incoming Adapter -->
+  <path d="M 230 480 L 230 330" stroke="#4caf50" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="240" y="400" font-family="Arial, sans-serif" font-size="10" fill="#4caf50" font-weight="bold">JSON over ZMQ</text>
+
+  <!-- Incoming Adapter to Inbound Port -->
+  <path d="M 350 280 L 450 280 L 450 320 L 500 327" stroke="#4caf50" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="387" y="270" font-family="Arial, sans-serif" font-size="10" fill="#4caf50" font-weight="bold">calls onDataReceived()</text>
+
+  <!-- Inbound Port to Application Service -->
+  <path d="M 590 300 L 590 260" stroke="#1976d2" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="600" y="280" font-family="Arial, sans-serif" font-size="10" fill="#1976d2" font-weight="bold">implements</text>
+  
+  <!-- Application Service to Outbound Port -->
+  <path d="M 810 260 L 810 300" stroke="#ff9800" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="820" y="280" font-family="Arial, sans-serif" font-size="10" fill="#ff9800" font-weight="bold">calls send()</text>
+
+  <!-- Outbound Port to Outgoing Adapter -->
+  <path d="M 900 327 L 950 327 L 950 280 L 1050 280" stroke="#ff9800" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="960" y="270" font-family="Arial, sans-serif" font-size="10" fill="#ff9800" font-weight="bold">implements</text>
+
+  <!-- Outgoing Adapter to External -->
+  <path d="M 1170 330 L 1170 480" stroke="#ff9800" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="1180" y="400" font-family="Arial, sans-serif" font-size="10" fill="#ff9800" font-weight="bold">JSON over ZMQ</text>
+
+  <!-- Application to Domain -->
+  <path d="M 700 650 L 700 594" stroke="#9c27b0" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="715" y="625" font-family="Arial, sans-serif" font-size="11" fill="#9c27b0" font-weight="bold">Orchestrates &amp; Assembles</text>>
+
+  <!-- Data Flow Labels -->
+  <text x="700" y="890" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">
+    Data Flow: ExtrapTrackData → Delay Calculation → DelayCalculatedTrackData (Nanosecond Precision)
+  </text>
+  
+  <!-- Architecture Pattern Info -->
+  <text x="700" y="920" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#666">
+    Hexagonal Architecture + MISRA C++ 2023 + ZeroMQ RADIO-DISH + Domain-Driven Design
+  </text>
+  
+  <!-- Legend -->
+  <rect x="80" y="950" width="1240" height="40" rx="8" fill="#ffffff" stroke="#ccc" stroke-width="2"/>
+  <text x="95" y="970" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Legend:</text>
+  
+  <circle cx="180" cy="975" r="8" fill="#4caf50"/>
+  <text x="195" y="980" font-family="Arial, sans-serif" font-size="11" fill="#333">Inbound (DISH Socket)</text>
+  
+  <circle cx="350" cy="975" r="8" fill="#ff9800"/>
+  <text x="365" y="980" font-family="Arial, sans-serif" font-size="11" fill="#333">Outbound (RADIO Socket)</text>
+  
+  <polygon points="520,970 535,975 520,980" fill="#1976d2"/>
+  <text x="545" y="980" font-family="Arial, sans-serif" font-size="11" fill="#333">Domain Core (Business Logic)</text>
+
+  <circle cx="720" cy="975" r="8" fill="#9c27b0"/>
+  <text x="735" y="980" font-family="Arial, sans-serif" font-size="11" fill="#333">Application Layer</text>
+
+  <circle cx="870" cy="975" r="8" fill="#7b1fa2"/>
+  <text x="885" y="980" font-family="Arial, sans-serif" font-size="11" fill="#333">MISRA C++ 2023 Compliant</text>
+
+  <circle cx="1120" cy="975" r="8" fill="#1976d2"/>
+  <text x="1135" y="980" font-family="Arial, sans-serif" font-size="11" fill="#333">Nanosecond Precision Timing</text>
+  
+</svg>

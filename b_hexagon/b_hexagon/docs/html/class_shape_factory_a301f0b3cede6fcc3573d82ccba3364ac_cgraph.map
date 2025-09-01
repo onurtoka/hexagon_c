@@ -1,0 +1,7 @@
+<map id="ShapeFactory::createRandomShape" name="ShapeFactory::createRandomShape">
+<area shape="rect" id="Node000001" title="Create a random shape for testing purposes." alt="" coords="5,23,216,63"/>
+<area shape="rect" id="Node000002" href="$class_shape_factory.html#a3bea74bc905be9e8be1ca0836bb4baf3" title="Create a circle with specified radius." alt="" coords="278,5,473,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,31,264,26,264,31,217,36"/>
+<area shape="rect" id="Node000003" href="$class_shape_factory.html#a1e70ea3e43d77528aba913db69cf2350" title="Create a rectangle with specified dimensions." alt="" coords="264,55,487,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="217,50,251,53,250,59,216,56"/>
+</map>

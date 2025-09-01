@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$class_shape.html" title="Abstract base class representing a drawable shape." alt="" coords="5,31,68,56"/>
+<area shape="rect" id="Node000001" href="$class_circle.html" title="Concrete implementation of a circle shape." alt="" coords="130,5,189,31"/>
+<area shape="poly" id="edge3_Node000000_Node000001" title=" " alt="" coords="81,31,129,21,130,27,82,37"/>
+<area shape="rect" id="Node000002" href="$class_rectangle.html" title="Concrete implementation of a rectangle shape." alt="" coords="116,55,203,80"/>
+<area shape="poly" id="edge4_Node000000_Node000002" title=" " alt="" coords="82,49,116,56,115,62,81,55"/>
+</map>

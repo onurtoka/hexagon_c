@@ -1,0 +1,36 @@
+\doxysection{Track\+Data\+Extrapolator.\+h}
+\hypertarget{TrackDataExtrapolator_8h_source}{}\label{TrackDataExtrapolator_8h_source}\index{src/domain/logic/TrackDataExtrapolator.h@{src/domain/logic/TrackDataExtrapolator.h}}
+\mbox{\hyperlink{TrackDataExtrapolator_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ TRACK\_DATA\_EXTRAPOLATOR\_H\ }}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ TRACK\_DATA\_EXTRAPOLATOR\_H\ }}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}../model/TrackData.h"{}}\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}../model/ExtrapTrackData.h"{}}\ \ \ \ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}../ports/outgoing/TrackDataOutgoingPort.h"{}}\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacedomain}{domain}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }logic\ \{}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{using\ }\mbox{\hyperlink{classdomain_1_1model_1_1TrackData}{domain::model::TrackData}};\ \ \ \ \ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{using\ }\mbox{\hyperlink{classdomain_1_1model_1_1ExtrapTrackData}{domain::model::ExtrapTrackData}};}
+\DoxyCodeLine{00021\ \textcolor{keyword}{using\ }std::vector;\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdomain_1_1logic_1_1TrackDataExtrapolator}{TrackDataExtrapolator}}\ \{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{classdomain_1_1ports_1_1outgoing_1_1ExtrapTrackDataOutgoingPort}{domain::ports::outgoing::ExtrapTrackDataOutgoingPort}}*\ outgoingPort\_;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{public}:\ }
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{classdomain_1_1logic_1_1TrackDataExtrapolator}{TrackDataExtrapolator}}(\mbox{\hyperlink{classdomain_1_1ports_1_1outgoing_1_1ExtrapTrackDataOutgoingPort}{domain::ports::outgoing::ExtrapTrackDataOutgoingPort}}*\ outgoingPort);}
+\DoxyCodeLine{00042\ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdomain_1_1logic_1_1TrackDataExtrapolator_a4af9555dd108a446e4b16d416fcc7360}{processAndForwardTrackData}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classdomain_1_1model_1_1TrackData}{domain::model::TrackData}}\&\ trackData);}
+\DoxyCodeLine{00053\ \ \ \ \ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{static}\ vector<ExtrapTrackData>\ \mbox{\hyperlink{classdomain_1_1logic_1_1TrackDataExtrapolator_abf43f33bfcacf059df5003d6dd99edb2}{extrapolateTo200Hz}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classdomain_1_1model_1_1TrackData}{TrackData}}\&\ trackData);}
+\DoxyCodeLine{00064\ \};}
+\DoxyCodeLine{00065\ \}}
+\DoxyCodeLine{00066\ \}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,62 @@
+\doxysection{Track\+Data.\+h}
+\hypertarget{TrackData_8h_source}{}\label{TrackData_8h_source}\index{src/domain/model/TrackData.h@{src/domain/model/TrackData.h}}
+\mbox{\hyperlink{TrackData_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ TRACK\_DATA\_H\ }}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ TRACK\_DATA\_H\ }}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacedomain}{domain}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }model\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdomain_1_1model_1_1TrackData}{TrackData}}\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classdomain_1_1model_1_1TrackData_ae5e760edd585a139fee680a6615fec4e}{TrackData}}();}
+\DoxyCodeLine{00026\ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classdomain_1_1model_1_1TrackData_a2ca644f86e3a6bbe23b6b94fcde41d8d}{\string~TrackData}}();}
+\DoxyCodeLine{00029\ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ Track\ ID\ accessors}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classdomain_1_1model_1_1TrackData_a0fb8b111fb8653ec8a9b69963ff1d8ae}{getTrackId}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ TrackId;\ \}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdomain_1_1model_1_1TrackData_a3312888dfb7f0489da6e5bbedfd6a6b8}{setTrackId}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id})\ \{\ TrackId\ =\ id;\ \}}
+\DoxyCodeLine{00035\ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//\ Velocity\ accessors\ in\ ECEF\ coordinates}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classdomain_1_1model_1_1TrackData_a185135fcdc65a9e27aed91aac291452f}{getXVelocityECEF}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ XVelocityECEF;\ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdomain_1_1model_1_1TrackData_a4178ae61e0fe1632c79320062ab06e21}{setXVelocityECEF}}(\textcolor{keywordtype}{double}\ v)\ \{\ XVelocityECEF\ =\ v;\ \}}
+\DoxyCodeLine{00041\ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classdomain_1_1model_1_1TrackData_a1e7e8a0cf500c4546b76af3a9022d122}{getYVelocityECEF}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ YVelocityECEF;\ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdomain_1_1model_1_1TrackData_ab10a95406705d25ab0132cda95ad7b58}{setYVelocityECEF}}(\textcolor{keywordtype}{double}\ v)\ \{\ YVelocityECEF\ =\ v;\ \}}
+\DoxyCodeLine{00046\ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classdomain_1_1model_1_1TrackData_aa7d6823d7a66156a80970d72ba82e710}{getZVelocityECEF}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ ZVelocityECEF;\ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdomain_1_1model_1_1TrackData_adb8b73a4040143b6d828094b6336a86f}{setZVelocityECEF}}(\textcolor{keywordtype}{double}\ v)\ \{\ ZVelocityECEF\ =\ v;\ \}}
+\DoxyCodeLine{00051\ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{//\ Position\ accessors\ in\ ECEF\ coordinates}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classdomain_1_1model_1_1TrackData_a4fb7ea1e81e24e5f8c3ca6b6537db7f3}{getXPositionECEF}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ XPositionECEF;\ \}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdomain_1_1model_1_1TrackData_ac5cf86edc5340fe4180f0fc48343d6dc}{setXPositionECEF}}(\textcolor{keywordtype}{double}\ p)\ \{\ XPositionECEF\ =\ p;\ \}}
+\DoxyCodeLine{00057\ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classdomain_1_1model_1_1TrackData_a5c8828ffe90572deca9e502db8285e90}{getYPositionECEF}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ YPositionECEF;\ \}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdomain_1_1model_1_1TrackData_a2e7eef8f759f045675b8bd3e8a5a7f85}{setYPositionECEF}}(\textcolor{keywordtype}{double}\ p)\ \{\ YPositionECEF\ =\ p;\ \}}
+\DoxyCodeLine{00062\ \ \ \ \ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classdomain_1_1model_1_1TrackData_a41b4099825aa099c218bcec7cc069468}{getZPositionECEF}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ ZPositionECEF;\ \}}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdomain_1_1model_1_1TrackData_a4f806ffb85c0a8fc628e1d430f92c472}{setZPositionECEF}}(\textcolor{keywordtype}{double}\ p)\ \{\ ZPositionECEF\ =\ p;\ \}}
+\DoxyCodeLine{00067\ \ \ \ \ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//\ Timing\ accessors}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classdomain_1_1model_1_1TrackData_a6041dd54037c48feb51a76ad92db88ff}{getOriginalUpdateTime}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ originalUpdateTime;\ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdomain_1_1model_1_1TrackData_a0f5fe8041339666fa4b8d70ce8828eef}{setOriginalUpdateTime}}(\textcolor{keywordtype}{long}\ t)\ \{\ originalUpdateTime\ =\ t;\ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{private}:\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{int}\ TrackId;}
+\DoxyCodeLine{00077\ \ \ \ \ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{double}\ XVelocityECEF;}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{double}\ YVelocityECEF;}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{double}\ ZVelocityECEF;}
+\DoxyCodeLine{00084\ \ \ \ \ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{double}\ XPositionECEF;}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{double}\ YPositionECEF;}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{double}\ ZPositionECEF;}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{long}\ originalUpdateTime;}
+\DoxyCodeLine{00090\ \};}
+\DoxyCodeLine{00091\ \}}
+\DoxyCodeLine{00092\ \}}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#endif\ }}
+
+\end{DoxyCode}

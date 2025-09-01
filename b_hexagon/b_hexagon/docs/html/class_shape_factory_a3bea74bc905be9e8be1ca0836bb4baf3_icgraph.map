@@ -1,0 +1,8 @@
+<map id="ShapeFactory::createCircle" name="ShapeFactory::createCircle">
+<area shape="rect" id="Node000001" title="Create a circle with specified radius." alt="" coords="367,42,561,67"/>
+<area shape="rect" id="Node000002" href="$class_shape_factory.html#a301f0b3cede6fcc3573d82ccba3364ac" title="Create a random shape for testing purposes." alt="" coords="108,5,319,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="353,44,319,40,319,35,353,39"/>
+<area shape="rect" id="Node000003" href="$example__documented__code_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Main function demonstrating the shape system." alt="" coords="5,42,60,67"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="353,60,108,60,60,58,60,53,108,55,353,54"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="95,47,61,53,60,48,94,42"/>
+</map>

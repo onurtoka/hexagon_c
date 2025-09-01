@@ -42,8 +42,8 @@ private:
     // Gecikme hesaplama için
     struct LatencyMeasurement {
         std::chrono::steady_clock::time_point receive_time;
-        long long send_timestamp_ns;
-        long long latency_ns;
+        long long send_timestamp_us;  // mikrosaniye
+        long long latency_us;         // mikrosaniye
         std::string original_data;
     };
     
@@ -52,15 +52,22 @@ private:
 
 public:
     /**
-     * Constructor
+     * Constructor - Default UDP multicast configuration
+     * @param track_data_submission Domain katmanına veri göndermek için port
+     */
+    ZeroMQDishTrackDataSubscriber(
+        std::shared_ptr<domain::ports::incoming::TrackDataSubmission> track_data_submission);
+
+    /**
+     * Constructor with custom configuration
      * @param track_data_submission Domain katmanına veri göndermek için port
      * @param multicast_endpoint UDP multicast endpoint (örn: "udp://239.1.1.1:9001")
      * @param group_name Dinlenecek multicast grup adı (örn: "SOURCE_DATA")
      */
     ZeroMQDishTrackDataSubscriber(
         std::shared_ptr<domain::ports::incoming::TrackDataSubmission> track_data_submission,
-        const std::string& multicast_endpoint = "udp://239.1.1.1:9001",
-        const std::string& group_name = "SOURCE_DATA");
+        const std::string& multicast_endpoint,
+        const std::string& group_name);
 
     ~ZeroMQDishTrackDataSubscriber();
 
@@ -101,6 +108,11 @@ private:
     std::optional<domain::model::DelayCalcTrackData> deserializeDelayCalcTrackData(
         const std::string& original_data, 
         const LatencyMeasurement& latency_info);
+
+    /**
+     * B_Hexagon'un JSON parsing yöntemini kullanarak güvenli parse
+     */
+    void parseJsonFieldsLikeBHexagon(const std::string& json, domain::model::DelayCalcTrackData& data);
 };
 
 } // namespace hat::adapters::incoming::zeromq

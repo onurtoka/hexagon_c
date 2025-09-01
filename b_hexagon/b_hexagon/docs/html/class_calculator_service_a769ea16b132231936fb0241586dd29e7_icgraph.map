@@ -1,0 +1,5 @@
+<map id="CalculatorService::start" name="CalculatorService::start">
+<area shape="rect" id="Node000001" title="Begin the processing loop (blocking call)." alt="" coords="108,5,252,45"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a11e60b9092bcfb411a8b5b75a35e5249" title=" " alt="" coords="5,13,60,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,28,60,28,60,23,94,23"/>
+</map>

@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['perimeter_0',['perimeter',['../class_shape.html#a56921fb8e6d0ad51dc38060fd22acfc5',1,'Shape::perimeter()'],['../class_circle.html#ac8c77ece2ee05002c375d6530b9f061d',1,'Circle::perimeter()'],['../class_rectangle.html#a87d72ed0c0a889835949ba32cdebc4f5',1,'Rectangle::perimeter()']]],
+  ['processtrackusecase_1',['processtrackusecase',['../classhexagon_1_1domain_1_1usecases_1_1_process_track_use_case.html#a6d6ecd0b84bb7c2a42cd394f99028e31',1,'hexagon::domain::usecases::ProcessTrackUseCase::ProcessTrackUseCase(std::shared_ptr&lt; CalculatorService &gt; calculator, std::shared_ptr&lt; IDataSender &gt; sender)'],['../classhexagon_1_1domain_1_1usecases_1_1_process_track_use_case.html#a68c2fb5dda2e367f1a4943297566e721',1,'hexagon::domain::usecases::ProcessTrackUseCase::ProcessTrackUseCase(const ProcessTrackUseCase &amp;)=delete'],['../classhexagon_1_1domain_1_1usecases_1_1_process_track_use_case.html#af56aafecec47ee8fc06bd35ea3806f02',1,'hexagon::domain::usecases::ProcessTrackUseCase::ProcessTrackUseCase(ProcessTrackUseCase &amp;&amp;) noexcept=default']]]
+];

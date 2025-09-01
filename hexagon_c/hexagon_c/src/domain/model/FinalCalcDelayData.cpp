@@ -105,7 +105,7 @@ FinalCalcDelayData::PerformanceMetrics FinalCalcDelayData::calculatePerformanceM
     int64_t total_time = calculateTotalProcessingTime();
     
     // Latency score (lower is better, scale 0-100)
-    metrics.latency_score = std::min(100.0, std::max(0.0, 100.0 - (total_time / 1000000.0))); // nanoseconds to score
+    metrics.latency_score = std::min(100.0, std::max(0.0, 100.0 - (total_time / 1000.0))); // mikrosaniye to score
     
     // Throughput rating (simple calculation)
     metrics.throughput_rating = metrics.latency_score;

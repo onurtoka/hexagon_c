@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['b_5fhexagon_20api_20documentation_0',['B_Hexagon API Documentation',['../md_docs_2_a_p_i___d_o_c_u_m_e_n_t_a_t_i_o_n.html',1,'']]],
+  ['basic_20documentation_20example_1',['1. Basic Documentation Example',['../md_docs_2_d_o_x_y_g_e_n___s_e_t_u_p.html#autotoc_md67',1,'']]],
+  ['basic_20documentation_20generation_2',['Basic Documentation Generation',['../md_docs_2_d_o_x_y_g_e_n___s_e_t_u_p.html#autotoc_md61',1,'']]],
+  ['before_20refactoring_3a_3',['Before Refactoring:',['../md_docs_2_m_i_s_r_a___r_e_f_a_c_t_o_r_i_n_g___c_o_m_p_l_e_t_e.html#autotoc_md147',1,'']]],
+  ['benefits_20achieved_4',['Benefits Achieved',['../md_docs_2_m_i_s_r_a___r_e_f_a_c_t_o_r_i_n_g___c_o_m_p_l_e_t_e.html#autotoc_md140',1,'']]],
+  ['benefits_20of_20misra_20c_202023_20compliance_5',['Benefits of MISRA C++ 2023 Compliance',['../md_docs_2_m_i_s_r_a___c_p_p__2023___c_o_m_p_l_i_a_n_c_e.html#autotoc_md116',1,'']]],
+  ['benefits_20of_20this_20architecture_6',['Benefits of This Architecture',['../md_docs_2architecture.html#autotoc_md45',1,'']]],
+  ['best_20practice_7',['9. Final Classes (Modern C++ best practice)',['../md_docs_2_m_i_s_r_a___r_e_f_a_c_t_o_r_i_n_g___c_o_m_p_l_e_t_e.html#autotoc_md131',1,'']]],
+  ['best_20practices_8',['best practices',['../md_docs_2_d_o_x_y_g_e_n___s_e_t_u_p.html#autotoc_md79',1,'Best Practices'],['../index.html#autotoc_md267',1,'Diagram Best Practices']]],
+  ['better_20performance_9',['3. Better Performance',['../md_docs_2_m_i_s_r_a___r_e_f_a_c_t_o_r_i_n_g___c_o_m_p_l_e_t_e.html#autotoc_md143',1,'']]],
+  ['blue_10',['Ports (Blue)',['../md_docs_2architecture.html#autotoc_md41',1,'']]],
+  ['buffer_20operations_11',['Buffer Operations',['../md_docs_2_m_i_s_r_a___z_e_r_o_m_q___s_e_n_d_e_r___a_n_a_l_y_s_i_s.html#autotoc_md172',1,'']]],
+  ['build_20and_20test_20status_12',['Build and Test Status',['../md_docs_2_p_r_o_j_e_c_t___s_t_a_t_u_s___u_p_d_a_t_e.html#autotoc_md240',1,'']]],
+  ['build_20configuration_20for_20misra_13',['Build Configuration for MISRA',['../md_docs_2_m_i_s_r_a___c_o_m_p_l_i_a_n_c_e___i_m_p_l_e_m_e_n_t_a_t_i_o_n.html#autotoc_md97',1,'']]],
+  ['build_20documentation_14',['Build Documentation',['../index.html#autotoc_md258',1,'']]],
+  ['build_20guide_15',['Hexagonal C++ Documentation Build Guide',['../index.html',1,'']]],
+  ['build_20project_20optional_16',['Step 1: Build Project (Optional)',['../index.html#autotoc_md259',1,'']]],
+  ['build_20script_17',['Using the Build Script',['../md_docs_2_d_o_x_y_g_e_n___s_e_t_u_p.html#autotoc_md62',1,'']]],
+  ['build_20system_18',['Build System',['../md_docs_2_p_r_o_j_e_c_t___c_o_m_p_l_e_t_i_o_n___s_u_m_m_a_r_y.html#autotoc_md223',1,'']]],
+  ['build_20system_20enhancements_19',['Build System Enhancements',['../md_docs_2_m_i_s_r_a___r_e_f_a_c_t_o_r_i_n_g___c_o_m_p_l_e_t_e.html#autotoc_md133',1,'']]],
+  ['build_20system_20updates_3a_20',['Build System Updates:',['../md_docs_2_m_i_s_r_a___c_p_p__2023___c_o_m_p_l_i_a_n_c_e.html#autotoc_md115',1,'']]],
+  ['building_20documentation_21',['building documentation',['../md_docs_2_d_o_x_y_g_e_n___s_e_t_u_p.html#autotoc_md60',1,'Building Documentation'],['../index.html#autotoc_md284',1,'Building Documentation']]],
+  ['by_20line_20code_20explanation_22',['Line-by-Line Code Explanation',['../md_docs_2_m_i_s_r_a___z_e_r_o_m_q___s_e_n_d_e_r___a_n_a_l_y_s_i_s.html#autotoc_md167',1,'']]]
+];

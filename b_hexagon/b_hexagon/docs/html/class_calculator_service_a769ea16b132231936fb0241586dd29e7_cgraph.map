@@ -1,0 +1,11 @@
+<map id="CalculatorService::start" name="CalculatorService::start">
+<area shape="rect" id="Node000001" title="Begin the processing loop (blocking call)." alt="" coords="5,101,149,141"/>
+<area shape="rect" id="Node000002" href="$class_track_calculations.html#a667256730f5193686d3114e5494cad4e" title="Calculates first hop delay time in nanoseconds." alt="" coords="202,5,409,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,99,196,55,216,47,218,52,198,60,113,104"/>
+<area shape="rect" id="Node000003" href="$class_track_calculations.html#a9bba5b67b4497fb443b56c6e7dd6c45a" title="Calculates second hop sent time as the current system time in nanoseconds." alt="" coords="197,69,413,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="149,109,184,104,184,109,150,114"/>
+<area shape="rect" id="Node000004" href="$class_delay_calculated_track_data.html#a2d3429b2f8abd54a70ea1731c860837d" title="Validates if all required fields have reasonable values." alt="" coords="208,133,403,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="150,129,195,135,194,140,149,134"/>
+<area shape="rect" id="Node000005" href="$class_track_data.html#a33dc7e4638c14a6cedcde00bf2c6e074" title="Validates if all required fields have reasonable values." alt="" coords="236,198,375,223"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="112,139,152,162,198,183,226,192,225,197,196,188,150,167,109,144"/>
+</map>

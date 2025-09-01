@@ -1,0 +1,30 @@
+<map id="src/domain/usecases/ProcessTrackUseCase.cpp" name="src/domain/usecases/ProcessTrackUseCase.cpp">
+<area shape="rect" id="Node000001" title="Implementation of ProcessTrackUseCase &#45; Core business workflow orchestration." alt="" coords="464,5,659,45"/>
+<area shape="rect" id="Node000002" href="$_process_track_use_case_8hpp.html" title="Process Track Use Case &#45; Core business workflow orchestration." alt="" coords="265,93,455,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="514,48,403,91,401,86,512,43"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="480,93,547,119"/>
+<area shape="poly" id="edge14_Node000001_Node000010" title=" " alt="" coords="552,47,530,83,525,80,547,44"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="571,93,651,119"/>
+<area shape="poly" id="edge15_Node000001_Node000011" title=" " alt="" coords="576,44,598,80,594,83,571,47"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="675,93,749,119"/>
+<area shape="poly" id="edge16_Node000001_Node000012" title=" " alt="" coords="599,43,679,84,676,89,596,48"/>
+<area shape="rect" id="Node000003" href="$_track_data_8hpp.html" title=" " alt="" coords="5,335,219,361"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="269,121,211,136,153,159,125,175,100,194,78,216,60,241,55,263,61,285,74,306,90,324,86,327,70,309,56,287,49,263,55,239,74,212,96,190,122,171,150,155,210,131,267,116"/>
+<area shape="rect" id="Node000004" href="$_delay_calculated_track_data_8hpp.html" title=" " alt="" coords="280,328,507,368"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="428,116,478,134,502,148,523,165,538,182,545,199,552,239,557,261,557,271,552,281,528,307,498,325,495,320,524,303,547,279,551,269,552,261,547,241,540,200,533,185,519,169,499,152,476,139,427,121"/>
+<area shape="rect" id="Node000005" href="$_i_data_receiver_8hpp.html" title="Declares the incoming port abstraction for acquiring raw domain input (TrackData)." alt="" coords="70,240,242,280"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="310,121,260,139,235,153,212,169,188,197,171,229,166,226,184,194,209,165,232,148,258,135,308,116"/>
+<area shape="rect" id="Node000006" href="$_i_data_sender_8hpp.html" title="Declares the outgoing port abstraction for emitting processed DelayCalculatedTrackData." alt="" coords="266,240,435,280"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="297,121,257,139,239,152,225,168,220,178,220,187,229,204,248,220,274,233,272,237,245,224,225,208,215,188,215,177,220,165,235,148,254,134,295,116"/>
+<area shape="rect" id="Node000007" href="$_calculator_service_8hpp.html" title="Declares the application service coordinating domain calculations and I/O." alt="" coords="234,167,486,192"/>
+<area shape="poly" id="edge8_Node000002_Node000007" title=" " alt="" coords="363,119,363,153,357,153,357,119"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="460,247,537,273"/>
+<area shape="poly" id="edge12_Node000002_Node000008" title=" " alt="" coords="426,116,467,134,486,148,501,165,508,182,511,200,508,234,503,233,506,200,503,183,496,168,482,152,465,139,424,121"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="613,167,699,192"/>
+<area shape="poly" id="edge13_Node000002_Node000009" title=" " alt="" coords="408,116,600,162,599,167,407,121"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="149,281,127,324,122,322,144,279"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="363,279,380,314,375,317,358,281"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="331,194,219,238,217,233,329,190"/>
+<area shape="poly" id="edge10_Node000007_Node000006" title=" " alt="" coords="361,192,357,227,352,226,356,192"/>
+<area shape="poly" id="edge11_Node000007_Node000008" title=" " alt="" coords="382,190,468,238,465,243,379,195"/>
+</map>

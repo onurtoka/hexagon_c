@@ -1,0 +1,11 @@
+<map id="src/domain/ports" name="src/domain/ports">
+<area shape="rect" id="node1" href="dir_7d52dfd286abdee16513d8c11a48cc0d.html" title="model" alt="" coords="98,136,161,161"/>
+<area shape="rect" id="node3" href="dir_be2ea62b530c45f5de10e99e883814cc.html" title="incoming" alt="" coords="141,63,224,88"/>
+<area shape="poly" id="edge1" href="dir_000006_000008.html" alt="" coords="176,90,148,127,144,124,172,87"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000006_000008.html" title="1" alt="" coords="151,119,160,134"/>
+<area shape="rect" id="node4" href="dir_60222f0bfb1bea076708dee7ed8b2f5e.html" title="outgoing" alt="" coords="38,63,117,88"/>
+<area shape="poly" id="edge2" href="dir_000010_000008.html" alt="" coords="88,87,115,123,111,126,84,90"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000010_000008.html" title="1" alt="" coords="112,109,122,124"/>
+<area shape="rect" id="clust2" href="dir_04bcccf53e8b17c9860051db78d44955.html" alt="" coords="27,52,315,99"/>
+<area shape="rect" id="clust1" href="dir_59e154daa71ab644ff60a4d6c4d01bbf.html" title="domain" alt="" coords="16,16,325,172"/>
+</map>
