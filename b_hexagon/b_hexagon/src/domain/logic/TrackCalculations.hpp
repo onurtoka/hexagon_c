@@ -1,16 +1,16 @@
 #pragma once
-#include "domain/model/TrackData.hpp"   // Input data structure
+#include "domain/model/ExtrapTrackData.hpp"   // Input data structure
 #include <chrono>                        // Time utilities for nanosecond precision
 
 /**
- * @brief Pure stateless calculation utilities for `TrackData` timing metrics.
+ * @brief Pure stateless calculation utilities for `ExtrapTrackData` timing metrics.
  *
  * @dot
  * digraph timing_flow {
  *   rankdir=TB;
  *   node [shape=box, style=filled];
  *   
- *   input [label="Input: TrackData\n+ firstHopSentTime", fillcolor=lightblue];
+ *   input [label="Input: ExtrapTrackData\n+ firstHopSentTime", fillcolor=lightblue];
  *   receive [label="System captures\nReceive Time", fillcolor=yellow];
  *   calc1 [label="Calculate First Hop Delay\n= receiveTime - firstHopSentTime", fillcolor=orange];
  *   calc2 [label="Calculate Second Hop Sent Time\n= current system time", fillcolor=orange];
@@ -33,11 +33,11 @@ class TrackCalculations {
 public:
     /**
      * @brief Calculates first hop delay time in nanoseconds.
-     * @param trackData The input TrackData
-     * @param receiveTimeNs The system receive time in nanoseconds
-     * @return First hop delay time (nanoseconds)
+     * @param trackData The input ExtrapTrackData
+     * @param receiveTimeNs The time when data was received (nanoseconds)
+     * @return Delay time in nanoseconds (receive_time - first_hop_sent_time)
      */
-    static long calculateFirstHopDelayTime(const TrackData& trackData, long receiveTimeNs) {
+    static long calculateFirstHopDelayTime(const ExtrapTrackData& trackData, long receiveTimeNs) {
         return receiveTimeNs - trackData.firstHopSentTime;
     }
 

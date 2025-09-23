@@ -16,6 +16,9 @@
 #include <cstring>
 #include <chrono>
 
+// Using declarations for convenience
+using domain::model::DelayCalcTrackData;
+
 namespace hat::adapters::incoming::zeromq {
 
 /**
@@ -108,11 +111,6 @@ private:
     std::optional<domain::model::DelayCalcTrackData> deserializeDelayCalcTrackData(
         const std::string& original_data, 
         const LatencyMeasurement& latency_info);
-
-    /**
-     * B_Hexagon'un JSON parsing yöntemini kullanarak güvenli parse
-     */
-    void parseJsonFieldsLikeBHexagon(const std::string& json, domain::model::DelayCalcTrackData& data);
 };
 
 } // namespace hat::adapters::incoming::zeromq

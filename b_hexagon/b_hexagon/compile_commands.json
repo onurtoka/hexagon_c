@@ -1,0 +1,788 @@
+[
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -I/workspaces/b_hexagon/b_hexagon/src -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wcast-qual -Wcast-align -Wredundant-decls -Wunreachable-code -Wnon-virtual-dtor -Wold-style-cast -Woverloaded-virtual -Wshadow -Wfloat-equal -Wundef -o CMakeFiles/b_hexagon_app.dir/src/application/main.cpp.o -c /workspaces/b_hexagon/b_hexagon/src/application/main.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/src/application/main.cpp",
+  "output": "CMakeFiles/b_hexagon_app.dir/src/application/main.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -I/workspaces/b_hexagon/b_hexagon/src -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wcast-qual -Wcast-align -Wredundant-decls -Wunreachable-code -Wnon-virtual-dtor -Wold-style-cast -Woverloaded-virtual -Wshadow -Wfloat-equal -Wundef -o CMakeFiles/b_hexagon_app.dir/src/domain/logic/CalculatorService.cpp.o -c /workspaces/b_hexagon/b_hexagon/src/domain/logic/CalculatorService.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/src/domain/logic/CalculatorService.cpp",
+  "output": "CMakeFiles/b_hexagon_app.dir/src/domain/logic/CalculatorService.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -I/workspaces/b_hexagon/b_hexagon/src -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wcast-qual -Wcast-align -Wredundant-decls -Wunreachable-code -Wnon-virtual-dtor -Wold-style-cast -Woverloaded-virtual -Wshadow -Wfloat-equal -Wundef -o CMakeFiles/b_hexagon_app.dir/src/domain/model/TrackData.cpp.o -c /workspaces/b_hexagon/b_hexagon/src/domain/model/TrackData.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/src/domain/model/TrackData.cpp",
+  "output": "CMakeFiles/b_hexagon_app.dir/src/domain/model/TrackData.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -I/workspaces/b_hexagon/b_hexagon/src -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wcast-qual -Wcast-align -Wredundant-decls -Wunreachable-code -Wnon-virtual-dtor -Wold-style-cast -Woverloaded-virtual -Wshadow -Wfloat-equal -Wundef -o CMakeFiles/b_hexagon_app.dir/src/domain/model/DelayCalculatedTrackData.cpp.o -c /workspaces/b_hexagon/b_hexagon/src/domain/model/DelayCalculatedTrackData.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/src/domain/model/DelayCalculatedTrackData.cpp",
+  "output": "CMakeFiles/b_hexagon_app.dir/src/domain/model/DelayCalculatedTrackData.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -I/workspaces/b_hexagon/b_hexagon/src -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wcast-qual -Wcast-align -Wredundant-decls -Wunreachable-code -Wnon-virtual-dtor -Wold-style-cast -Woverloaded-virtual -Wshadow -Wfloat-equal -Wundef -o CMakeFiles/b_hexagon_app.dir/src/adapters/outgoing/ZeroMQDataSender.cpp.o -c /workspaces/b_hexagon/b_hexagon/src/adapters/outgoing/ZeroMQDataSender.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/src/adapters/outgoing/ZeroMQDataSender.cpp",
+  "output": "CMakeFiles/b_hexagon_app.dir/src/adapters/outgoing/ZeroMQDataSender.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -I/workspaces/b_hexagon/b_hexagon/src -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wcast-qual -Wcast-align -Wredundant-decls -Wunreachable-code -Wnon-virtual-dtor -Wold-style-cast -Woverloaded-virtual -Wshadow -Wfloat-equal -Wundef -o CMakeFiles/b_hexagon_app.dir/src/adapters/incoming/ZeroMQDataHandler.cpp.o -c /workspaces/b_hexagon/b_hexagon/src/adapters/incoming/ZeroMQDataHandler.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/src/adapters/incoming/ZeroMQDataHandler.cpp",
+  "output": "CMakeFiles/b_hexagon_app.dir/src/adapters/incoming/ZeroMQDataHandler.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -I/workspaces/b_hexagon/b_hexagon/src -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wcast-qual -Wcast-align -Wredundant-decls -Wunreachable-code -Wnon-virtual-dtor -Wold-style-cast -Woverloaded-virtual -Wshadow -Wfloat-equal -Wundef -o CMakeFiles/b_hexagon_app.dir/src/messaging/ContractManager.cpp.o -c /workspaces/b_hexagon/b_hexagon/src/messaging/ContractManager.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/src/messaging/ContractManager.cpp",
+  "output": "CMakeFiles/b_hexagon_app.dir/src/messaging/ContractManager.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -I/workspaces/b_hexagon/b_hexagon/src -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wcast-qual -Wcast-align -Wredundant-decls -Wunreachable-code -Wnon-virtual-dtor -Wold-style-cast -Woverloaded-virtual -Wshadow -Wfloat-equal -Wundef -o CMakeFiles/b_hexagon_app.dir/src/messaging/messaging.cpp.o -c /workspaces/b_hexagon/b_hexagon/src/messaging/messaging.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/src/messaging/messaging.cpp",
+  "output": "CMakeFiles/b_hexagon_app.dir/src/messaging/messaging.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -I/workspaces/b_hexagon/b_hexagon/src -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wcast-qual -Wcast-align -Wredundant-decls -Wunreachable-code -Wnon-virtual-dtor -Wold-style-cast -Woverloaded-virtual -Wshadow -Wfloat-equal -Wundef -o CMakeFiles/b_hexagon_app.dir/src/common/JsonConfigReader.cpp.o -c /workspaces/b_hexagon/b_hexagon/src/common/JsonConfigReader.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/src/common/JsonConfigReader.cpp",
+  "output": "CMakeFiles/b_hexagon_app.dir/src/common/JsonConfigReader.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -I/workspaces/b_hexagon/b_hexagon/src -I/workspaces/b_hexagon/b_hexagon/tests -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wcast-qual -Wcast-align -Wredundant-decls -Wunreachable-code -Wnon-virtual-dtor -Wold-style-cast -Woverloaded-virtual -Wshadow -Wfloat-equal -Wundef -o CMakeFiles/domain_tests.dir/tests/test_main.cpp.o -c /workspaces/b_hexagon/b_hexagon/tests/test_main.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/tests/test_main.cpp",
+  "output": "CMakeFiles/domain_tests.dir/tests/test_main.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -I/workspaces/b_hexagon/b_hexagon/src -I/workspaces/b_hexagon/b_hexagon/tests -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wcast-qual -Wcast-align -Wredundant-decls -Wunreachable-code -Wnon-virtual-dtor -Wold-style-cast -Woverloaded-virtual -Wshadow -Wfloat-equal -Wundef -o CMakeFiles/domain_tests.dir/tests/TrackCalculationsTest.cpp.o -c /workspaces/b_hexagon/b_hexagon/tests/TrackCalculationsTest.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/tests/TrackCalculationsTest.cpp",
+  "output": "CMakeFiles/domain_tests.dir/tests/TrackCalculationsTest.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -I/workspaces/b_hexagon/b_hexagon/src -I/workspaces/b_hexagon/b_hexagon/tests -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wcast-qual -Wcast-align -Wredundant-decls -Wunreachable-code -Wnon-virtual-dtor -Wold-style-cast -Woverloaded-virtual -Wshadow -Wfloat-equal -Wundef -o CMakeFiles/domain_tests.dir/tests/CalculatorServiceTest.cpp.o -c /workspaces/b_hexagon/b_hexagon/tests/CalculatorServiceTest.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/tests/CalculatorServiceTest.cpp",
+  "output": "CMakeFiles/domain_tests.dir/tests/CalculatorServiceTest.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -I/workspaces/b_hexagon/b_hexagon/src -I/workspaces/b_hexagon/b_hexagon/tests -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wcast-qual -Wcast-align -Wredundant-decls -Wunreachable-code -Wnon-virtual-dtor -Wold-style-cast -Woverloaded-virtual -Wshadow -Wfloat-equal -Wundef -o CMakeFiles/domain_tests.dir/tests/TrackDataTest.cpp.o -c /workspaces/b_hexagon/b_hexagon/tests/TrackDataTest.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/tests/TrackDataTest.cpp",
+  "output": "CMakeFiles/domain_tests.dir/tests/TrackDataTest.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -I/workspaces/b_hexagon/b_hexagon/src -I/workspaces/b_hexagon/b_hexagon/tests -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wcast-qual -Wcast-align -Wredundant-decls -Wunreachable-code -Wnon-virtual-dtor -Wold-style-cast -Woverloaded-virtual -Wshadow -Wfloat-equal -Wundef -o CMakeFiles/domain_tests.dir/tests/DelayCalculatedTrackDataTest.cpp.o -c /workspaces/b_hexagon/b_hexagon/tests/DelayCalculatedTrackDataTest.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/tests/DelayCalculatedTrackDataTest.cpp",
+  "output": "CMakeFiles/domain_tests.dir/tests/DelayCalculatedTrackDataTest.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -I/workspaces/b_hexagon/b_hexagon/src -I/workspaces/b_hexagon/b_hexagon/tests -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wcast-qual -Wcast-align -Wredundant-decls -Wunreachable-code -Wnon-virtual-dtor -Wold-style-cast -Woverloaded-virtual -Wshadow -Wfloat-equal -Wundef -o CMakeFiles/domain_tests.dir/tests/common/JsonConfigReaderTest.cpp.o -c /workspaces/b_hexagon/b_hexagon/tests/common/JsonConfigReaderTest.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/tests/common/JsonConfigReaderTest.cpp",
+  "output": "CMakeFiles/domain_tests.dir/tests/common/JsonConfigReaderTest.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -I/workspaces/b_hexagon/b_hexagon/src -I/workspaces/b_hexagon/b_hexagon/tests -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wcast-qual -Wcast-align -Wredundant-decls -Wunreachable-code -Wnon-virtual-dtor -Wold-style-cast -Woverloaded-virtual -Wshadow -Wfloat-equal -Wundef -o CMakeFiles/domain_tests.dir/src/domain/logic/CalculatorService.cpp.o -c /workspaces/b_hexagon/b_hexagon/src/domain/logic/CalculatorService.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/src/domain/logic/CalculatorService.cpp",
+  "output": "CMakeFiles/domain_tests.dir/src/domain/logic/CalculatorService.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -I/workspaces/b_hexagon/b_hexagon/src -I/workspaces/b_hexagon/b_hexagon/tests -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wcast-qual -Wcast-align -Wredundant-decls -Wunreachable-code -Wnon-virtual-dtor -Wold-style-cast -Woverloaded-virtual -Wshadow -Wfloat-equal -Wundef -o CMakeFiles/domain_tests.dir/src/domain/model/TrackData.cpp.o -c /workspaces/b_hexagon/b_hexagon/src/domain/model/TrackData.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/src/domain/model/TrackData.cpp",
+  "output": "CMakeFiles/domain_tests.dir/src/domain/model/TrackData.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -I/workspaces/b_hexagon/b_hexagon/src -I/workspaces/b_hexagon/b_hexagon/tests -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wcast-qual -Wcast-align -Wredundant-decls -Wunreachable-code -Wnon-virtual-dtor -Wold-style-cast -Woverloaded-virtual -Wshadow -Wfloat-equal -Wundef -o CMakeFiles/domain_tests.dir/src/domain/model/DelayCalculatedTrackData.cpp.o -c /workspaces/b_hexagon/b_hexagon/src/domain/model/DelayCalculatedTrackData.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/src/domain/model/DelayCalculatedTrackData.cpp",
+  "output": "CMakeFiles/domain_tests.dir/src/domain/model/DelayCalculatedTrackData.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -I/workspaces/b_hexagon/b_hexagon/src -I/workspaces/b_hexagon/b_hexagon/tests -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wcast-qual -Wcast-align -Wredundant-decls -Wunreachable-code -Wnon-virtual-dtor -Wold-style-cast -Woverloaded-virtual -Wshadow -Wfloat-equal -Wundef -o CMakeFiles/domain_tests.dir/src/adapters/outgoing/ZeroMQDataSender.cpp.o -c /workspaces/b_hexagon/b_hexagon/src/adapters/outgoing/ZeroMQDataSender.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/src/adapters/outgoing/ZeroMQDataSender.cpp",
+  "output": "CMakeFiles/domain_tests.dir/src/adapters/outgoing/ZeroMQDataSender.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -I/workspaces/b_hexagon/b_hexagon/src -I/workspaces/b_hexagon/b_hexagon/tests -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wcast-qual -Wcast-align -Wredundant-decls -Wunreachable-code -Wnon-virtual-dtor -Wold-style-cast -Woverloaded-virtual -Wshadow -Wfloat-equal -Wundef -o CMakeFiles/domain_tests.dir/src/adapters/incoming/ZeroMQDataHandler.cpp.o -c /workspaces/b_hexagon/b_hexagon/src/adapters/incoming/ZeroMQDataHandler.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/src/adapters/incoming/ZeroMQDataHandler.cpp",
+  "output": "CMakeFiles/domain_tests.dir/src/adapters/incoming/ZeroMQDataHandler.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -I/workspaces/b_hexagon/b_hexagon/src -I/workspaces/b_hexagon/b_hexagon/tests -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wcast-qual -Wcast-align -Wredundant-decls -Wunreachable-code -Wnon-virtual-dtor -Wold-style-cast -Woverloaded-virtual -Wshadow -Wfloat-equal -Wundef -o CMakeFiles/domain_tests.dir/src/messaging/ContractManager.cpp.o -c /workspaces/b_hexagon/b_hexagon/src/messaging/ContractManager.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/src/messaging/ContractManager.cpp",
+  "output": "CMakeFiles/domain_tests.dir/src/messaging/ContractManager.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -I/workspaces/b_hexagon/b_hexagon/src -I/workspaces/b_hexagon/b_hexagon/tests -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wcast-qual -Wcast-align -Wredundant-decls -Wunreachable-code -Wnon-virtual-dtor -Wold-style-cast -Woverloaded-virtual -Wshadow -Wfloat-equal -Wundef -o CMakeFiles/domain_tests.dir/src/messaging/messaging.cpp.o -c /workspaces/b_hexagon/b_hexagon/src/messaging/messaging.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/src/messaging/messaging.cpp",
+  "output": "CMakeFiles/domain_tests.dir/src/messaging/messaging.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -I/workspaces/b_hexagon/b_hexagon/src -I/workspaces/b_hexagon/b_hexagon/tests -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wcast-qual -Wcast-align -Wredundant-decls -Wunreachable-code -Wnon-virtual-dtor -Wold-style-cast -Woverloaded-virtual -Wshadow -Wfloat-equal -Wundef -o CMakeFiles/domain_tests.dir/src/common/JsonConfigReader.cpp.o -c /workspaces/b_hexagon/b_hexagon/src/common/JsonConfigReader.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/src/common/JsonConfigReader.cpp",
+  "output": "CMakeFiles/domain_tests.dir/src/common/JsonConfigReader.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/precompiled.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/precompiled.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/precompiled.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/precompiled.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/address.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/address.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/address.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/address.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/channel.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/channel.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/channel.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/channel.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/client.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/client.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/client.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/client.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/clock.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/clock.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/clock.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/clock.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/ctx.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/ctx.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/ctx.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/ctx.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/curve_mechanism_base.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/curve_mechanism_base.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/curve_mechanism_base.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/curve_mechanism_base.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/curve_client.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/curve_client.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/curve_client.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/curve_client.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/curve_server.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/curve_server.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/curve_server.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/curve_server.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/dealer.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/dealer.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/dealer.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/dealer.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/devpoll.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/devpoll.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/devpoll.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/devpoll.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/dgram.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/dgram.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/dgram.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/dgram.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/dist.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/dist.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/dist.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/dist.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/endpoint.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/endpoint.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/endpoint.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/endpoint.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/epoll.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/epoll.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/epoll.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/epoll.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/err.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/err.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/err.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/err.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/fq.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/fq.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/fq.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/fq.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/io_object.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/io_object.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/io_object.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/io_object.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/io_thread.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/io_thread.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/io_thread.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/io_thread.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/ip.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/ip.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/ip.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/ip.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/ipc_address.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/ipc_address.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/ipc_address.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/ipc_address.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/ipc_connecter.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/ipc_connecter.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/ipc_connecter.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/ipc_connecter.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/ipc_listener.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/ipc_listener.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/ipc_listener.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/ipc_listener.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/kqueue.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/kqueue.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/kqueue.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/kqueue.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/lb.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/lb.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/lb.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/lb.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/mailbox.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/mailbox.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/mailbox.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/mailbox.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/mailbox_safe.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/mailbox_safe.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/mailbox_safe.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/mailbox_safe.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/mechanism.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/mechanism.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/mechanism.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/mechanism.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/mechanism_base.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/mechanism_base.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/mechanism_base.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/mechanism_base.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/metadata.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/metadata.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/metadata.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/metadata.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/msg.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/msg.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/msg.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/msg.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/mtrie.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/mtrie.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/mtrie.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/mtrie.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/norm_engine.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/norm_engine.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/norm_engine.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/norm_engine.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/object.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/object.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/object.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/object.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/options.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/options.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/options.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/options.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/own.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/own.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/own.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/own.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/null_mechanism.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/null_mechanism.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/null_mechanism.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/null_mechanism.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/pair.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/pair.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/pair.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/pair.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/peer.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/peer.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/peer.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/peer.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/pgm_receiver.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/pgm_receiver.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/pgm_receiver.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/pgm_receiver.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/pgm_sender.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/pgm_sender.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/pgm_sender.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/pgm_sender.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/pgm_socket.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/pgm_socket.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/pgm_socket.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/pgm_socket.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/pipe.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/pipe.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/pipe.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/pipe.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/plain_client.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/plain_client.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/plain_client.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/plain_client.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/plain_server.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/plain_server.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/plain_server.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/plain_server.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/poll.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/poll.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/poll.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/poll.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/poller_base.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/poller_base.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/poller_base.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/poller_base.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/polling_util.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/polling_util.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/polling_util.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/polling_util.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/pollset.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/pollset.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/pollset.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/pollset.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/proxy.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/proxy.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/proxy.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/proxy.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/pub.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/pub.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/pub.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/pub.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/pull.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/pull.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/pull.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/pull.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/push.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/push.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/push.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/push.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/random.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/random.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/random.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/random.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/raw_encoder.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/raw_encoder.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/raw_encoder.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/raw_encoder.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/raw_decoder.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/raw_decoder.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/raw_decoder.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/raw_decoder.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/raw_engine.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/raw_engine.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/raw_engine.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/raw_engine.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/reaper.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/reaper.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/reaper.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/reaper.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/rep.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/rep.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/rep.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/rep.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/req.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/req.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/req.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/req.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/router.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/router.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/router.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/router.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/select.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/select.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/select.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/select.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/server.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/server.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/server.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/server.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/session_base.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/session_base.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/session_base.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/session_base.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/signaler.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/signaler.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/signaler.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/signaler.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/socket_base.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/socket_base.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/socket_base.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/socket_base.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/socks.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/socks.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/socks.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/socks.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/socks_connecter.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/socks_connecter.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/socks_connecter.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/socks_connecter.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/stream.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/stream.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/stream.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/stream.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/stream_engine_base.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/stream_engine_base.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/stream_engine_base.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/stream_engine_base.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/sub.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/sub.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/sub.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/sub.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/tcp.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/tcp.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/tcp.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/tcp.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/tcp_address.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/tcp_address.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/tcp_address.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/tcp_address.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/tcp_connecter.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/tcp_connecter.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/tcp_connecter.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/tcp_connecter.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/tcp_listener.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/tcp_listener.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/tcp_listener.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/tcp_listener.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/thread.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/thread.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/thread.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/thread.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/trie.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/trie.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/trie.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/trie.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/radix_tree.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/radix_tree.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/radix_tree.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/radix_tree.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/v1_decoder.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/v1_decoder.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/v1_decoder.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/v1_decoder.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/v1_encoder.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/v1_encoder.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/v1_encoder.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/v1_encoder.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/v2_decoder.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/v2_decoder.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/v2_decoder.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/v2_decoder.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/v2_encoder.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/v2_encoder.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/v2_encoder.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/v2_encoder.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/v3_1_encoder.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/v3_1_encoder.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/v3_1_encoder.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/v3_1_encoder.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/xpub.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/xpub.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/xpub.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/xpub.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/xsub.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/xsub.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/xsub.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/xsub.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/zmq.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/zmq.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/zmq.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/zmq.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/zmq_utils.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/zmq_utils.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/zmq_utils.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/zmq_utils.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/decoder_allocators.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/decoder_allocators.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/decoder_allocators.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/decoder_allocators.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/socket_poller.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/socket_poller.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/socket_poller.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/socket_poller.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/timers.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/timers.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/timers.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/timers.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/radio.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/radio.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/radio.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/radio.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/dish.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/dish.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/dish.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/dish.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/udp_engine.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/udp_engine.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/udp_engine.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/udp_engine.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/udp_address.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/udp_address.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/udp_address.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/udp_address.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/scatter.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/scatter.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/scatter.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/scatter.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/gather.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/gather.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/gather.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/gather.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/ip_resolver.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/ip_resolver.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/ip_resolver.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/ip_resolver.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/zap_client.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/zap_client.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/zap_client.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/zap_client.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/zmtp_engine.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/zmtp_engine.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/zmtp_engine.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/zmtp_engine.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/stream_connecter_base.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/stream_connecter_base.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/stream_connecter_base.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/stream_connecter_base.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/stream_listener_base.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/stream_listener_base.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/stream_listener_base.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/stream_listener_base.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/tipc_address.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/tipc_address.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/tipc_address.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/tipc_address.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/tipc_connecter.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/tipc_connecter.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/tipc_connecter.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/tipc_connecter.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq",
+  "command": "/usr/bin/c++ -DZMQ_BUILD_DRAFT_API -DZMQ_CUSTOM_PLATFORM_HPP -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE -I/workspaces/b_hexagon/b_hexagon/third_party/libzmq/include -I/workspaces/b_hexagon/b_hexagon/build/third_party/libzmq  -Wno-tautological-constant-compare -O3 -DNDEBUG -std=gnu++17 -fPIC -o CMakeFiles/objects.dir/src/tipc_listener.cpp.o -c /workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/tipc_listener.cpp",
+  "file": "/workspaces/b_hexagon/b_hexagon/third_party/libzmq/src/tipc_listener.cpp",
+  "output": "third_party/libzmq/CMakeFiles/objects.dir/src/tipc_listener.cpp.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/c++  -I/workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock/include -I/workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest -O3 -DNDEBUG -std=c++17 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "file": "/workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/c++  -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest -O3 -DNDEBUG -std=c++17 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "file": "/workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/c++  -I/workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest/include -I/workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest -O3 -DNDEBUG -std=c++17 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "file": "/workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
+},
+{
+  "directory": "/workspaces/b_hexagon/b_hexagon/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/c++  -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest/include -isystem /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest -O3 -DNDEBUG -std=c++17 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "file": "/workspaces/b_hexagon/b_hexagon/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
+}
+]

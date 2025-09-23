@@ -12,8 +12,8 @@ ZeroMQDishTrackDataSubscriber::ZeroMQDishTrackDataSubscriber(
     std::shared_ptr<domain::ports::incoming::TrackDataSubmission> track_data_submission)
     : track_data_submission_(track_data_submission)
     , running_(false)
-    , multicast_endpoint_("udp://239.1.1.1:9002")  // Port 9002 for DelayCalcTrackData from B_hexagon
-    , group_name_("SOURCE_DATA")                    // Default group name
+    , multicast_endpoint_("udp://239.1.1.5:9595")  // Port 9595 for DelayCalcTrackData from B_hexagon (updated to match DelayCalcTrackData constants)
+    , group_name_("DelayCalcTrackData")             // Group name matches message type
     , zmq_context_(1)  // 1 I/O thread
     , dish_socket_(nullptr) {
     
@@ -201,119 +201,23 @@ ZeroMQDishTrackDataSubscriber::deserializeDelayCalcTrackData(
     const LatencyMeasurement& latency_info) {
     
     try {
-        // A'dan B'ye nasıl başarılı data akışı var ise, B'den C'ye de aynı yöntem kullanılacak
-        // B_hexagon'un JSON parsing yöntemi - basit ve güvenli approach
+        // Güncellenmiş modelin binary serialization özelliğini kullan
         domain::model::DelayCalcTrackData data; // default constructed
         
-        // B_hexagon'un başarılı parsing metodunu kullan
-        parseJsonFieldsLikeBHexagon(original_data, data);
+        // String'i binary data'ya dönüştür
+        std::vector<uint8_t> binary_data(original_data.begin(), original_data.end());
         
-        return data;
+        // Modelin kendi deserialize metodunu kullan
+        if (data.deserialize(binary_data)) {
+            return data;
+        } else {
+            std::cerr << "[DishSubscriber] Binary deserialization failed" << std::endl;
+            return std::nullopt;
+        }
 
     } catch (const std::exception& e) {
-        std::cerr << "[DishSubscriber] B_hexagon-style deserialization hatası: " << e.what() << std::endl;
-        std::cerr << "[DishSubscriber] Problematic data: " << original_data << std::endl;
+        std::cerr << "[DishSubscriber] Binary deserialization hatası: " << e.what() << std::endl;
+        std::cerr << "[DishSubscriber] Data size: " << original_data.size() << " bytes" << std::endl;
         return std::nullopt;
     }
-}
-
-// B_Hexagon'un JSON parsing yöntemini kopyala - basit ve güvenli
-void ZeroMQDishTrackDataSubscriber::parseJsonFieldsLikeBHexagon(
-    const std::string& json, domain::model::DelayCalcTrackData& data) {
-    
-    std::size_t pos = 0;
-    auto skipWhitespace = [&]() {
-        while (pos < json.length() && std::isspace(static_cast<unsigned char>(json[pos]))) {
-            ++pos;
-        }
-    };
-    
-    skipWhitespace();
-    if (pos >= json.length() || json[pos] != '{') {
-        return; // Invalid JSON object
-    }
-    
-    ++pos; // Skip opening brace
-    
-    while (pos < json.length()) {
-        skipWhitespace();
-        
-        if (pos >= json.length()) break;
-        if (json[pos] == '}') break; // End of object
-        
-        // Extract field name
-        if (json[pos] != '"') {
-            ++pos;
-            continue;
-        }
-        
-        try {
-            // Extract field name like B_Hexagon does
-            ++pos; // Skip opening quote
-            std::size_t start = pos;
-            
-            // Find closing quote
-            while (pos < json.length() && json[pos] != '"') {
-                if (json[pos] == '\\') {
-                    ++pos; // Skip escaped character
-                }
-                ++pos;
-            }
-            
-            if (pos >= json.length()) break;
-            
-            std::string fieldName = json.substr(start, pos - start);
-            ++pos; // Skip closing quote
-            
-            skipWhitespace();
-            if (pos >= json.length() || json[pos] != ':') {
-                ++pos;
-                continue;
-            }
-            ++pos; // Skip colon
-            
-            skipWhitespace();
-            
-            // Parse field values exactly like B_Hexagon does
-            if (fieldName == "trackId") {
-                data.setTrackId(std::stoul(json.substr(pos)));
-            } else if (fieldName == "xVelocityECEF") {
-                data.setVelocityECEF(std::stod(json.substr(pos)), data.getYVelocityECEF(), data.getZVelocityECEF());
-            } else if (fieldName == "yVelocityECEF") {
-                data.setVelocityECEF(data.getXVelocityECEF(), std::stod(json.substr(pos)), data.getZVelocityECEF());
-            } else if (fieldName == "zVelocityECEF") {
-                data.setVelocityECEF(data.getXVelocityECEF(), data.getYVelocityECEF(), std::stod(json.substr(pos)));
-            } else if (fieldName == "xPositionECEF") {
-                data.setPositionECEF(std::stod(json.substr(pos)), data.getYPositionECEF(), data.getZPositionECEF());
-            } else if (fieldName == "yPositionECEF") {
-                data.setPositionECEF(data.getXPositionECEF(), std::stod(json.substr(pos)), data.getZPositionECEF());
-            } else if (fieldName == "zPositionECEF") {
-                data.setPositionECEF(data.getXPositionECEF(), data.getYPositionECEF(), std::stod(json.substr(pos)));
-            } else if (fieldName == "updateTime") {
-                data.setUpdateTime(std::stoull(json.substr(pos)));
-            } else if (fieldName == "originalUpdateTime") {
-                data.setOriginalUpdateTime(std::stoull(json.substr(pos)));
-            } else if (fieldName == "firstHopSentTime") {
-                data.setFirstHopSentTime(std::stoull(json.substr(pos)));
-            } else if (fieldName == "firstHopDelayTime") {
-                data.setFirstHopDelayTime(std::stoull(json.substr(pos)));
-            } else if (fieldName == "secondHopSentTime") {
-                data.setSecondHopSentTime(std::stoull(json.substr(pos)));
-            }
-            
-            // Skip to next field like B_Hexagon does
-            while (pos < json.length() && json[pos] != ',' && json[pos] != '}') {
-                ++pos;
-            }
-            if (pos < json.length() && json[pos] == ',') {
-                ++pos;
-            }
-            
-        } catch (const std::exception&) {
-            // Skip invalid field exactly like B_Hexagon does
-            ++pos;
-        }
-    }
-}
-
 } // namespace hat::adapters::incoming::zeromq

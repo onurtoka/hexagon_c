@@ -1,40 +1,21 @@
 #pragma once
 
-#include "../../model/DelayCalcTrackData.hpp"
-#include "../../model/FinalCalcDelayData.hpp"
-#include <vector>
-#include <memory>
-
-namespace hat::domain::ports::outgoing {
+#include "../../model/FinalCalcTrackData.hpp"  // Outgoing FinalCalcTrackData
 
 /**
- * SECONDARY PORT INTERFACE - Hexagonal Architecture'da Secondary Port
+ * @interface IDataSender  
+ * @brief Hexagonal Architecture Secondary Port for outgoing track data
  * 
- * HEXAGONAL ARCHITECTURE AÇIKLAMASI:
- * - Secondary Port = Domain'in dış dünyayı kullanması için tanımladığı interface
- * - Bu port DOMAIN LOGIC tarafından çağrılır (outgoing direction)
- * - ADAPTER'lar bu port'u implement eder (ZeroMQTrackDataPublisher)
- * - İşlenen verileri ZeroMQ üzerinden dışarı gönderen arayüz
+ * Sends FinalCalcTrackData to external systems via ZeroMQ RADIO socket.
+ * This is the secondary port interface that domain logic calls.
  */
-class TrackDataPublisher {
+class IDataSender {
 public:
-    virtual ~TrackDataPublisher() = default;
+    virtual ~IDataSender() = default;
 
     /**
-     * DELAY CALC TRACK DATA PUBLISHING - Ana veri yayınlama fonksiyonu
+     * @brief Send final calculated track data to external systems
+     * @param data FinalCalcTrackData containing complete delay analysis
      */
-    virtual bool publishDelayCalcTrackData(const model::DelayCalcTrackData& data) = 0;
-
-    /**
-     * FINAL CALC DELAY DATA PUBLISHING - Final veri yayınlama fonksiyonu
-     */
-    virtual bool publishFinalCalcDelayData(const model::FinalCalcDelayData& data) = 0;
-
-    /**
-     * PUBLISHER STATUS CHECK - Yayınlayıcı durum kontrolü
-     */
-    virtual bool isPublisherActive() const = 0;
-
-}; // class TrackDataPublisher
-
-} // namespace hat::domain::ports::outgoing
+    virtual void sendData(const domain::model::FinalCalcTrackData& data) = 0;
+};

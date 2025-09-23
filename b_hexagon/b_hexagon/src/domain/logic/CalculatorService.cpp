@@ -6,40 +6,42 @@
 #include "domain/logic/CalculatorService.hpp"
 #include "common/Logger.hpp"
 
-DelayCalculatedTrackData CalculatorService::calculateDelay(const TrackData& trackData) const {
-    Logger::debug("Processing track ", trackData.trackId, " - calculating delay metrics");
+DelayCalcTrackData CalculatorService::calculateDelay(const ExtrapTrackData& trackData) const {
+    Logger::debug("Processing track ", trackData.getTrackId(), " - calculating delay metrics");
     
     // Get current processing time for second hop
     long currentTime = getCurrentTimeMicroseconds();
     
     // Validate input timestamp
-    if (trackData.firstHopSentTime <= 0) {
-        Logger::warn("Invalid firstHopSentTime for track ", trackData.trackId, ": ", trackData.firstHopSentTime);
+    if (trackData.getFirstHopSentTime() <= 0) {
+        Logger::warn("Invalid firstHopSentTime for track ", trackData.getTrackId(), ": ", trackData.getFirstHopSentTime());
     }
     
     // Create result with calculated values
-    DelayCalculatedTrackData result;
+    DelayCalcTrackData result;
     
     // Copy all original track data
-    result.trackId = trackData.trackId;
-    result.xVelocityECEF = trackData.xVelocityECEF;
-    result.yVelocityECEF = trackData.yVelocityECEF;
-    result.zVelocityECEF = trackData.zVelocityECEF;
-    result.xPositionECEF = trackData.xPositionECEF;
-    result.yPositionECEF = trackData.yPositionECEF;
-    result.zPositionECEF = trackData.zPositionECEF;
-    result.updateTime = trackData.updateTime;
-    result.originalUpdateTime = trackData.originalUpdateTime;
-    result.firstHopSentTime = trackData.firstHopSentTime;
+    result.setTrackId(trackData.getTrackId());
+    result.setXVelocityECEF(trackData.getXVelocityECEF());
+    result.setYVelocityECEF(trackData.getYVelocityECEF());
+    result.setZVelocityECEF(trackData.getZVelocityECEF());
+    result.setXPositionECEF(trackData.getXPositionECEF());
+    result.setYPositionECEF(trackData.getYPositionECEF());
+    result.setZPositionECEF(trackData.getZPositionECEF());
+    result.setUpdateTime(trackData.getUpdateTime());
+    result.setOriginalUpdateTime(trackData.getOriginalUpdateTime());
+    result.setFirstHopSentTime(trackData.getFirstHopSentTime());
     
     // Calculate first hop delay (current time - first hop sent time)
-    result.firstHopDelayTime = calculateTimeDelta(trackData.firstHopSentTime, currentTime);
+    result.setFirstHopDelayTime(calculateTimeDelta(trackData.getFirstHopSentTime(), currentTime));
     
     // Set second hop sent time as current time
-    result.secondHopSentTime = currentTime;
+    result.setSecondHopSentTime(currentTime);
     
-    // Logger::info("Track ", trackData.trackId, " delay calculation complete - first hop delay: ", 
-    //              result.firstHopDelayTime, " μs, second hop time: ", result.secondHopSentTime);
+    Logger::info("Track ", trackData.getTrackId(), " delay calculation complete - first hop delay: ", 
+                 result.getFirstHopDelayTime(), " μs, second hop time: ", result.getSecondHopSentTime());
+    Logger::info("CURRENT TIME <>>>>>>>  ",currentTime);
+    Logger::info("getFirstHopSentTime TIME <>>>>>>>  ",trackData.getFirstHopSentTime());
     
     return result;
 }
@@ -48,6 +50,7 @@ long CalculatorService::getCurrentTimeMicroseconds() const noexcept {
     try {
         auto now = std::chrono::system_clock::now();
         auto duration = now.time_since_epoch();
+        // Microsecond precision kullan (nanosecond yerine)
         return std::chrono::duration_cast<std::chrono::microseconds>(duration).count();
     } catch (...) {
         return 0L;  // Fallback value if time acquisition fails

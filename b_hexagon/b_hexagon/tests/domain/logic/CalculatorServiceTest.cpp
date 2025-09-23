@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include "domain/logic/CalculatorService.hpp"
-#include "domain/model/TrackData.hpp"
-#include "domain/model/DelayCalculatedTrackData.hpp"
+#include "domain/model/ExtrapTrackData.hpp"
+#include "domain/model/DelayCalcTrackData.hpp"
 
 class CalculatorServiceTest : public ::testing::Test {
 protected:
@@ -20,12 +20,12 @@ protected:
     }
 
     CalculatorService service;
-    TrackData testTrackData;
+    ExtrapTrackData testTrackData;
 };
 
 TEST_F(CalculatorServiceTest, CalculateDelay_ValidInput_ReturnsCorrectData) {
     // Act
-    DelayCalculatedTrackData result = service.calculateDelay(testTrackData);
+    DelayCalcTrackData result = service.calculateDelay(testTrackData);
 
     // Assert - Check that all original data is preserved
     EXPECT_EQ(testTrackData.trackId, result.trackId);
@@ -42,7 +42,7 @@ TEST_F(CalculatorServiceTest, CalculateDelay_ValidInput_ReturnsCorrectData) {
 
 TEST_F(CalculatorServiceTest, CalculateDelay_ValidInput_CalculatesDelayCorrectly) {
     // Act
-    DelayCalculatedTrackData result = service.calculateDelay(testTrackData);
+    DelayCalcTrackData result = service.calculateDelay(testTrackData);
 
     // Assert - Check calculated delay
     EXPECT_GT(result.firstHopDelayTime, 0L); // Should be positive
@@ -54,7 +54,7 @@ TEST_F(CalculatorServiceTest, CalculateDelay_ZeroTrackId_PreservesZeroId) {
     testTrackData.trackId = 0;
 
     // Act
-    DelayCalculatedTrackData result = service.calculateDelay(testTrackData);
+    DelayCalcTrackData result = service.calculateDelay(testTrackData);
 
     // Assert
     EXPECT_EQ(0, result.trackId);
@@ -67,7 +67,7 @@ TEST_F(CalculatorServiceTest, CalculateDelay_NegativePositions_PreservesNegative
     testTrackData.zPositionECEF = -750.0;
 
     // Act
-    DelayCalculatedTrackData result = service.calculateDelay(testTrackData);
+    DelayCalcTrackData result = service.calculateDelay(testTrackData);
 
     // Assert
     EXPECT_DOUBLE_EQ(-1500.0, result.xPositionECEF);
@@ -82,7 +82,7 @@ TEST_F(CalculatorServiceTest, CalculateDelay_NegativeVelocities_PreservesNegativ
     testTrackData.zVelocityECEF = -25.0;
 
     // Act
-    DelayCalculatedTrackData result = service.calculateDelay(testTrackData);
+    DelayCalcTrackData result = service.calculateDelay(testTrackData);
 
     // Assert
     EXPECT_DOUBLE_EQ(-50.0, result.xVelocityECEF);
@@ -92,8 +92,8 @@ TEST_F(CalculatorServiceTest, CalculateDelay_NegativeVelocities_PreservesNegativ
 
 TEST_F(CalculatorServiceTest, CalculateDelay_MultipleCallsWithSameInput_ConsistentResults) {
     // Act
-    DelayCalculatedTrackData result1 = service.calculateDelay(testTrackData);
-    DelayCalculatedTrackData result2 = service.calculateDelay(testTrackData);
+    DelayCalcTrackData result1 = service.calculateDelay(testTrackData);
+    DelayCalcTrackData result2 = service.calculateDelay(testTrackData);
 
     // Assert - All original data should be identical
     EXPECT_EQ(result1.trackId, result2.trackId);
@@ -118,7 +118,7 @@ TEST_F(CalculatorServiceTest, CalculateDelay_ZeroTimestamps_HandlesGracefully) {
     testTrackData.firstHopSentTime = 0L;
 
     // Act
-    DelayCalculatedTrackData result = service.calculateDelay(testTrackData);
+    DelayCalcTrackData result = service.calculateDelay(testTrackData);
 
     // Assert
     EXPECT_EQ(0L, result.updateTime);

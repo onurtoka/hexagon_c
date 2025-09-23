@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include "domain/logic/TrackCalculations.hpp"
-#include "domain/model/TrackData.hpp"
+#include "domain/model/ExtrapTrackData.hpp"
 #include <chrono>
 #include <thread>
 
@@ -12,7 +12,7 @@ protected:
         testTrackData.firstHopSentTime = 1000000000L; // 1 second in nanoseconds
     }
 
-    TrackData testTrackData;
+    ExtrapTrackData testTrackData;
 };
 
 TEST_F(TrackCalculationsTest, CalculateFirstHopDelayTime_ValidInput_ReturnsCorrectDelay) {

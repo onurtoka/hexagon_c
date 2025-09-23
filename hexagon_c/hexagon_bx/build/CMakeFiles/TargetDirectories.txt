@@ -1,9 +1,0 @@
-/workspaces/hexagon_c/hexagon_c/hexagon_bx/build/CMakeFiles/hat_b_app.dir
-/workspaces/hexagon_c/hexagon_c/hexagon_bx/build/CMakeFiles/package.dir
-/workspaces/hexagon_c/hexagon_c/hexagon_bx/build/CMakeFiles/package_source.dir
-/workspaces/hexagon_c/hexagon_c/hexagon_bx/build/CMakeFiles/edit_cache.dir
-/workspaces/hexagon_c/hexagon_c/hexagon_bx/build/CMakeFiles/rebuild_cache.dir
-/workspaces/hexagon_c/hexagon_c/hexagon_bx/build/CMakeFiles/list_install_components.dir
-/workspaces/hexagon_c/hexagon_c/hexagon_bx/build/CMakeFiles/install.dir
-/workspaces/hexagon_c/hexagon_c/hexagon_bx/build/CMakeFiles/install/local.dir
-/workspaces/hexagon_c/hexagon_c/hexagon_bx/build/CMakeFiles/install/strip.dir

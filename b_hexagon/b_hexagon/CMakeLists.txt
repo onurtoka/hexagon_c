@@ -9,13 +9,11 @@ option(USE_VENDORED_ZMQ "Build and link against bundled libzmq" ON)
 # Core sources (explicit for clarity)
 set(APP_SOURCES
     src/domain/logic/CalculatorService.cpp
-    src/domain/model/TrackData.cpp
-    src/domain/model/DelayCalculatedTrackData.cpp
-    src/adapters/outgoing/ZeroMQDataSender.cpp
+    src/domain/model/ExtrapTrackData.cpp
+    src/domain/model/DelayCalcTrackData.cpp
+    src/adapters/outgoing/ZeroMQDataWriter.cpp
     src/adapters/incoming/ZeroMQDataHandler.cpp
-    src/messaging/ContractManager.cpp
-    src/messaging/messaging.cpp
-    src/common/JsonConfigReader.cpp
+    src/common/BinarySerializer.cpp
 )
 
 add_executable(b_hexagon_app
@@ -83,25 +81,31 @@ endif()
 # Enable testing
 enable_testing()
 
-# Download and include Google Test (DISABLED FOR BUILD)
-# include(FetchContent)
-# FetchContent_Declare(
-#   googletest
-#   URL https://github.com/google/googletest/archive/release-1.12.1.zip
-#   DOWNLOAD_EXTRACT_TIMESTAMP true
-# )
-# # For Windows: Prevent overriding the parent project's compiler/linker settings
-# set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-# FetchContent_MakeAvailable(googletest)
+# Download and include Google Test
+include(FetchContent)
+FetchContent_Declare(
+  googletest
+  URL https://github.com/google/googletest/archive/release-1.12.1.zip
+  DOWNLOAD_EXTRACT_TIMESTAMP true
+)
+# For Windows: Prevent overriding the parent project's compiler/linker settings
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+FetchContent_MakeAvailable(googletest)
 
 # Test sources
 set(TEST_SOURCES
     tests/test_main.cpp
     tests/TrackCalculationsTest.cpp
     tests/CalculatorServiceTest.cpp
-    tests/TrackDataTest.cpp
-    tests/DelayCalculatedTrackDataTest.cpp
-    tests/common/JsonConfigReaderTest.cpp
+    tests/ExtrapTrackDataTest.cpp
+    tests/DelayCalcTrackDataTest.cpp
+    tests/common/BinarySerializerTest.cpp
+    tests/test_zmq_config.cpp
+    tests/test_adapter_config.cpp
+    tests/adapters/incoming/ZeroMQDataHandlerTest.cpp
+    tests/adapters/outgoing/ZeroMQDataWriterTest.cpp
+    tests/integration/EndToEndIntegrationTest.cpp
+    tests/performance/PerformanceTest.cpp
 )
 
 # Domain test executable

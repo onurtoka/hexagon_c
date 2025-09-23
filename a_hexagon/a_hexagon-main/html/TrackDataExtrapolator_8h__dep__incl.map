@@ -1,9 +1,0 @@
-<map id="src/domain/logic/TrackDataExtrapolator.h" name="src/domain/logic/TrackDataExtrapolator.h">
-<area shape="rect" id="Node000001" title="Header file for TrackDataExtrapolator class." alt="" coords="211,5,410,45"/>
-<area shape="rect" id="Node000002" href="$src_2application_2main_8cpp.html" title=" " alt="" coords="5,101,187,126"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="252,53,126,103,124,98,250,48"/>
-<area shape="rect" id="Node000003" href="$TrackDataExtrapolator_8cpp.html" title=" " alt="" coords="211,93,410,133"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="313,59,313,93,308,93,308,59"/>
-<area shape="rect" id="Node000004" href="$TrackDataExtrapolator__test_8cpp.html" title=" " alt="" coords="434,93,638,133"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="374,48,488,91,486,96,372,53"/>
-</map>

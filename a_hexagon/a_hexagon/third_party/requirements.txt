@@ -1,0 +1,5 @@
+sudo apt install doxygen # For documentation generation
+sudo apt install graphviz # For generating diagrams in documentation
+sudo apt install valgrind # For memory leak detection and dynamic analysis
+sudo apt install cppcheck # For static code analysis
+sudo apt install gcovr # For code coverage reporting

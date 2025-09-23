@@ -210,10 +210,7 @@ CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.o: \
  /usr/include/c++/12/pstl/execution_defs.h /usr/include/c++/12/thread \
  /usr/include/c++/12/bits/std_thread.h \
  /usr/include/c++/12/bits/this_thread_sleep.h \
- /workspaces/hexagon_c/hexagon_c/hexagon_c/src/application/../domain/logic/TrackDataProcessor.hpp \
- /workspaces/hexagon_c/hexagon_c/hexagon_c/src/application/../domain/logic/../ports/incoming/TrackDataSubmission.hpp \
- /workspaces/hexagon_c/hexagon_c/hexagon_c/src/application/../domain/logic/../ports/incoming/../../model/DelayCalcTrackData.hpp \
- /workspaces/hexagon_c/hexagon_c/hexagon_c/src/application/../domain/logic/../ports/incoming/../../model/FinalCalcDelayData.hpp \
+ /workspaces/hexagon_c/hexagon_c/hexagon_c/src/application/../domain/model/DelayCalcTrackData.hpp \
  /usr/include/c++/12/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -238,14 +235,14 @@ CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.o: \
  /usr/include/c++/12/tr1/riemann_zeta.tcc /usr/include/c++/12/vector \
  /usr/include/c++/12/bits/stl_vector.h \
  /usr/include/c++/12/bits/stl_bvector.h \
- /usr/include/c++/12/bits/vector.tcc \
- /workspaces/hexagon_c/hexagon_c/hexagon_c/src/application/../adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.hpp \
+ /usr/include/c++/12/bits/vector.tcc /usr/include/c++/12/cstring \
+ /usr/include/string.h /usr/include/strings.h \
+ /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+ /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
+ /workspaces/hexagon_c/hexagon_c/hexagon_c/src/application/../domain/model/FinalCalcTrackData.hpp \
  /workspaces/hexagon_c/hexagon_c/hexagon_c/../libzmq/include/zmq.hpp \
  /workspaces/hexagon_c/hexagon_c/hexagon_c/../libzmq/include/zmq.h \
  /usr/include/c++/12/cassert /usr/include/assert.h \
- /usr/include/c++/12/cstring /usr/include/string.h /usr/include/strings.h \
- /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
- /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
  /usr/include/c++/12/algorithm /usr/include/c++/12/bits/stl_algo.h \
  /usr/include/c++/12/bits/algorithmfwd.h \
  /usr/include/c++/12/bits/stl_heap.h \
@@ -261,14 +258,4 @@ CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.o: \
  /usr/include/c++/12/bits/quoted_string.h /usr/include/c++/12/sstream \
  /usr/include/c++/12/bits/sstream.tcc /usr/include/c++/12/array \
  /usr/include/c++/12/compare /usr/include/c++/12/optional \
- /usr/include/c++/12/bits/enable_special_members.h \
- /workspaces/hexagon_c/hexagon_c/hexagon_c/../libzmq/include/zmq_addon.hpp \
- /workspaces/hexagon_c/hexagon_c/hexagon_c/../libzmq/include/zmq.hpp \
- /usr/include/c++/12/deque /usr/include/c++/12/bits/stl_deque.h \
- /usr/include/c++/12/bits/deque.tcc /usr/include/c++/12/functional \
- /usr/include/c++/12/bits/std_function.h \
- /usr/include/c++/12/unordered_map /usr/include/c++/12/bits/hashtable.h \
- /usr/include/c++/12/bits/hashtable_policy.h \
- /usr/include/c++/12/bits/node_handle.h \
- /usr/include/c++/12/bits/unordered_map.h \
- /usr/include/c++/12/bits/erase_if.h
+ /usr/include/c++/12/bits/enable_special_members.h

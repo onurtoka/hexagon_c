@@ -29,6 +29,12 @@ cd /workspaces/hexagon_c/hexagon_c/hexagon_c
 g++ -std=c++17 -I../libzmq/include -I../include -DZMQ_BUILD_DRAFT_API -pthread -O3 -march=native -mtune=native -flto -ffast-math -DNDEBUG src/application/main.cpp src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp src/adapters/incoming/zeromq/ZeroMQTrackDataSubscriber.cpp src/adapters/outgoing/zeromq/ZeroMQTrackDataPublisher.cpp src/adapters/outgoing/zeromq/ZeroMQRadioTrackDataPublisher.cpp src/domain/model/FinalCalcDelayData.cpp src/domain/model/DelayCalcTrackData.cpp src/domain/logic/TrackDataProcessor.cpp ../libzmq/build/lib/libzmq.a -lsodium -lrt -lgnutls -o hexagon_c_app_optimized
 ```
 
+## Hexagon_c Binary Serialization Build (Recommended)
+```bash
+cd /workspaces/hexagon_c/hexagon_c/hexagon_c
+g++ -std=c++17 -I../libzmq/include -I../include -DZMQ_BUILD_DRAFT_API -pthread -O3 -march=native -mtune=native -flto -ffast-math -DNDEBUG src/application/main.cpp src/domain/model/DelayCalcTrackData.cpp src/domain/model/FinalCalcTrackData.cpp src/domain/logic/TrackDataProcessor.cpp ../libzmq/build/lib/libzmq.a -lsodium -lrt -lgnutls -o hexagon_c_app_binary_optimized
+```
+
 ## B_hexagon Optimized Build (G++ Manual)
 ```bash
 cd /workspaces/hexagon_c/b_hexagon/b_hexagon
@@ -39,6 +45,12 @@ g++ -std=c++17 -Isrc -I/workspaces/hexagon_c/hexagon_c/libzmq/include -I/workspa
 ```bash
 cd /workspaces/hexagon_c/a_hexagon/a_hexagon-main
 g++ -std=c++17 -Isrc -I/workspaces/hexagon_c/hexagon_c/libzmq/include -I/workspaces/hexagon_c/hexagon_c/include -DZMQ_BUILD_DRAFT_API -pthread -O3 -march=native -mtune=native -flto -ffast-math -DNDEBUG src/application/main.cpp src/adapters/outgoing/ZeroMQExtrapTrackDataAdapter.cpp src/utilities/JsonConfigParser.cpp src/domain/ports/incoming/TrackDataIncomingPort.cpp src/domain/model/ExtrapTrackData.cpp src/domain/model/TrackData.cpp src/domain/logic/TrackDataExtrapolator.cpp src/domain/ports/outgoing/TrackDataOutgoingPort.cpp /workspaces/hexagon_c/hexagon_c/libzmq/build/lib/libzmq.a -lsodium -lrt -lgnutls -o a_hexagon_app_optimized
+```
+
+## A_hexagon-main 100Hz Build (G++ Manual)
+```bash
+cd /workspaces/hexagon_c/a_hexagon/a_hexagon-main
+g++ -std=c++17 -Isrc -I/workspaces/hexagon_c/hexagon_c/libzmq/include -I/workspaces/hexagon_c/hexagon_c/include -DZMQ_BUILD_DRAFT_API -pthread -O3 -march=native -mtune=native -flto -ffast-math -DNDEBUG src/application/main.cpp src/adapters/outgoing/ZeroMQExtrapTrackDataAdapter.cpp src/utilities/JsonConfigParser.cpp src/domain/ports/incoming/TrackDataIncomingPort.cpp src/domain/model/ExtrapTrackData.cpp src/domain/model/TrackData.cpp src/domain/logic/TrackDataExtrapolator.cpp src/domain/ports/outgoing/TrackDataOutgoingPort.cpp /workspaces/hexagon_c/hexagon_c/libzmq/build/lib/libzmq.a -lsodium -lrt -lgnutls -o a_hexagon_app_100hz
 ```
 
 ## Notlar

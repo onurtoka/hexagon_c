@@ -129,30 +129,6 @@ hexagon_c_app/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/build
 .PHONY : hexagon_c_app/fast
 
-src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.o: src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.o
-.PHONY : src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.o
-
-# target to build an object file
-src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.o
-.PHONY : src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.o
-
-src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.i: src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.i
-.PHONY : src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.i
-
-# target to preprocess a source file
-src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.i
-.PHONY : src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.i
-
-src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.s: src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.s
-.PHONY : src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.s
-
-# target to generate assembly for a file
-src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.s
-.PHONY : src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.cpp.s
-
 src/application/main.o: src/application/main.cpp.o
 .PHONY : src/application/main.o
 
@@ -176,30 +152,6 @@ src/application/main.s: src/application/main.cpp.s
 src/application/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.s
 .PHONY : src/application/main.cpp.s
-
-src/domain/logic/TrackDataProcessor.o: src/domain/logic/TrackDataProcessor.cpp.o
-.PHONY : src/domain/logic/TrackDataProcessor.o
-
-# target to build an object file
-src/domain/logic/TrackDataProcessor.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/domain/logic/TrackDataProcessor.cpp.o
-.PHONY : src/domain/logic/TrackDataProcessor.cpp.o
-
-src/domain/logic/TrackDataProcessor.i: src/domain/logic/TrackDataProcessor.cpp.i
-.PHONY : src/domain/logic/TrackDataProcessor.i
-
-# target to preprocess a source file
-src/domain/logic/TrackDataProcessor.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/domain/logic/TrackDataProcessor.cpp.i
-.PHONY : src/domain/logic/TrackDataProcessor.cpp.i
-
-src/domain/logic/TrackDataProcessor.s: src/domain/logic/TrackDataProcessor.cpp.s
-.PHONY : src/domain/logic/TrackDataProcessor.s
-
-# target to generate assembly for a file
-src/domain/logic/TrackDataProcessor.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/domain/logic/TrackDataProcessor.cpp.s
-.PHONY : src/domain/logic/TrackDataProcessor.cpp.s
 
 src/domain/model/DelayCalcTrackData.o: src/domain/model/DelayCalcTrackData.cpp.o
 .PHONY : src/domain/model/DelayCalcTrackData.o
@@ -225,29 +177,29 @@ src/domain/model/DelayCalcTrackData.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.s
 .PHONY : src/domain/model/DelayCalcTrackData.cpp.s
 
-src/domain/model/FinalCalcDelayData.o: src/domain/model/FinalCalcDelayData.cpp.o
-.PHONY : src/domain/model/FinalCalcDelayData.o
+src/domain/model/FinalCalcTrackData.o: src/domain/model/FinalCalcTrackData.cpp.o
+.PHONY : src/domain/model/FinalCalcTrackData.o
 
 # target to build an object file
-src/domain/model/FinalCalcDelayData.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcDelayData.cpp.o
-.PHONY : src/domain/model/FinalCalcDelayData.cpp.o
+src/domain/model/FinalCalcTrackData.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcTrackData.cpp.o
+.PHONY : src/domain/model/FinalCalcTrackData.cpp.o
 
-src/domain/model/FinalCalcDelayData.i: src/domain/model/FinalCalcDelayData.cpp.i
-.PHONY : src/domain/model/FinalCalcDelayData.i
+src/domain/model/FinalCalcTrackData.i: src/domain/model/FinalCalcTrackData.cpp.i
+.PHONY : src/domain/model/FinalCalcTrackData.i
 
 # target to preprocess a source file
-src/domain/model/FinalCalcDelayData.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcDelayData.cpp.i
-.PHONY : src/domain/model/FinalCalcDelayData.cpp.i
+src/domain/model/FinalCalcTrackData.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcTrackData.cpp.i
+.PHONY : src/domain/model/FinalCalcTrackData.cpp.i
 
-src/domain/model/FinalCalcDelayData.s: src/domain/model/FinalCalcDelayData.cpp.s
-.PHONY : src/domain/model/FinalCalcDelayData.s
+src/domain/model/FinalCalcTrackData.s: src/domain/model/FinalCalcTrackData.cpp.s
+.PHONY : src/domain/model/FinalCalcTrackData.s
 
 # target to generate assembly for a file
-src/domain/model/FinalCalcDelayData.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcDelayData.cpp.s
-.PHONY : src/domain/model/FinalCalcDelayData.cpp.s
+src/domain/model/FinalCalcTrackData.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcTrackData.cpp.s
+.PHONY : src/domain/model/FinalCalcTrackData.cpp.s
 
 # Help Target
 help:
@@ -258,21 +210,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... hexagon_c_app"
-	@echo "... src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.o"
-	@echo "... src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.i"
-	@echo "... src/adapters/incoming/zeromq/ZeroMQDishTrackDataSubscriber.s"
 	@echo "... src/application/main.o"
 	@echo "... src/application/main.i"
 	@echo "... src/application/main.s"
-	@echo "... src/domain/logic/TrackDataProcessor.o"
-	@echo "... src/domain/logic/TrackDataProcessor.i"
-	@echo "... src/domain/logic/TrackDataProcessor.s"
 	@echo "... src/domain/model/DelayCalcTrackData.o"
 	@echo "... src/domain/model/DelayCalcTrackData.i"
 	@echo "... src/domain/model/DelayCalcTrackData.s"
-	@echo "... src/domain/model/FinalCalcDelayData.o"
-	@echo "... src/domain/model/FinalCalcDelayData.i"
-	@echo "... src/domain/model/FinalCalcDelayData.s"
+	@echo "... src/domain/model/FinalCalcTrackData.o"
+	@echo "... src/domain/model/FinalCalcTrackData.i"
+	@echo "... src/domain/model/FinalCalcTrackData.s"
 .PHONY : help
 
 

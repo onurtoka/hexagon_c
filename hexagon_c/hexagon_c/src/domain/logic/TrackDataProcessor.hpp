@@ -1,44 +1,33 @@
 #pragma once
 
 #include "../ports/incoming/TrackDataSubmission.hpp"
+#include "../ports/outgoing/TrackDataPublisher.hpp"
 #include "../model/DelayCalcTrackData.hpp"
-#include "../model/FinalCalcDelayData.hpp"
-
-namespace hat::domain::logic {
-
-// Basit konfigürasyon - sadece gerekli
-struct ProcessorConfig {
-    // Minimal config - sadece gerekli olanlar
-};
+#include "../model/FinalCalcTrackData.hpp"
+#include <memory>
 
 /**
- * Core business logic - Hexagon'un kalbi
- * Track data işleme, gecikme analizi ve console output
- * Sadece domain modelleri ve incoming port'a bağımlı, publisher yok
+ * @class FinalCalculatorService
+ * @brief Core business logic for processing DelayCalcTrackData and generating FinalCalcTrackData
+ * 
+ * Receives DelayCalcTrackData from B_hexagon, performs final delay analysis,
+ * and sends FinalCalcTrackData to external systems.
  */
-class TrackDataProcessor : public ports::incoming::TrackDataSubmission {
-    
+class FinalCalculatorService final : public IDataReceiver {
+private:
+    std::unique_ptr<IDataSender> dataSender_;
+
 public:
-    TrackDataProcessor();
+    explicit FinalCalculatorService(std::unique_ptr<IDataSender> dataSender);
 
-    // TrackDataSubmission interface implementation
-    
-    /**
-     * DelayCalcTrackData işleme - Ana iş mantığı
-     */
-    bool submitDelayCalcTrackData(const model::DelayCalcTrackData& data) override;
-
-    /**
-     * Sistem hazır durumu kontrolü
-     */
-    bool isReadyToReceive() const override;
+    // IDataReceiver interface implementation
+    void onDataReceived(const domain::model::DelayCalcTrackData& data) override;
 
 private:
     /**
-     * DelayCalcTrackData'dan FinalCalcDelayData üretir
-     * Gelişmiş gecikme hesaplaması ve performance metrics
+     * @brief Process DelayCalcTrackData and generate FinalCalcTrackData
+     * @param input Incoming DelayCalcTrackData from B_hexagon
+     * @return Final calculated track data with complete delay analysis
      */
-    model::FinalCalcDelayData createFinalCalcDelayData(const model::DelayCalcTrackData& input_data);
+    domain::model::FinalCalcTrackData calculateFinalDelay(const domain::model::DelayCalcTrackData& input);
 };
-
-} // namespace hat::domain::logic

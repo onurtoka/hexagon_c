@@ -5,9 +5,13 @@
 
 #pragma once
 
-#include "domain/model/TrackData.hpp"
-#include "domain/model/DelayCalculatedTrackData.hpp"
+#include "domain/model/ExtrapTrackData.hpp"
+#include "domain/model/DelayCalcTrackData.hpp"
 #include <chrono>
+
+// Using declarations for convenience
+using domain::model::ExtrapTrackData;
+using domain::model::DelayCalcTrackData;
 
 /**
  * @class CalculatorService
@@ -36,9 +40,9 @@ public:
     /**
      * @brief Calculate delay between original update time and current time
      * @param trackData Input track data with timing information
-     * @return DelayCalculatedTrackData with computed delay value
+     * @return DelayCalcTrackData with computed delay value
      */
-    DelayCalculatedTrackData calculateDelay(const TrackData& trackData) const;
+    DelayCalcTrackData calculateDelay(const ExtrapTrackData& trackData) const;
 
 private:
     /**

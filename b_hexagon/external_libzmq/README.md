@@ -1,33 +1,63 @@
-# External libzmq Build System
+# External ZeroMQ Build System for B_Hexagon
 
-This directory contains scripts and configuration for building libzmq externally from the main b_hexagon project. This approach provides better control over ZeroMQ compilation and enables easier deployment scenarios.
+This directory provides **optional external ZeroMQ compilation** for the B_Hexagon project. While the main project uses vendored ZeroMQ by default (recommended), this build system offers **maximum control** over ZeroMQ features and optimization for specialized deployment scenarios.
+
+## 🎯 When to Use External ZeroMQ
+
+✅ **Use External ZeroMQ when you need:**
+- Custom ZeroMQ configuration options
+- System-wide ZeroMQ installation
+- Integration with existing ZeroMQ infrastructure  
+- Shared library deployment
+- Custom performance optimizations
+
+❌ **Stick with Vendored ZeroMQ (default) for:**
+- Simple development and testing
+- Avoiding dependency conflicts
+- Guaranteed ABI compatibility
+- Quick project setup
 
 ## 📁 Directory Structure
 
 ```
 external_libzmq/
-├── build_libzmq.sh      # Main build script
-├── verify_libzmq.sh     # Verification and testing script
-├── setup_env.sh         # Environment setup (generated after build)
-├── README.md           # This file
-├── build/              # Build artifacts (generated)
-└── install/            # Installation directory (generated)
-    ├── lib/            # Compiled libraries
-    ├── include/        # Header files
-    └── lib/pkgconfig/  # pkg-config files
+├── build_libzmq.sh      # Complete build automation script
+├── verify_libzmq.sh     # Post-build verification and testing  
+├── setup_env.sh         # Environment configuration (auto-generated)
+├── README.md           # This documentation
+├── build/              # Build artifacts and intermediate files
+└── install/            # Final installation with all components
+    ├── lib/            # Shared/static libraries (libzmq.so, libzmq.a)
+    ├── include/        # C/C++ headers (zmq.h, zmq.hpp)  
+    ├── bin/            # Utilities and tools
+    └── lib/pkgconfig/  # pkg-config files for easy linking
 ```
 
-## 🚀 Quick Start
+## 🚀 Quick Start Guide
 
-### 1. Build libzmq Externally
-
+### 1. Build ZeroMQ with Default Configuration
 ```bash
-# From the project root
+# Navigate to external build directory
 cd external_libzmq
+
+# Run automated build (installs to ./install/ by default)
 ./build_libzmq.sh
+
+# Verify the build completed successfully
+./verify_libzmq.sh
 ```
 
-### 2. Verify the Build
+### 2. Build with Custom Installation Directory
+```bash
+# Install to system directory (requires sudo)
+./build_libzmq.sh /usr/local
+
+# Install to custom location
+./build_libzmq.sh /opt/zeromq
+
+# Verify custom installation
+./verify_libzmq.sh /opt/zeromq
+```
 
 ```bash
 ./verify_libzmq.sh

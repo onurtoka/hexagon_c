@@ -4,57 +4,65 @@
  */
 
 #include "domain/logic/CalculatorService.hpp"
-#include "domain/ports/incoming/IDataReceiver.hpp"
-#include "domain/ports/outgoing/IDataSender.hpp"
+#include "domain/ports/incoming/IDataHandler.hpp"
+#include "domain/ports/outgoing/IDataWriter.hpp"
 #include "adapters/incoming/ZeroMQDataHandler.hpp"
-#include "adapters/outgoing/ZeroMQDataSender.hpp"
+#include "adapters/outgoing/ZeroMQDataWriter.hpp"
 #include "common/Logger.hpp"
 #include <memory>
 #include <iostream>
 #include <thread>
 #include <chrono>
 
+// Using declarations for convenience
+using domain::model::ExtrapTrackData;
+using domain::model::DelayCalcTrackData;
+
 /**
  * @class ProcessTrackUseCase
  * @brief Domain use case for processing track data
  */
-class ProcessTrackUseCase final : public IDataReceiver {
+class ProcessTrackUseCase final : public IDataHandler {
 private:
-    std::unique_ptr<CalculatorService> calculatorService_;
-    std::unique_ptr<IDataSender> dataSender_;
+    std::unique_ptr<CalculatorService> calculator_;
+    std::unique_ptr<IDataWriter> dataSender_;
 
 public:
-    ProcessTrackUseCase(std::unique_ptr<CalculatorService> calculatorService,
-                       std::unique_ptr<IDataSender> dataSender)
-        : calculatorService_(std::move(calculatorService)),
+    explicit ProcessTrackUseCase(std::unique_ptr<CalculatorService> calculator,
+                       std::unique_ptr<IDataWriter> dataSender)
+        : calculator_(std::move(calculator)),
           dataSender_(std::move(dataSender)) {
         Logger::info("ProcessTrackUseCase initialized with CalculatorService and DataSender");
     }
 
-    void onDataReceived(const TrackData& data) override {
-        Logger::debug("Received track data: ID=", data.trackId, 
-                     ", Position=(", data.xPositionECEF, ",", data.yPositionECEF, ",", data.zPositionECEF, ")");
+    void onDataReceived(const ExtrapTrackData& data) override {
+        Logger::info("=== RECEIVED DATA FROM A_HEXAGON ===");
+        Logger::info("Track ID: ", data.getTrackId());
+        Logger::info("Position ECEF: (", data.getXPositionECEF(), ", ", data.getYPositionECEF(), ", ", data.getZPositionECEF(), ")");
+        Logger::info("Velocity ECEF: (", data.getXVelocityECEF(), ", ", data.getYVelocityECEF(), ", ", data.getZVelocityECEF(), ")");
+        Logger::info("Update Time: ", data.getUpdateTime());
+        Logger::info("=====================================");
         
         if (!data.isValid()) {
-            Logger::warn("Invalid track data received: ID=", data.trackId);
+            Logger::warn("Invalid track data received: ID=", data.getTrackId());
             return;
         }
         
         try {
             // Process the track data through domain logic
-            DelayCalculatedTrackData processedData = calculatorService_->calculateDelay(data);
+            DelayCalcTrackData processedData = calculator_->calculateDelay(data);
             
-            // Logger::info("Processed track ", data.trackId, 
-            //             " -> Delay: ", processedData.firstHopDelayTime, "μs, ",
-            //             "SecondHop: ", processedData.secondHopSentTime, "μs");
+            Logger::info("Processed track ", data.getTrackId(), 
+                        " -> Delay: ", processedData.getFirstHopDelayTime(), "μs, ",
+                        "SecondHop: ", processedData.getSecondHopSentTime(), "μs");
             
             // Send processed data via outgoing adapter
             dataSender_->sendData(processedData);
             
-            Logger::debug("Successfully sent processed track data for ID=", data.trackId);
+            Logger::debug("Successfully sent processed track data for ID=", data.getTrackId());
             
         } catch (const std::exception& e) {
-            Logger::error("Error processing track ", data.trackId, ": ", e.what());
+            Logger::error("Error processing track ", data.getTrackId(), ": ", e.what());
         }
     }
 };
@@ -76,8 +84,8 @@ int main() {
         auto calculatorService = std::make_unique<CalculatorService>();
         
         // Create outgoing adapter (RADIO socket)
-        Logger::debug("Creating ZeroMQDataSender (RADIO socket)...");
-        auto dataSender = std::make_unique<ZeroMQDataSender>();
+        Logger::debug("Creating ZeroMQDataWriter (RADIO socket)...");
+        auto dataSender = std::make_unique<ZeroMQDataWriter>();
         
         // Create use case with dependencies
         Logger::debug("Creating ProcessTrackUseCase with dependencies...");
@@ -93,8 +101,8 @@ int main() {
         Logger::info("=== System Configuration ===");
         Logger::info("Architecture: Hexagonal (Ports & Adapters)");
         Logger::info("Messaging: ZeroMQ RADIO/DISH UDP multicast");
-        Logger::info("Endpoint: udp://239.1.1.1:9001");
-        Logger::info("Group: SOURCE_DATA");
+        Logger::info("Endpoint: udp://239.255.0.1:7779");
+        Logger::info("Group: TRACK_DATA_UDP");
         Logger::info("Status: Ready to receive track data");
         Logger::info("===============================");
         

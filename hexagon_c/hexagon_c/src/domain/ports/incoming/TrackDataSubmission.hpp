@@ -4,107 +4,28 @@
 #pragma once
 
 // DOMAIN MODEL INCLUDES - İş mantığı modelleri
-// ../../ = iki seviye yukarı çık (ports -> domain -> src)
-// model/ = domain model'lerin bulunduğu dizin
-#include "../../model/DelayCalcTrackData.hpp"    // Gecikme hesaplama track verisi
-#include "../../model/FinalCalcDelayData.hpp"    // Final gecikme hesaplama verisi
+#include "../../model/DelayCalcTrackData.hpp"    // Incoming DelayCalcTrackData from B_hexagon
 
 // STL (Standard Template Library) INCLUDES
 #include <memory>      // Smart pointer'lar için (std::shared_ptr, std::unique_ptr)
-#include <vector>      // Dynamic array için (std::vector<T>)
-
-// NAMESPACE DEFINITION - Hat projesinin domain katmanı namespace'i
-// :: = namespace separator (scope resolution operator)
-// Nested namespace: hat -> domain -> ports -> incoming
-namespace hat::domain::ports::incoming {
 
 /**
- * PRIMARY PORT INTERFACE - Hexagonal Architecture'da Primary Port
+ * @interface IDataReceiver
+ * @brief Hexagonal Architecture Primary Port for incoming track data
  * 
- * HEXAGONAL ARCHITECTURE AÇIKLAMASI:
- * - Primary Port = Uygulamanın dış dünyaya sunduğu interface (API)
- * - Bu port DOMAIN LOGIC tarafından implement edilir
- * - ADAPTER'lar bu port'u çağırır (dependency inversion)
- * - ZeroMQ üzerinden gelen track data'ları sistem içine alan arayüz
- * 
- * DESIGN PATTERN: Port & Adapter Pattern
- * - Port = Interface definition (bu dosya)
- * - Adapter = External system integration (ZeroMQTrackDataSubscriber)
- * - Domain Logic = Business rules implementation (TrackDataProcessor)
+ * Receives DelayCalcTrackData from B_hexagon via ZeroMQ DISH socket.
+ * This is the primary port interface that domain logic implements.
  */
-class TrackDataSubmission {
-public:    // Public section - dışarıdan erişilebilir members
-    
-    // VIRTUAL DESTRUCTOR - Polymorphism için kritik
-    // virtual = bu fonksiyon derived class'larda override edilebilir
-    // ~ = destructor operator (object yok edilirken çağrılır)
-    // = default = compiler'ın default implementation'ını kullan
-    // 
-    // NEDEN VIRTUAL DESTRUCTOR GEREKLİ:
-    // - Base class pointer ile derived object silinirken
-    // - Derived class'ın destructor'ının çağrılması için
-    // - Memory leak'leri önlemek için
-    virtual ~TrackDataSubmission() = default;
+class IDataReceiver {
+public:
+    virtual ~IDataReceiver() = default;
 
     /**
-     * CORE BUSINESS METHOD - Ana iş mantığı fonksiyonu
-     * DelayCalcTrackData verisi işleme alır
-     * 
-     * PURE VIRTUAL FUNCTION (= 0):
-     * - Bu class'da implementation yok, abstract class yapıyor
-     * - Derived class'larda mutlaka implement edilmeli
-     * - Interface contract'ı tanımlar
-     * 
-     * @param data Gelen track data
-     * @return İşlem sonucu (başarılı/başarısız)
+     * @brief Process incoming DelayCalcTrackData from B_hexagon
+     * @param data DelayCalcTrackData containing delay calculations from B_hexagon
      */
-    // virtual = polymorphic behavior (runtime'da hangi implementation çağrılacağı belirlenir)
-    // bool = return type, true/false değer döner
-    // const model::DelayCalcTrackData& = referans parametresi
-    //   - const = fonksiyon içinde parametre değiştirilemez (immutable)
-    //   - & = reference, kopyalama yapmaz (performance optimization)
-    //   - model::DelayCalcTrackData = domain model type
-    // = 0 = pure virtual function, implementation yok
-    virtual bool submitDelayCalcTrackData(const model::DelayCalcTrackData& data) = 0;
-
-    /**
-     * SYSTEM STATUS CHECK METHOD - Sistem durumu kontrolü
-     * Sistem veri almaya hazır mı kontrol eder
-     * 
-     * CONST MEMBER FUNCTION:
-     * - const = bu fonksiyon object'in state'ini değiştirmez
-     * - Read-only operation garantisi
-     * - Thread-safety için önemli ipucu
-     * - Compiler optimization'a yardım eder
-     * 
-     * @return Sistem veri almaya hazır mı?
-     */
-    // const = member function modifier, object state'ini değiştirmez
-    // Bu fonksiyon sadece okuma yapar, yazma yapmaz
-    virtual bool isReadyToReceive() const = 0;
-
-    // CLASS DESIGN NOTES:
-    // 
-    // 1. INTERFACE SEGREGATION PRINCIPLE (ISP):
-    //    - Sadece gerekli metodlar var
-    //    - Client'lar kullanmadıkları interface'lere depend etmez
-    // 
-    // 2. DEPENDENCY INVERSION PRINCIPLE (DIP):
-    //    - High-level modules (Domain Logic) low-level modules'a (Adapters) depend etmez
-    //    - Her ikisi de abstraction'lara (bu interface) depend eder
-    // 
-    // 3. SINGLE RESPONSIBILITY PRINCIPLE (SRP):
-    //    - Sadece track data submission sorumluluğu
-    //    - Başka sorumluluklar yok
-    // 
-    // 4. OPEN/CLOSED PRINCIPLE (OCP):
-    //    - Extension'a açık (yeni implementation'lar eklenebilir)
-    //    - Modification'a kapalı (mevcut interface değişmez)
-
-}; // class TrackDataSubmission sonu
-
-// NAMESPACE CLOSING - Hat projesinin domain katmanı namespace'i kapanışı
-} // namespace hat::domain::ports::incoming
+    virtual void onDataReceived(const domain::model::DelayCalcTrackData& data) = 0;
+};
 
 // HEADER GUARD NOTES:
 // Bu dosya #pragma once ile korunmuş durumda

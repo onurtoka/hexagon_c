@@ -2,60 +2,75 @@
 #include <iostream>
 #include <chrono>
 
-namespace hat::domain::logic {
-
-TrackDataProcessor::TrackDataProcessor() {
+FinalCalculatorService::FinalCalculatorService(std::unique_ptr<IDataSender> dataSender)
+    : dataSender_(std::move(dataSender)) {
 }
 
-bool TrackDataProcessor::submitDelayCalcTrackData(const model::DelayCalcTrackData& data) {
+void FinalCalculatorService::onDataReceived(const domain::model::DelayCalcTrackData& data) {
     try {
         if (!data.isValid()) {
-            return false;
+            std::cout << "Invalid DelayCalcTrackData received" << std::endl;
+            return;
         }
 
-        // FinalCalcDelayData oluştur ve performance metrics hesapla
-        model::FinalCalcDelayData final_data = createFinalCalcDelayData(data);
-        auto metrics = final_data.calculatePerformanceMetrics();
+        // Calculate final delay analysis
+        domain::model::FinalCalcTrackData finalData = calculateFinalDelay(data);
+        
+        // Send processed data via outgoing adapter
+        if (dataSender_) {
+            dataSender_->sendData(finalData);
+        }
 
+        // Log processing results
         auto now = std::chrono::duration_cast<std::chrono::microseconds>(
             std::chrono::system_clock::now().time_since_epoch()
         ).count();
-        long long total_delay = now - data.getFirstHopSentTime();
-        long long b_to_c_delay = now - data.getSecondHopSentTime();
         
-        std::cout << "Track[" << data.getTrackId() << "] FirstSent:" << data.getFirstHopSentTime()
-                  << " TotalDelay:" << total_delay << "μs B->C:" << b_to_c_delay << "μs"
-                  << " LatencyScore:" << metrics.latency_score << std::endl;
-
-        return true;
+        long long totalDelay = now - data.getFirstHopSentTime();
+        long long bToCDelay = now - data.getSecondHopSentTime();
+        
+        std::cout << "📊 Track[" << data.getTrackId() 
+                  << "] Total:" << totalDelay << "μs"
+                  << " B→C:" << bToCDelay << "μs"
+                  << " Final:" << finalData.getTotalDelayTime() << "μs" << std::endl;
 
     } catch (const std::exception& e) {
-        return false;
+        std::cout << "Error processing DelayCalcTrackData: " << e.what() << std::endl;
     }
 }
 
-bool TrackDataProcessor::isReadyToReceive() const {
-    return true;
-}
-
-model::FinalCalcDelayData TrackDataProcessor::createFinalCalcDelayData(
-    const model::DelayCalcTrackData& input_data) {
+domain::model::FinalCalcTrackData FinalCalculatorService::calculateFinalDelay(
+    const domain::model::DelayCalcTrackData& input) {
     
-    model::FinalCalcDelayData final_data;
+    domain::model::FinalCalcTrackData finalData;
 
-    final_data.setTrackId(input_data.getTrackId());
+    // Copy basic track information
+    finalData.setTrackId(static_cast<uint16_t>(input.getTrackId()));
+    finalData.setXVelocityECEF(input.getXVelocityECEF());
+    finalData.setYVelocityECEF(input.getYVelocityECEF());
+    finalData.setZVelocityECEF(input.getZVelocityECEF());
+    finalData.setXPositionECEF(input.getXPositionECEF());
+    finalData.setYPositionECEF(input.getYPositionECEF());
+    finalData.setZPositionECEF(input.getZPositionECEF());
 
-    auto current_time = std::chrono::system_clock::now();
-    auto epoch_time = current_time.time_since_epoch();
-    int64_t current_time_us = std::chrono::duration_cast<std::chrono::microseconds>(epoch_time).count();
+    // Copy timing information from previous hops
+    finalData.setOriginalUpdateTime(static_cast<uint32_t>(input.getOriginalUpdateTime()));
+    finalData.setUpdateTime(static_cast<uint32_t>(input.getUpdateTime()));
+    finalData.setFirstHopSentTime(static_cast<uint32_t>(input.getFirstHopSentTime()));
+    finalData.setFirstHopDelayTime(static_cast<uint32_t>(input.getFirstHopDelayTime()));
+    finalData.setSecondHopSentTime(static_cast<uint32_t>(input.getSecondHopSentTime()));
+    finalData.setSecondHopDelayTime(static_cast<uint32_t>(input.getSecondHopSentTime() - input.getFirstHopSentTime()));
 
-    int64_t processing_delay = current_time_us - input_data.getOriginalUpdateTime();
+    // Calculate final hop timing
+    auto currentTime = std::chrono::duration_cast<std::chrono::microseconds>(
+        std::chrono::system_clock::now().time_since_epoch()
+    ).count();
     
-    final_data.setTotalDelayTime(processing_delay);
-    final_data.setFirstHopSentTime(input_data.getOriginalUpdateTime());
-    final_data.setThirdHopSentTime(current_time_us);
+    uint32_t thirdHopSentTime = static_cast<uint32_t>(currentTime);
+    uint32_t totalDelayTime = thirdHopSentTime - static_cast<uint32_t>(input.getFirstHopSentTime());
 
-    return final_data;
-}
+    finalData.setThirdHopSentTime(thirdHopSentTime);
+    finalData.setTotalDelayTime(totalDelayTime);
 
+    return finalData;
 }

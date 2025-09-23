@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ExtrapTrackData",
+  "description": "Bir izin ECEF koordinat sistemindeki extrapolation yapılmış kinematik durumunu ve detaylı zamanlama bilgilerini içerir.",
+  "type": "object",
+
+  "x-service-metadata": {
+    "description": "UDP RADIO/DISH yayınının bağlantı bilgileri.",
+    "protocol": "udp",
+    "multicast_address": "239.1.1.5",
+    "port": 9596
+  },
+
+  "properties": {
+    "trackId": {
+      "description": "İz için benzersiz tam sayı kimliği",
+      "type": "integer",
+      "format": "int",
+      "minimum": 1,
+      "maximum": 4294967295
+    },
+    "xVelocityECEF": {
+      "description": "ECEF koordinatlarındaki X ekseni hızı (m/s)",
+      "type": "number",
+      "format": "double",
+      "minimum": -1.0e+6,
+      "maximum": 1.0e+6
+    },
+    "yVelocityECEF": {
+      "description": "ECEF koordinatlarındaki Y ekseni hızı (m/s)",
+      "type": "number",
+      "format": "double",
+      "minimum": -1.0e+6,
+      "maximum": 1.0e+6
+    },
+    "zVelocityECEF": {
+      "description": "ECEF koordinatlarındaki Z ekseni hızı (m/s)",
+      "type": "number",
+      "format": "double",
+      "minimum": -1.0e+6,
+      "maximum": 1.0e+6
+    },
+    "xPositionECEF": {
+      "description": "ECEF koordinatlarındaki X ekseni konumu (metre)",
+      "type": "number",
+      "format": "double",
+      "minimum": -9.9e+10,
+      "maximum": 9.9e+10
+    },
+    "yPositionECEF": {
+      "description": "ECEF koordinatlarındaki Y ekseni konumu (metre)",
+      "type": "number",
+      "format": "double",
+      "minimum": -9.9e+10,
+      "maximum": 9.9e+10
+    },
+    "zPositionECEF": {
+      "description": "ECEF koordinatlarındaki Z ekseni konumu (metre)",
+      "type": "number",
+      "format": "double",
+      "minimum": -9.9e+10,
+      "maximum": 9.9e+10
+    },
+    "originalUpdateTime": {
+      "description": "Original güncelleme zamanı (mikrosaniye)",
+      "type": "integer",
+      "format": "long",
+      "minimum": 0,
+      "maximum": 9223372036854775
+    },
+    "updateTime": {
+      "description": "Son güncelleme zamanı (mikrosaniye)",
+      "type": "integer",
+      "format": "long",
+      "minimum": 0,
+      "maximum": 9223372036854775
+    },
+    "firstHopSentTime": {
+      "description": "İlk atlamanın gönderildiği zaman (mikrosaniye)",
+      "type": "integer",
+      "format": "long",
+      "minimum": 0,
+      "maximum": 9223372036854775
+    }
+  },
+  "required": [
+    "trackId",
+    "xVelocityECEF",
+    "yVelocityECEF",
+    "zVelocityECEF",
+    "xPositionECEF",
+    "yPositionECEF",
+    "zPositionECEF",
+    "originalUpdateTime",
+    "updateTime",
+    "firstHopSentTime"
+  ]
+}

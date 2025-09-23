@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<models>
+    <model name="DelayCalcTrackData" type="dish" />
+    <model name="ExtrapTrackData" type="radio" />
+    <model name="FinalCalcTrackData" type="radio" />
+    <model name="ProcessedTrackData" type="dish" />
+    <model name="TrackStatics" type="radio" />
+</models>
