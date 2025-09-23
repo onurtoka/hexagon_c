@@ -18,3 +18,4 @@ cmake-build-debug/
 .vscode/
 third_party/libzmq/build/
 third_party/libzmq/.deps/
+gcc-8.5.tar.gz
