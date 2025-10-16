@@ -9,46 +9,71 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_FLAGS_RELEASE "-O3 -march=native -mtune=native -flto -ffast-math -DNDEBUG")
 set(CMAKE_BUILD_TYPE Release)
 
+# Enable testing
+enable_testing()
+
 # Include directories
 include_directories(${CMAKE_SOURCE_DIR}/../libzmq/include)
 include_directories(${CMAKE_SOURCE_DIR}/../include)
+include_directories(${CMAKE_SOURCE_DIR}/src)
+include_directories(${CMAKE_SOURCE_DIR})
 
 # Find required packages
 find_package(Threads REQUIRED)
+find_package(GTest REQUIRED)
+include_directories(${GTEST_INCLUDE_DIRS})
+
+# Add ZeroMQ library
+add_library(zmq STATIC IMPORTED)
+set_target_properties(zmq PROPERTIES
+    IMPORTED_LOCATION "${CMAKE_SOURCE_DIR}/../libzmq/build/lib/libzmq.a"
+)
 
 # Source files
 set(SOURCES
-    src/application/main.cpp
     src/domain/model/DelayCalcTrackData.cpp
     src/domain/model/FinalCalcTrackData.cpp
+    src/domain/logic/TrackDataProcessor.cpp
 )
 
-# Create executable
-add_executable(hexagon_c_app ${SOURCES})
+# Test files
+set(TEST_SOURCES
+    tests/unit/domain/logic/FinalCalculatorServiceTest.cpp
+    tests/domain/model/DelayCalcTrackData_test.cpp
+    tests/domain/logic/TrackDataProcessor_test.cpp
+)
 
-# Link libraries - static linking for optimal performance
-target_link_libraries(hexagon_c_app 
-    /workspaces/hexagon_c/hexagon_c/libzmq/build/lib/libzmq.a
-    sodium
-    rt
+# Library target for shared code
+add_library(hexagon_core STATIC ${SOURCES})
+target_link_libraries(hexagon_core 
+    PUBLIC 
+    Threads::Threads
+    zmq
     gnutls
-    pthread
-    dl
 )
 
-# Real-time performance flags
-target_compile_options(hexagon_c_app PRIVATE 
-    -DZMQ_BUILD_DRAFT_API=1
-    -pthread
-    -O3
-    -march=native
-    -mtune=native
-    -flto
-    -ffast-math
-    -DNDEBUG
+# Main executable
+add_executable(${PROJECT_NAME}
+    src/application/main.cpp
+)
+target_link_libraries(${PROJECT_NAME} 
+    PRIVATE 
+    hexagon_core
+    zmq
+    gnutls
 )
 
-# Set output directory
-set_target_properties(hexagon_c_app PROPERTIES
-    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}
+# Test executable
+add_executable(run_tests ${TEST_SOURCES})
+target_link_libraries(run_tests
+    PRIVATE
+    GTest::gtest
+    GTest::gtest_main
+    GTest::gmock
+    hexagon_core
+    zmq
+    gnutls
 )
+
+# Register tests
+add_test(NAME unit_tests COMMAND run_tests)

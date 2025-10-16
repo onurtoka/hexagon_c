@@ -13,7 +13,7 @@
  * Receives DelayCalcTrackData from B_hexagon, performs final delay analysis,
  * and sends FinalCalcTrackData to external systems.
  */
-class FinalCalculatorService final : public IDataReceiver {
+class FinalCalculatorService : public IDataReceiver {
 private:
     std::unique_ptr<IDataSender> dataSender_;
 
@@ -23,7 +23,7 @@ public:
     // IDataReceiver interface implementation
     void onDataReceived(const domain::model::DelayCalcTrackData& data) override;
 
-private:
+protected:
     /**
      * @brief Process DelayCalcTrackData and generate FinalCalcTrackData
      * @param input Incoming DelayCalcTrackData from B_hexagon

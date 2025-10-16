@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /workspaces/hexagon_c/hexagon_c/hexagon_c/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
@@ -117,6 +127,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named hexagon_core
+
+# Build rule for target.
+hexagon_core: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hexagon_core
+.PHONY : hexagon_core
+
+# fast build rule for target.
+hexagon_core/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_core.dir/build.make CMakeFiles/hexagon_core.dir/build
+.PHONY : hexagon_core/fast
+
+#=============================================================================
 # Target rules for targets named hexagon_c_app
 
 # Build rule for target.
@@ -128,6 +151,19 @@ hexagon_c_app: cmake_check_build_system
 hexagon_c_app/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/build
 .PHONY : hexagon_c_app/fast
+
+#=============================================================================
+# Target rules for targets named run_tests
+
+# Build rule for target.
+run_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_tests
+.PHONY : run_tests
+
+# fast build rule for target.
+run_tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
+.PHONY : run_tests/fast
 
 src/application/main.o: src/application/main.cpp.o
 .PHONY : src/application/main.o
@@ -153,12 +189,36 @@ src/application/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.s
 .PHONY : src/application/main.cpp.s
 
+src/domain/logic/TrackDataProcessor.o: src/domain/logic/TrackDataProcessor.cpp.o
+.PHONY : src/domain/logic/TrackDataProcessor.o
+
+# target to build an object file
+src/domain/logic/TrackDataProcessor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_core.dir/build.make CMakeFiles/hexagon_core.dir/src/domain/logic/TrackDataProcessor.cpp.o
+.PHONY : src/domain/logic/TrackDataProcessor.cpp.o
+
+src/domain/logic/TrackDataProcessor.i: src/domain/logic/TrackDataProcessor.cpp.i
+.PHONY : src/domain/logic/TrackDataProcessor.i
+
+# target to preprocess a source file
+src/domain/logic/TrackDataProcessor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_core.dir/build.make CMakeFiles/hexagon_core.dir/src/domain/logic/TrackDataProcessor.cpp.i
+.PHONY : src/domain/logic/TrackDataProcessor.cpp.i
+
+src/domain/logic/TrackDataProcessor.s: src/domain/logic/TrackDataProcessor.cpp.s
+.PHONY : src/domain/logic/TrackDataProcessor.s
+
+# target to generate assembly for a file
+src/domain/logic/TrackDataProcessor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_core.dir/build.make CMakeFiles/hexagon_core.dir/src/domain/logic/TrackDataProcessor.cpp.s
+.PHONY : src/domain/logic/TrackDataProcessor.cpp.s
+
 src/domain/model/DelayCalcTrackData.o: src/domain/model/DelayCalcTrackData.cpp.o
 .PHONY : src/domain/model/DelayCalcTrackData.o
 
 # target to build an object file
 src/domain/model/DelayCalcTrackData.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_core.dir/build.make CMakeFiles/hexagon_core.dir/src/domain/model/DelayCalcTrackData.cpp.o
 .PHONY : src/domain/model/DelayCalcTrackData.cpp.o
 
 src/domain/model/DelayCalcTrackData.i: src/domain/model/DelayCalcTrackData.cpp.i
@@ -166,7 +226,7 @@ src/domain/model/DelayCalcTrackData.i: src/domain/model/DelayCalcTrackData.cpp.i
 
 # target to preprocess a source file
 src/domain/model/DelayCalcTrackData.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_core.dir/build.make CMakeFiles/hexagon_core.dir/src/domain/model/DelayCalcTrackData.cpp.i
 .PHONY : src/domain/model/DelayCalcTrackData.cpp.i
 
 src/domain/model/DelayCalcTrackData.s: src/domain/model/DelayCalcTrackData.cpp.s
@@ -174,7 +234,7 @@ src/domain/model/DelayCalcTrackData.s: src/domain/model/DelayCalcTrackData.cpp.s
 
 # target to generate assembly for a file
 src/domain/model/DelayCalcTrackData.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_core.dir/build.make CMakeFiles/hexagon_core.dir/src/domain/model/DelayCalcTrackData.cpp.s
 .PHONY : src/domain/model/DelayCalcTrackData.cpp.s
 
 src/domain/model/FinalCalcTrackData.o: src/domain/model/FinalCalcTrackData.cpp.o
@@ -182,7 +242,7 @@ src/domain/model/FinalCalcTrackData.o: src/domain/model/FinalCalcTrackData.cpp.o
 
 # target to build an object file
 src/domain/model/FinalCalcTrackData.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcTrackData.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_core.dir/build.make CMakeFiles/hexagon_core.dir/src/domain/model/FinalCalcTrackData.cpp.o
 .PHONY : src/domain/model/FinalCalcTrackData.cpp.o
 
 src/domain/model/FinalCalcTrackData.i: src/domain/model/FinalCalcTrackData.cpp.i
@@ -190,7 +250,7 @@ src/domain/model/FinalCalcTrackData.i: src/domain/model/FinalCalcTrackData.cpp.i
 
 # target to preprocess a source file
 src/domain/model/FinalCalcTrackData.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcTrackData.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_core.dir/build.make CMakeFiles/hexagon_core.dir/src/domain/model/FinalCalcTrackData.cpp.i
 .PHONY : src/domain/model/FinalCalcTrackData.cpp.i
 
 src/domain/model/FinalCalcTrackData.s: src/domain/model/FinalCalcTrackData.cpp.s
@@ -198,8 +258,80 @@ src/domain/model/FinalCalcTrackData.s: src/domain/model/FinalCalcTrackData.cpp.s
 
 # target to generate assembly for a file
 src/domain/model/FinalCalcTrackData.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcTrackData.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_core.dir/build.make CMakeFiles/hexagon_core.dir/src/domain/model/FinalCalcTrackData.cpp.s
 .PHONY : src/domain/model/FinalCalcTrackData.cpp.s
+
+tests/domain/logic/TrackDataProcessor_test.o: tests/domain/logic/TrackDataProcessor_test.cpp.o
+.PHONY : tests/domain/logic/TrackDataProcessor_test.o
+
+# target to build an object file
+tests/domain/logic/TrackDataProcessor_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/domain/logic/TrackDataProcessor_test.cpp.o
+.PHONY : tests/domain/logic/TrackDataProcessor_test.cpp.o
+
+tests/domain/logic/TrackDataProcessor_test.i: tests/domain/logic/TrackDataProcessor_test.cpp.i
+.PHONY : tests/domain/logic/TrackDataProcessor_test.i
+
+# target to preprocess a source file
+tests/domain/logic/TrackDataProcessor_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/domain/logic/TrackDataProcessor_test.cpp.i
+.PHONY : tests/domain/logic/TrackDataProcessor_test.cpp.i
+
+tests/domain/logic/TrackDataProcessor_test.s: tests/domain/logic/TrackDataProcessor_test.cpp.s
+.PHONY : tests/domain/logic/TrackDataProcessor_test.s
+
+# target to generate assembly for a file
+tests/domain/logic/TrackDataProcessor_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/domain/logic/TrackDataProcessor_test.cpp.s
+.PHONY : tests/domain/logic/TrackDataProcessor_test.cpp.s
+
+tests/domain/model/DelayCalcTrackData_test.o: tests/domain/model/DelayCalcTrackData_test.cpp.o
+.PHONY : tests/domain/model/DelayCalcTrackData_test.o
+
+# target to build an object file
+tests/domain/model/DelayCalcTrackData_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/domain/model/DelayCalcTrackData_test.cpp.o
+.PHONY : tests/domain/model/DelayCalcTrackData_test.cpp.o
+
+tests/domain/model/DelayCalcTrackData_test.i: tests/domain/model/DelayCalcTrackData_test.cpp.i
+.PHONY : tests/domain/model/DelayCalcTrackData_test.i
+
+# target to preprocess a source file
+tests/domain/model/DelayCalcTrackData_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/domain/model/DelayCalcTrackData_test.cpp.i
+.PHONY : tests/domain/model/DelayCalcTrackData_test.cpp.i
+
+tests/domain/model/DelayCalcTrackData_test.s: tests/domain/model/DelayCalcTrackData_test.cpp.s
+.PHONY : tests/domain/model/DelayCalcTrackData_test.s
+
+# target to generate assembly for a file
+tests/domain/model/DelayCalcTrackData_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/domain/model/DelayCalcTrackData_test.cpp.s
+.PHONY : tests/domain/model/DelayCalcTrackData_test.cpp.s
+
+tests/unit/domain/logic/FinalCalculatorServiceTest.o: tests/unit/domain/logic/FinalCalculatorServiceTest.cpp.o
+.PHONY : tests/unit/domain/logic/FinalCalculatorServiceTest.o
+
+# target to build an object file
+tests/unit/domain/logic/FinalCalculatorServiceTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/unit/domain/logic/FinalCalculatorServiceTest.cpp.o
+.PHONY : tests/unit/domain/logic/FinalCalculatorServiceTest.cpp.o
+
+tests/unit/domain/logic/FinalCalculatorServiceTest.i: tests/unit/domain/logic/FinalCalculatorServiceTest.cpp.i
+.PHONY : tests/unit/domain/logic/FinalCalculatorServiceTest.i
+
+# target to preprocess a source file
+tests/unit/domain/logic/FinalCalculatorServiceTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/unit/domain/logic/FinalCalculatorServiceTest.cpp.i
+.PHONY : tests/unit/domain/logic/FinalCalculatorServiceTest.cpp.i
+
+tests/unit/domain/logic/FinalCalculatorServiceTest.s: tests/unit/domain/logic/FinalCalculatorServiceTest.cpp.s
+.PHONY : tests/unit/domain/logic/FinalCalculatorServiceTest.s
+
+# target to generate assembly for a file
+tests/unit/domain/logic/FinalCalculatorServiceTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/unit/domain/logic/FinalCalculatorServiceTest.cpp.s
+.PHONY : tests/unit/domain/logic/FinalCalculatorServiceTest.cpp.s
 
 # Help Target
 help:
@@ -209,16 +341,31 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... hexagon_c_app"
+	@echo "... hexagon_core"
+	@echo "... run_tests"
 	@echo "... src/application/main.o"
 	@echo "... src/application/main.i"
 	@echo "... src/application/main.s"
+	@echo "... src/domain/logic/TrackDataProcessor.o"
+	@echo "... src/domain/logic/TrackDataProcessor.i"
+	@echo "... src/domain/logic/TrackDataProcessor.s"
 	@echo "... src/domain/model/DelayCalcTrackData.o"
 	@echo "... src/domain/model/DelayCalcTrackData.i"
 	@echo "... src/domain/model/DelayCalcTrackData.s"
 	@echo "... src/domain/model/FinalCalcTrackData.o"
 	@echo "... src/domain/model/FinalCalcTrackData.i"
 	@echo "... src/domain/model/FinalCalcTrackData.s"
+	@echo "... tests/domain/logic/TrackDataProcessor_test.o"
+	@echo "... tests/domain/logic/TrackDataProcessor_test.i"
+	@echo "... tests/domain/logic/TrackDataProcessor_test.s"
+	@echo "... tests/domain/model/DelayCalcTrackData_test.o"
+	@echo "... tests/domain/model/DelayCalcTrackData_test.i"
+	@echo "... tests/domain/model/DelayCalcTrackData_test.s"
+	@echo "... tests/unit/domain/logic/FinalCalculatorServiceTest.o"
+	@echo "... tests/unit/domain/logic/FinalCalculatorServiceTest.i"
+	@echo "... tests/unit/domain/logic/FinalCalculatorServiceTest.s"
 .PHONY : help
 
 

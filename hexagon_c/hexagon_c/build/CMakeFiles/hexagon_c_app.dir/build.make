@@ -73,64 +73,33 @@ CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.o: CMakeFiles/hexagon_c_ap
 CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.o: /workspaces/hexagon_c/hexagon_c/hexagon_c/src/application/main.cpp
 CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.o: CMakeFiles/hexagon_c_app.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.o -MF CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.o.d -o CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.o -c /workspaces/hexagon_c/hexagon_c/hexagon_c/src/application/main.cpp
+	/usr/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.o -MF CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.o.d -o CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.o -c /workspaces/hexagon_c/hexagon_c/hexagon_c/src/application/main.cpp
 
 CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/hexagon_c/hexagon_c/hexagon_c/src/application/main.cpp > CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.i
+	/usr/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/hexagon_c/hexagon_c/hexagon_c/src/application/main.cpp > CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.i
 
 CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/hexagon_c/hexagon_c/hexagon_c/src/application/main.cpp -o CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.s
-
-CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.o: CMakeFiles/hexagon_c_app.dir/flags.make
-CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.o: /workspaces/hexagon_c/hexagon_c/hexagon_c/src/domain/model/DelayCalcTrackData.cpp
-CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.o: CMakeFiles/hexagon_c_app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.o -MF CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.o.d -o CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.o -c /workspaces/hexagon_c/hexagon_c/hexagon_c/src/domain/model/DelayCalcTrackData.cpp
-
-CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/hexagon_c/hexagon_c/hexagon_c/src/domain/model/DelayCalcTrackData.cpp > CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.i
-
-CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/hexagon_c/hexagon_c/hexagon_c/src/domain/model/DelayCalcTrackData.cpp -o CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.s
-
-CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcTrackData.cpp.o: CMakeFiles/hexagon_c_app.dir/flags.make
-CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcTrackData.cpp.o: /workspaces/hexagon_c/hexagon_c/hexagon_c/src/domain/model/FinalCalcTrackData.cpp
-CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcTrackData.cpp.o: CMakeFiles/hexagon_c_app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcTrackData.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcTrackData.cpp.o -MF CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcTrackData.cpp.o.d -o CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcTrackData.cpp.o -c /workspaces/hexagon_c/hexagon_c/hexagon_c/src/domain/model/FinalCalcTrackData.cpp
-
-CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcTrackData.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcTrackData.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/hexagon_c/hexagon_c/hexagon_c/src/domain/model/FinalCalcTrackData.cpp > CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcTrackData.cpp.i
-
-CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcTrackData.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcTrackData.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/hexagon_c/hexagon_c/hexagon_c/src/domain/model/FinalCalcTrackData.cpp -o CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcTrackData.cpp.s
+	/usr/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/hexagon_c/hexagon_c/hexagon_c/src/application/main.cpp -o CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.s
 
 # Object files for target hexagon_c_app
 hexagon_c_app_OBJECTS = \
-"CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.o" \
-"CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.o" \
-"CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcTrackData.cpp.o"
+"CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.o"
 
 # External object files for target hexagon_c_app
 hexagon_c_app_EXTERNAL_OBJECTS =
 
-/workspaces/hexagon_c/hexagon_c/hexagon_c/hexagon_c_app: CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.o
-/workspaces/hexagon_c/hexagon_c/hexagon_c/hexagon_c_app: CMakeFiles/hexagon_c_app.dir/src/domain/model/DelayCalcTrackData.cpp.o
-/workspaces/hexagon_c/hexagon_c/hexagon_c/hexagon_c_app: CMakeFiles/hexagon_c_app.dir/src/domain/model/FinalCalcTrackData.cpp.o
-/workspaces/hexagon_c/hexagon_c/hexagon_c/hexagon_c_app: CMakeFiles/hexagon_c_app.dir/build.make
-/workspaces/hexagon_c/hexagon_c/hexagon_c/hexagon_c_app: /workspaces/hexagon_c/hexagon_c/libzmq/build/lib/libzmq.a
-/workspaces/hexagon_c/hexagon_c/hexagon_c/hexagon_c_app: CMakeFiles/hexagon_c_app.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable /workspaces/hexagon_c/hexagon_c/hexagon_c/hexagon_c_app"
+hexagon_c_app: CMakeFiles/hexagon_c_app.dir/src/application/main.cpp.o
+hexagon_c_app: CMakeFiles/hexagon_c_app.dir/build.make
+hexagon_c_app: libhexagon_core.a
+hexagon_c_app: /workspaces/hexagon_c/hexagon_c/hexagon_c/../libzmq/build/lib/libzmq.a
+hexagon_c_app: CMakeFiles/hexagon_c_app.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable hexagon_c_app"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hexagon_c_app.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/hexagon_c_app.dir/build: /workspaces/hexagon_c/hexagon_c/hexagon_c/hexagon_c_app
+CMakeFiles/hexagon_c_app.dir/build: hexagon_c_app
 .PHONY : CMakeFiles/hexagon_c_app.dir/build
 
 CMakeFiles/hexagon_c_app.dir/clean:

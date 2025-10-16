@@ -1,0 +1,46 @@
+{
+    "normal_cases": [
+        {
+            "name": "standard_track",
+            "track_id": 1001,
+            "positions": {
+                "x": 1000.0,
+                "y": 2000.0,
+                "z": 3000.0
+            },
+            "velocities": {
+                "x": 100.0,
+                "y": 200.0,
+                "z": 300.0
+            },
+            "timing": {
+                "update_time": 1696932000000,
+                "first_hop_time": 1696932000100,
+                "second_hop_time": 1696932000200
+            },
+            "expected_delay": 150.5
+        }
+    ],
+    "edge_cases": [
+        {
+            "name": "stationary_track",
+            "track_id": 2001,
+            "positions": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "velocities": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "timing": {
+                "update_time": 1696932000000,
+                "first_hop_time": 1696932000300,
+                "second_hop_time": 1696932000600
+            },
+            "expected_delay": 300.0
+        }
+    ]
+}

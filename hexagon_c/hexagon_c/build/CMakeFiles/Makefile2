@@ -63,7 +63,9 @@ CMAKE_BINARY_DIR = /workspaces/hexagon_c/hexagon_c/hexagon_c/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/hexagon_core.dir/all
 all: CMakeFiles/hexagon_c_app.dir/all
+all: CMakeFiles/run_tests.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,22 +73,50 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/hexagon_core.dir/clean
 clean: CMakeFiles/hexagon_c_app.dir/clean
+clean: CMakeFiles/run_tests.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/hexagon_core.dir
+
+# All Build rule for target.
+CMakeFiles/hexagon_core.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_core.dir/build.make CMakeFiles/hexagon_core.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_core.dir/build.make CMakeFiles/hexagon_core.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles --progress-num=3,4,5,6 "Built target hexagon_core"
+.PHONY : CMakeFiles/hexagon_core.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/hexagon_core.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/hexagon_core.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles 0
+.PHONY : CMakeFiles/hexagon_core.dir/rule
+
+# Convenience name for target.
+hexagon_core: CMakeFiles/hexagon_core.dir/rule
+.PHONY : hexagon_core
+
+# clean rule for target.
+CMakeFiles/hexagon_core.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_core.dir/build.make CMakeFiles/hexagon_core.dir/clean
+.PHONY : CMakeFiles/hexagon_core.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/hexagon_c_app.dir
 
 # All Build rule for target.
-CMakeFiles/hexagon_c_app.dir/all:
+CMakeFiles/hexagon_c_app.dir/all: CMakeFiles/hexagon_core.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles --progress-num=1,2,3,4 "Built target hexagon_c_app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles --progress-num=1,2 "Built target hexagon_c_app"
 .PHONY : CMakeFiles/hexagon_c_app.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/hexagon_c_app.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/hexagon_c_app.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles 0
 .PHONY : CMakeFiles/hexagon_c_app.dir/rule
@@ -99,6 +129,32 @@ hexagon_c_app: CMakeFiles/hexagon_c_app.dir/rule
 CMakeFiles/hexagon_c_app.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexagon_c_app.dir/build.make CMakeFiles/hexagon_c_app.dir/clean
 .PHONY : CMakeFiles/hexagon_c_app.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/run_tests.dir
+
+# All Build rule for target.
+CMakeFiles/run_tests.dir/all: CMakeFiles/hexagon_core.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles --progress-num=7,8,9,10 "Built target run_tests"
+.PHONY : CMakeFiles/run_tests.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/run_tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/run_tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/hexagon_c/hexagon_c/hexagon_c/build/CMakeFiles 0
+.PHONY : CMakeFiles/run_tests.dir/rule
+
+# Convenience name for target.
+run_tests: CMakeFiles/run_tests.dir/rule
+.PHONY : run_tests
+
+# clean rule for target.
+CMakeFiles/run_tests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/clean
+.PHONY : CMakeFiles/run_tests.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
